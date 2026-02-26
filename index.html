@@ -350,6 +350,16 @@
   <p>Site by Nick Del Vecchio</p>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script>
   const nav = document.getElementById('main-nav');
-  const hero = docume
+  const hero = document.getElementById('hero');
+
+  const observer = new IntersectionObserver(([entry]) => {
+    nav.classList.toggle('scrolled', !entry.isIntersecting);
+  }, { threshold: 0.05 });
+
+  observer.observe(hero);
+</script>
+</body>
+</html>
