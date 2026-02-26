@@ -9,6 +9,14 @@
   }
 
   loadInclude('site-header', 'header.html', function () {
+    // Active nav link
+    const page = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-links a').forEach(function (link) {
+      if (link.getAttribute('href') === page) {
+        link.classList.add('active');
+      }
+    });
+
     // Scroll observer to toggle .scrolled class on nav
     const nav = document.getElementById('main-nav');
     const hero = document.getElementById('hero');

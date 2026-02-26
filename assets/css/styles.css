@@ -73,6 +73,9 @@ nav.scrolled {
 .nav-links a:hover {
   color: var(--white);
 }
+.nav-links a.active {
+  color: var(--white);
+}
 
 /* HERO */
 .hero {
