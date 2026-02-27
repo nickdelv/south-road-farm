@@ -27,4 +27,20 @@
   });
 
   loadInclude('site-footer', 'footer.html');
+
+  // Fade-in on scroll — applies to any .fade-in element on any page
+  const fadeObserver = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          fadeObserver.unobserve(e.target);
+        }
+      });
+    },
+    { threshold: 0.05 }
+  );
+  document.querySelectorAll('.fade-in').forEach(function (el) {
+    fadeObserver.observe(el);
+  });
 })();

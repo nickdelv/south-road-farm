@@ -11,245 +11,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <style>
-      /* Page-specific overrides and grid layouts */
-
-      /* Hero — bottom-left anchor instead of centered */
-      .hero-weekend {
-        align-items: flex-end;
-        justify-content: flex-start;
-      }
-      .hero-weekend .hero-overlay {
-        background: linear-gradient(
-          to top,
-          rgba(23, 26, 18, 0.72) 0%,
-          rgba(23, 26, 18, 0.15) 55%,
-          transparent 100%
-        );
-      }
-      .hero-weekend .hero-content {
-        text-align: left;
-        padding: 0 72px 80px;
-        animation: fadeUp 1.4s ease 0.4s both;
-      }
-      .hero-weekend .hero-title {
-        font-size: clamp(64px, 10vw, 128px);
-      }
-      .hero-weekend .hero-sub {
-        text-align: left;
-        max-width: 420px;
-      }
-
-      /* Two-column intro */
-      .wknd-intro {
-        background: var(--cream);
-        padding: 120px 72px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 80px;
-        align-items: center;
-      }
-      .wknd-intro-text h2 {
-        font-family: "Cormorant Garamond", serif;
-        font-size: clamp(40px, 4vw, 60px);
-        font-weight: 300;
-        line-height: 1.1;
-        color: var(--forest);
-        margin: 20px 0 28px;
-      }
-      .wknd-intro-text h2 em { font-style: italic; }
-      .wknd-intro-text p {
-        font-size: 16px;
-        font-weight: 300;
-        line-height: 1.9;
-        color: var(--stone);
-        max-width: 460px;
-      }
-      .wknd-intro-text p + p { margin-top: 20px; }
-      .wknd-intro-img {
-        aspect-ratio: 4 / 5;
-        overflow: hidden;
-      }
-      .wknd-intro-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      }
-
-      /* Section backgrounds */
-      .wknd-dark  { background: var(--forest);     padding: 100px 72px; }
-      .wknd-light { background: var(--cream);       padding: 100px 72px; }
-      .wknd-warm  { background: var(--cream-warm);  padding: 100px 72px; }
-      .wknd-mid   { background: var(--forest-mid);  padding: 100px 72px; }
-
-      /* Section header: eyebrow + headline left, body right */
-      .wknd-hdr {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 80px;
-        align-items: end;
-        margin-bottom: 64px;
-      }
-      .wknd-hdr h2 {
-        font-family: "Cormorant Garamond", serif;
-        font-size: clamp(44px, 5vw, 76px);
-        font-weight: 300;
-        line-height: 1.05;
-        color: var(--white);
-        margin-top: 16px;
-      }
-      .wknd-hdr h2 em { font-style: italic; }
-      .wknd-hdr h2.on-light { color: var(--forest); }
-      .wknd-hdr p {
-        font-size: 16px;
-        font-weight: 300;
-        line-height: 1.9;
-        color: rgba(244, 239, 228, 0.6);
-        align-self: end;
-        max-width: 440px;
-      }
-      .wknd-hdr p.on-light { color: var(--stone); }
-
-      /* ── Image grids ── */
-
-      /* Tall hero left + 2 stacked right */
-      .grid-ceremony {
-        display: grid;
-        grid-template-columns: 1.35fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 10px;
-      }
-      .grid-ceremony .tall {
-        grid-row: 1 / 3;
-        aspect-ratio: 3 / 5;
-        overflow: hidden;
-      }
-      .grid-ceremony .cell {
-        aspect-ratio: 4 / 3;
-        overflow: hidden;
-      }
-
-      /* 3-col strip */
-      .grid-strip {
-        display: grid;
-        grid-template-columns: 1fr 1.6fr 1fr;
-        gap: 10px;
-        margin-bottom: 10px;
-      }
-      .grid-strip .cell-tall { aspect-ratio: 3 / 4; overflow: hidden; }
-      .grid-strip .cell-wide { aspect-ratio: 3 / 2; overflow: hidden; }
-
-      /* Full-width panel */
-      .grid-panel {
-        aspect-ratio: 16 / 6;
-        overflow: hidden;
-      }
-
-      /* Wide feature + side stack */
-      .grid-trucks {
-        display: grid;
-        grid-template-columns: 1.5fr 1fr;
-        gap: 10px;
-        margin-bottom: 10px;
-      }
-      .grid-trucks .feature { aspect-ratio: 16 / 10; overflow: hidden; }
-      .grid-trucks .stack   { display: grid; gap: 10px; }
-      .grid-trucks .stack .cell { aspect-ratio: 4 / 3; overflow: hidden; }
-
-      /* 2-col equal */
-      .grid-eve {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        margin-bottom: 10px;
-      }
-      .grid-eve .cell-tall { aspect-ratio: 3 / 4; overflow: hidden; }
-
-      /* Late night: text + tall image */
-      .wknd-latenight {
-        background: var(--forest);
-        padding: 100px 72px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 80px;
-        align-items: center;
-      }
-      .wknd-latenight-text h2 {
-        font-family: "Cormorant Garamond", serif;
-        font-size: clamp(40px, 4vw, 60px);
-        font-weight: 300;
-        line-height: 1.1;
-        color: var(--white);
-        margin: 16px 0 28px;
-      }
-      .wknd-latenight-text h2 em { font-style: italic; }
-      .wknd-latenight-text p {
-        font-size: 16px;
-        font-weight: 300;
-        line-height: 1.9;
-        color: rgba(244, 239, 228, 0.6);
-        max-width: 460px;
-      }
-      .wknd-latenight-text p + p { margin-top: 20px; }
-      .wknd-latenight-img {
-        aspect-ratio: 3 / 4;
-        overflow: hidden;
-      }
-
-      /* All image children */
-      .grid-ceremony .tall img,
-      .grid-ceremony .cell img,
-      .grid-strip .cell-tall img,
-      .grid-strip .cell-wide img,
-      .grid-panel img,
-      .grid-trucks .feature img,
-      .grid-trucks .stack .cell img,
-      .grid-eve .cell-tall img,
-      .wknd-latenight-img img,
-      .wknd-intro-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        transition: transform 0.7s ease;
-      }
-      .grid-ceremony .tall:hover img,
-      .grid-ceremony .cell:hover img,
-      .grid-strip .cell-tall:hover img,
-      .grid-strip .cell-wide:hover img,
-      .grid-trucks .feature:hover img,
-      .grid-trucks .stack .cell:hover img,
-      .grid-eve .cell-tall:hover img { transform: scale(1.03); }
-
-      /* Fade in on scroll */
-      .fade-in {
-        opacity: 0;
-        transform: translateY(28px);
-        transition: opacity 0.8s ease, transform 0.8s ease;
-      }
-      .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      /* Responsive */
-      @media (max-width: 900px) {
-        .hero-weekend .hero-content { padding: 0 32px 56px; }
-        .wknd-intro { grid-template-columns: 1fr; gap: 40px; padding: 80px 32px; }
-        .wknd-dark, .wknd-light, .wknd-warm, .wknd-mid { padding: 80px 32px; }
-        .wknd-hdr { grid-template-columns: 1fr; gap: 20px; margin-bottom: 40px; }
-        .grid-ceremony { grid-template-columns: 1fr; }
-        .grid-ceremony .tall { grid-row: auto; aspect-ratio: 4/3; }
-        .grid-strip { grid-template-columns: 1fr 1fr; }
-        .grid-strip .cell-tall:last-child { display: none; }
-        .grid-trucks { grid-template-columns: 1fr; }
-        .grid-trucks .feature { aspect-ratio: 4/3; }
-        .grid-eve { grid-template-columns: 1fr; }
-        .grid-panel { aspect-ratio: 4/3; }
-        .wknd-latenight { grid-template-columns: 1fr; gap: 40px; padding: 80px 32px; }
-      }
-    </style>
   </head>
   <body>
     <div id="site-header"></div>
@@ -300,8 +61,8 @@
     <!-- CEREMONY -->
     <section class="wknd-dark">
       <div class="wknd-hdr fade-in">
-        <div>
-          <p class="section-eyebrow">Saturday</p>
+        <div class="moment-text">
+          <p class="moment-tag">Saturday</p>
           <h2>The<br /><em>Ceremony.</em></h2>
         </div>
         <p>
@@ -339,8 +100,8 @@
     <!-- COCKTAIL HOUR -->
     <section class="wknd-light">
       <div class="wknd-hdr fade-in">
-        <div>
-          <p class="section-eyebrow">After the Ceremony</p>
+        <div class="moment-text">
+          <p class="moment-tag">After the Ceremony</p>
           <h2 class="on-light">Cocktail<br /><em>Hour.</em></h2>
         </div>
         <p class="on-light">
@@ -385,8 +146,8 @@
     <!-- FOOD + DRINKS -->
     <section class="wknd-mid">
       <div class="wknd-hdr fade-in">
-        <div>
-          <p class="section-eyebrow">Dinner + Drinks</p>
+        <div class="moment-text">
+          <p class="moment-tag">Dinner + Drinks</p>
           <h2>Food trucks.<br /><em>Firelight.</em></h2>
         </div>
         <p>
@@ -433,14 +194,14 @@
     <!-- RECEPTION -->
     <section class="wknd-warm">
       <div class="wknd-hdr fade-in">
-        <div>
-          <p class="section-eyebrow">The Reception</p>
+        <div class="moment-text">
+          <p class="moment-tag">The Reception</p>
           <h2 class="on-light">Pie.<br /><em>Dancing.<br />All of it.</em></h2>
         </div>
         <p class="on-light">
           The barn fills up. Jackets come off. The dance floor doesn't stop.
           Somewhere along the way there's a dessert table, a coffee cart by
-          the door, and someone who changed into sneakers hours ago.
+          the door, and a pie that disappears faster than expected.
         </p>
       </div>
       <div class="grid-eve fade-in">
@@ -470,8 +231,8 @@
 
     <!-- LATE NIGHT -->
     <section class="wknd-latenight">
-      <div class="wknd-latenight-text fade-in">
-        <p class="section-eyebrow">Late Night</p>
+      <div class="wknd-latenight-text moment-text fade-in">
+        <p class="moment-tag">Late Night</p>
         <h2>The part<br /><em>nobody forgets.</em></h2>
         <p>
           The barn lights low. String lights out front. Someone swapped their
@@ -523,22 +284,5 @@
     <div id="site-footer"></div>
 
     <script src="assets/js/site.js"></script>
-    <script>
-      // Fade-in on scroll
-      const fadeObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((e) => {
-            if (e.isIntersecting) {
-              e.target.classList.add("visible");
-              fadeObserver.unobserve(e.target);
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
-      document
-        .querySelectorAll(".fade-in")
-        .forEach((el) => fadeObserver.observe(el));
-    </script>
   </body>
 </html>
