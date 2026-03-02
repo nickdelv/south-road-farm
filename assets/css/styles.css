@@ -592,6 +592,8 @@ footer {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--cream);
+  text-decoration: none;
+  display: block;
 }
 .footer-sub {
   font-size: 13px;
