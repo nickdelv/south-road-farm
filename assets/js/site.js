@@ -22,13 +22,18 @@
     // Scroll observer to toggle .scrolled class on nav
     const nav = document.getElementById("main-nav");
     const hero = document.getElementById("hero");
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        nav.classList.toggle("scrolled", !entry.isIntersecting);
-      },
-      { threshold: 0.05 },
-    );
-    observer.observe(hero);
+    if (hero) {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          nav.classList.toggle("scrolled", !entry.isIntersecting);
+        },
+        { threshold: 0.05 },
+      );
+      observer.observe(hero);
+    } else {
+      // No hero on this page — keep nav opaque always
+      nav.classList.add("scrolled");
+    }
   });
 
   loadInclude("site-footer", "footer.html");

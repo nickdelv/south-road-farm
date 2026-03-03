@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inquire — South Road Farm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <style>
+      /* ── Page header ── */
+      .inquire-header {
+        background: var(--forest);
+        padding: 160px 72px 100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: end;
+      }
+      .inquire-header h1 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(52px, 7vw, 96px);
+        font-weight: 300;
+        line-height: 1;
+        color: var(--white);
+        margin-top: 16px;
+      }
+      .inquire-header h1 em {
+        font-style: italic;
+      }
+      .inquire-header-right p {
+        font-family: "Jost", sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.9;
+        color: rgba(244, 239, 228, 0.6);
+        max-width: 400px;
+      }
+
+      /* ── Body layout ── */
+      .inquire-body {
+        background: var(--cream);
+        padding: 100px 72px 120px;
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 100px;
+        align-items: start;
+      }
+
+      /* ── Form ── */
+      .inquire-form-wrap {
+        width: 100%;
+      }
+
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+
+      .form-field {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 32px;
+      }
+
+      .form-field label {
+        font-family: "Jost", sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--forest);
+        margin-bottom: 10px;
+      }
+      .form-field label .req {
+        color: var(--amber);
+        margin-left: 2px;
+      }
+
+      .form-field input,
+      .form-field select,
+      .form-field textarea {
+        font-family: "Jost", sans-serif;
+        font-size: 15px;
+        font-weight: 300;
+        color: var(--forest);
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(58, 74, 48, 0.3);
+        padding: 10px 0;
+        outline: none;
+        transition: border-color 0.2s ease;
+        -webkit-appearance: none;
+        appearance: none;
+        border-radius: 0;
+        width: 100%;
+      }
+
+      .form-field select {
+        cursor: pointer;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%233a4a30' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 4px center;
+        padding-right: 24px;
+      }
+
+      .form-field input:focus,
+      .form-field select:focus,
+      .form-field textarea:focus {
+        border-bottom-color: var(--forest);
+      }
+
+      .form-field input::placeholder,
+      .form-field textarea::placeholder {
+        color: rgba(58, 74, 48, 0.35);
+      }
+
+      .form-field textarea {
+        resize: none;
+        min-height: 100px;
+        line-height: 1.7;
+      }
+
+      .form-submit {
+        margin-top: 8px;
+      }
+
+      .form-submit button {
+        font-family: "Jost", sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--cream);
+        background: var(--forest);
+        border: none;
+        padding: 18px 48px;
+        cursor: pointer;
+        transition:
+          background 0.2s ease,
+          color 0.2s ease;
+        width: 100%;
+      }
+
+      .form-submit button:hover {
+        background: var(--amber);
+      }
+
+      /* Success / error states */
+      .form-message {
+        display: none;
+        font-family: "Jost", sans-serif;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 1.8;
+        margin-top: 24px;
+        padding: 20px 24px;
+      }
+      .form-message.success {
+        color: var(--forest);
+        border-left: 2px solid var(--forest);
+      }
+      .form-message.error {
+        color: #8b2e2e;
+        border-left: 2px solid #8b2e2e;
+      }
+
+      /* ── Right column ── */
+      .inquire-aside {
+        padding-top: 8px;
+      }
+
+      .inquire-aside-block {
+        margin-bottom: 56px;
+      }
+
+      .inquire-aside-block:last-child {
+        margin-bottom: 0;
+      }
+
+      .aside-label {
+        font-family: "Jost", sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--amber);
+        margin-bottom: 16px;
+      }
+
+      .inquire-aside h3 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(28px, 3vw, 40px);
+        font-weight: 300;
+        line-height: 1.15;
+        color: var(--forest);
+        margin-bottom: 20px;
+      }
+      .inquire-aside h3 em {
+        font-style: italic;
+      }
+
+      .inquire-aside p {
+        font-family: "Jost", sans-serif;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 1.9;
+        color: var(--stone);
+      }
+
+      .aside-rule {
+        width: 40px;
+        height: 1px;
+        background: rgba(58, 74, 48, 0.2);
+        margin: 48px 0;
+      }
+
+      .inquire-contact-item {
+        margin-bottom: 20px;
+      }
+
+      .inquire-contact-item p {
+        margin-bottom: 4px;
+      }
+
+      .inquire-contact-item a {
+        font-family: "Jost", sans-serif;
+        font-size: 15px;
+        font-weight: 300;
+        color: var(--forest);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .inquire-contact-item a:hover {
+        color: var(--amber);
+      }
+
+      /* ── Thank you state ── */
+      .thank-you-state {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.6s ease;
+      }
+      .thank-you-state.visible {
+        display: block;
+        opacity: 1;
+      }
+      .ty-check {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        border: 1px solid rgba(58, 74, 48, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 36px;
+      }
+      .ty-check svg {
+        width: 22px;
+        height: 22px;
+        stroke: var(--amber);
+        stroke-width: 2;
+        fill: none;
+      }
+      .ty-headline {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(40px, 5vw, 68px);
+        font-weight: 300;
+        line-height: 1.05;
+        color: var(--forest);
+        margin-bottom: 24px;
+      }
+      .ty-headline em {
+        font-style: italic;
+      }
+      .ty-rule {
+        width: 40px;
+        height: 1px;
+        background: var(--amber);
+        margin-bottom: 28px;
+        opacity: 0.6;
+      }
+      .ty-body {
+        font-family: "Jost", sans-serif;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 1.9;
+        color: var(--stone);
+        max-width: 400px;
+        margin-bottom: 40px;
+      }
+      .ty-link {
+        font-family: "Jost", sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--forest);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+      .ty-link:hover {
+        color: var(--amber);
+      }
+
+      /* Fade out form */
+      .inquire-form-wrap {
+        transition: opacity 0.4s ease;
+      }
+      .inquire-form-wrap.fading {
+        opacity: 0;
+        pointer-events: none;
+      }
+      @media (max-width: 900px) {
+        .inquire-header {
+          grid-template-columns: 1fr;
+          gap: 24px;
+          padding: 120px 32px 72px;
+        }
+        .inquire-body {
+          grid-template-columns: 1fr;
+          gap: 64px;
+          padding: 72px 32px 80px;
+        }
+        .form-row {
+          grid-template-columns: 1fr;
+          gap: 0;
+        }
+        .inquire-aside {
+          padding-top: 0;
+          border-top: 1px solid rgba(58, 74, 48, 0.15);
+          padding-top: 48px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="site-header"></div>
+
+    <!-- PAGE HEADER -->
+    <section class="inquire-header">
+      <div>
+        <p class="section-eyebrow">Get in Touch</p>
+        <h1>Tell us about<br /><em>your day.</em></h1>
+      </div>
+      <div class="inquire-header-right">
+        <p>
+          Whether you have a date in mind or you're still figuring it out, we'd
+          love to hear from you. Fill out the form and we'll be back in touch —
+          usually within 24 hours.
+        </p>
+      </div>
+    </section>
+
+    <!-- BODY -->
+    <div class="inquire-body">
+      <!-- FORM -->
+      <div class="inquire-form-wrap" id="form-wrap">
+        <form id="inquire-form">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Your Name <span class="req">*</span></label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="First and last"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="email"
+                >Email Address <span class="req">*</span></label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="date">Wedding Date or Timeframe</label>
+              <input
+                type="text"
+                id="date"
+                name="wedding_date"
+                placeholder="e.g. Sept 2026, or TBD"
+              />
+            </div>
+            <div class="form-field">
+              <label for="guests">Approximate Guest Count</label>
+              <select id="guests" name="guest_count">
+                <option value="" disabled selected>Select a range</option>
+                <option value="under-50">Under 50</option>
+                <option value="50-75">50 – 75</option>
+                <option value="75-100">75 – 100</option>
+                <option value="100-125">100 – 125</option>
+                <option value="125-150">125 – 150</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="referral">How did you hear about us?</label>
+            <select id="referral" name="referral">
+              <option value="" disabled selected>Select one</option>
+              <option value="instagram">Instagram</option>
+              <option value="google">Google search</option>
+              <option value="friend">Friend or family referral</option>
+              <option value="wedding-site">
+                Wedding website (The Knot, Zola, etc.)
+              </option>
+              <option value="vendor">Vendor referral</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Anything else you'd like us to know?</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Tell us a little about what you're envisioning..."
+            ></textarea>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit">Send it our way</button>
+          </div>
+
+          <div class="form-message error" id="form-error">
+            Something went wrong. Please try again or email us directly at
+            <a href="mailto:hello@southroad.farm">hello@southroad.farm</a>.
+          </div>
+        </form>
+      </div>
+
+      <!-- THANK YOU STATE -->
+      <div class="thank-you-state" id="thank-you">
+        <div class="ty-check">
+          <svg viewBox="0 0 24 24">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <h2 class="ty-headline">We got it.<br /><em>Talk soon.</em></h2>
+        <div class="ty-rule"></div>
+        <p class="ty-body">
+          We'll be back in touch within 24 hours. In the meantime, if you
+          haven't yet, take a look at how the weekend unfolds.
+        </p>
+        <a href="weekend.html" class="ty-link">See the Weekend →</a>
+      </div>
+
+      <!-- ASIDE -->
+      <div class="inquire-aside">
+        <div class="inquire-aside-block">
+          <p class="aside-label">What happens next</p>
+          <h3>A conversation,<br /><em>not a pitch.</em></h3>
+          <p>
+            We'll reach out to introduce ourselves, answer any questions you
+            have, and share availability and pricing. If it feels like a good
+            fit on both sides, we'll set up a time to walk you through the
+            property in person.
+          </p>
+          <p style="margin-top: 16px">
+            No pressure, no hard sell. We keep the calendar small on purpose —
+            this only works if it's the right match.
+          </p>
+        </div>
+
+        <div class="aside-rule"></div>
+
+        <div class="inquire-aside-block">
+          <p class="aside-label">Reach us directly</p>
+          <div class="inquire-contact-item">
+            <p>Email</p>
+            <a href="mailto:hello@southroad.farm">hello@southroad.farm</a>
+          </div>
+          <div class="inquire-contact-item">
+            <p>Instagram</p>
+            <a
+              href="https://www.instagram.com/southroad.farm/"
+              target="_blank"
+              rel="noopener"
+              >@southroad.farm</a
+            >
+          </div>
+        </div>
+
+        <div class="aside-rule"></div>
+
+        <div class="inquire-aside-block">
+          <p class="aside-label">Location</p>
+          <p>220 South Road<br />Fayette, Maine 04349</p>
+          <p style="margin-top: 12px">About an hour north of Portland.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="site-footer"></div>
+
+    <script src="assets/js/site.js"></script>
+    <script>
+      // Form submission to Zapier
+      const form = document.getElementById("inquire-form");
+      const formWrap = document.getElementById("form-wrap");
+      const thankYou = document.getElementById("thank-you");
+      const errorMsg = document.getElementById("form-error");
+
+      // Replace this URL with your Zapier webhook URL
+      const ZAPIER_WEBHOOK = "YOUR_ZAPIER_WEBHOOK_URL_HERE";
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const btn = form.querySelector("button[type='submit']");
+        btn.textContent = "Sending…";
+        btn.disabled = true;
+
+        const data = {
+          name: form.name.value,
+          email: form.email.value,
+          wedding_date: form.wedding_date.value,
+          guest_count: form.guest_count.value,
+          referral: form.referral.value,
+          message: form.message.value,
+          submitted_at: new Date().toISOString(),
+        };
+
+        try {
+          await fetch(ZAPIER_WEBHOOK, {
+            method: "POST",
+            mode: "no-cors",
+            body: JSON.stringify(data),
+          });
+
+          // Fade out form, fade in thank you
+          formWrap.classList.add("fading");
+          setTimeout(() => {
+            formWrap.style.display = "none";
+            thankYou.style.display = "block";
+            // Force reflow then fade in
+            requestAnimationFrame(() => {
+              requestAnimationFrame(() => {
+                thankYou.classList.add("visible");
+              });
+            });
+          }, 400);
+        } catch (err) {
+          errorMsg.style.display = "block";
+          btn.textContent = "Send it our way";
+          btn.disabled = false;
+        }
+      });
+    </script>
+  </body>
+</html>

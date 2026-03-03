@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ — South Road Farm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <style>
+
+      /* ── Page header ── */
+      .faq-header {
+        background: var(--forest);
+        padding: 160px 72px 100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: end;
+      }
+      .faq-header-left h1 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(52px, 7vw, 96px);
+        font-weight: 300;
+        line-height: 1.0;
+        color: var(--white);
+        margin-top: 16px;
+      }
+      }
+      .faq-header-left h1 em { font-style: italic; }
+      .faq-header-right p {
+        font-family: "Jost", sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.9;
+        color: rgba(244, 239, 228, 0.6);
+        max-width: 400px;
+        align-self: end;
+      }
+
+      /* ── FAQ body ── */
+      .faq-body {
+        background: var(--cream);
+        padding: 0 72px 120px;
+      }
+
+      /* ── Group ── */
+      .faq-group {
+        border-top: 1px solid rgba(58, 74, 48, 0.15);
+        padding-top: 64px;
+        margin-top: 64px;
+      }
+      .faq-group:first-child {
+        border-top: none;
+        margin-top: 0;
+        padding-top: 80px;
+      }
+      .faq-group-label {
+        font-family: "Jost", sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--amber);
+        margin-bottom: 40px;
+      }
+
+      /* ── Accordion item ── */
+      .faq-item {
+        border-top: 1px solid rgba(58, 74, 48, 0.12);
+      }
+      .faq-item:last-child {
+        border-bottom: 1px solid rgba(58, 74, 48, 0.12);
+      }
+      .faq-question {
+        width: 100%;
+        background: none;
+        border: none;
+        padding: 28px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+        cursor: pointer;
+        text-align: left;
+      }
+      .faq-question-text {
+        font-family: "Jost", sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+        color: var(--forest);
+        line-height: 1.4;
+        transition: color 0.2s ease;
+      }
+      .faq-question:hover .faq-question-text {
+        color: var(--amber);
+      }
+      .faq-icon {
+        flex-shrink: 0;
+        width: 20px;
+        height: 20px;
+        position: relative;
+      }
+      .faq-icon::before,
+      .faq-icon::after {
+        content: "";
+        position: absolute;
+        background: var(--forest);
+        transition: transform 0.35s ease, opacity 0.35s ease;
+      }
+      .faq-icon::before {
+        width: 100%;
+        height: 1px;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+      .faq-icon::after {
+        width: 1px;
+        height: 100%;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+      }
+      .faq-item.open .faq-icon::after {
+        transform: translateX(-50%) rotate(90deg);
+        opacity: 0;
+      }
+      .faq-answer {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.4s ease;
+      }
+      .faq-answer-inner {
+        padding: 0 0 32px;
+        font-family: "Jost", sans-serif;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 1.9;
+        color: var(--stone);
+        max-width: 640px;
+      }
+      .faq-answer-inner a {
+        color: var(--forest);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+      .faq-answer-inner a:hover {
+        color: var(--amber);
+      }
+
+      /* ── Still have questions interstitial ── */
+      .faq-interstitial {
+        background: var(--forest);
+        padding: 80px 72px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+      }
+      .faq-interstitial p {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(28px, 3vw, 40px);
+        font-weight: 300;
+        font-style: italic;
+        color: var(--white);
+        line-height: 1.2;
+      }
+      .faq-interstitial a {
+        flex-shrink: 0;
+        align-self: center;
+      }
+
+      /* ── Responsive ── */
+      @media (max-width: 900px) {
+        .faq-header {
+          grid-template-columns: 1fr;
+          gap: 24px;
+          padding: 120px 32px 72px;
+        }
+        .faq-body { padding: 0 32px 80px; }
+        .faq-interstitial {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 64px 32px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="site-header"></div>
+
+    <!-- PAGE HEADER -->
+    <section class="faq-header">
+      <div class="faq-header-left">
+        <p class="section-eyebrow">Good to Know</p>
+        <h1>Common<br /><em>Questions.</em></h1>
+      </div>
+      <div class="faq-header-right">
+        <p>
+          Everything you need to know before you reach out — pricing, logistics,
+          what's included, and how the weekend actually works.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ BODY -->
+    <div class="faq-body">
+      <!-- GROUP 1: Pricing & Availability -->
+      <div class="faq-group">
+        <p class="faq-group-label">Pricing &amp; Availability</p>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text">How much does it cost?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Weekends at South Road Farm start at $12,000. That's a single,
+              all-in price — no à la carte fees, no vendor surcharges, no hidden
+              add-ons. You get the full property: both barns, the farmhouse, all
+              ceremony sites, and every outdoor space from Friday afternoon
+              through Sunday midday. Pricing varies by weekend, with peak dates
+              in September and October priced higher. Reach out and we'll send a
+              full breakdown.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text">When are you available?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              We book weddings May through October. We intentionally keep the
+              calendar small — a limited number of weekends per season — so that
+              every event gets our full attention. If you have a date in mind,
+              reach out early. Popular weekends, particularly in September and
+              October, tend to go first.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text"
+              >How long is the rental period?</span
+            >
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              The property is yours from Friday afternoon through Sunday at
+              noon. That includes time to arrive, set up, rehearse, get ready,
+              celebrate, and wind down — without feeling rushed at any point.
+              Sunday morning is part of every booking, not an add-on.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text">How do we hold a date?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Reach out through our <a href="contact.html">contact form</a> or
+              email us at
+              <a href="mailto:hello@southroad.farm">hello@southroad.farm</a>.
+              We'll follow up with availability and next steps. A signed
+              agreement and deposit officially hold your date.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GROUP 2: The Property -->
+      <div class="faq-group">
+        <p class="faq-group-label">The Property</p>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text"
+              >How many guests can the property accommodate?</span
+            >
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              South Road Farm comfortably hosts up to 150 guests. There's ample
+              space for dining, dancing, and gathering both indoors and out —
+              across two barns, multiple decks, the courtyard, and the
+              surrounding grounds.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text"
+              >What's included with the farmhouse?</span
+            >
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              The farmhouse is included in every weekend rental — no separate
+              fee. It sleeps 8–10 comfortably across 4 bedrooms and 2.5
+              bathrooms. It's perfect for the wedding party, immediate family,
+              or out-of-town guests who want to be on-site. You decide who stays
+              there.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text"
+              >Are there accommodations nearby for other guests?</span
+            >
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes — there are Airbnbs, inns, and hotels within 20–30 minutes of
+              the farm. We're happy to share a lodging guide with suggestions
+              once you're in the planning process.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text"
+              >Can we tour the property before booking?</span
+            >
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Absolutely — we encourage it. Reach out to schedule a private tour
+              and we'll walk you through the barns, farmhouse, ceremony sites,
+              and outdoor spaces. There's a lot to take in, and seeing it in
+              person makes all the difference.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GROUP 3: Planning & Vendors -->
+      <div class="faq-group">
+        <p class="faq-group-label">Planning &amp; Vendors</p>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text"
+              >Is a wedding planner required?</span
+            >
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes — we require that couples work with a professional wedding
+              planner or day-of coordinator. It's not a formality; it's what
+              allows everything to run smoothly and lets you actually be present
+              on the day. You're welcome to choose whoever aligns with your
+              vision and budget.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text">Can we hire our own caterer?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes. We don't require specific vendors, so you're free to bring in
+              a caterer that fits your taste and vision. The property is set up
+              well for food trucks, plated service, and buffet-style setups
+              alike — with power hookups, courtyard space, and room to make it a
+              proper scene.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text"
+              >Can we provide our own alcohol?</span
+            >
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes — many couples do. You'll need to hire a licensed and insured
+              bar service to handle the pour on the day of your event, but what
+              you stock the bar with is entirely up to you.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text"
+              >Is a shuttle service required?</span
+            >
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes. On-site parking accommodates around 50 vehicles, so for
+              larger guest lists a shuttle is required. It keeps traffic moving
+              smoothly and, honestly, makes for a better guest experience —
+              nobody's navigating dark country roads at the end of the night.
+              We're happy to share recommendations for local shuttle services.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GROUP 4: Day Of -->
+      <div class="faq-group">
+        <p class="faq-group-label">Day Of</p>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text"
+              >What are the music and noise guidelines?</span
+            >
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Per town ordinance, amplified music ends by 11:00 pm and all
+              non-overnight guests depart by 11:30 pm. After that, anyone
+              staying in the farmhouse is welcome to keep the evening going at
+              their own pace — the fire pit is yours, the kitchen is yours, the
+              night is yours.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text"
+              >Are there ceremony site options?</span
+            >
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes — two distinct options. An open-field site with panoramic
+              views in every direction, and a wooded site nestled into the trees
+              for something more intimate. Both include a hand-built wooden arch
+              and rows of wooden benches. We're happy to walk you through both
+              on a tour.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTERSTITIAL -->
+    <div class="faq-interstitial">
+      <p>Still have a question<br />we didn't answer?</p>
+      <a href="contact.html" class="btn-light">Get in Touch</a>
+    </div>
+
+    <!-- CTA -->
+    <section class="cta">
+      <p class="section-eyebrow">Ready to Talk?</p>
+      <h2>Your weekend<br /><em>starts here.</em></h2>
+      <p>
+        South Road Farm books a limited number of weddings each season — by
+        design. Reach out and we'll share availability, a full pricing
+        breakdown, and an invitation to come see it in person.
+      </p>
+      <div>
+        <a href="contact.html" class="btn-dark">Schedule a Tour</a>
+        <a href="farm.html" class="btn-outline">Read Our Story</a>
+      </div>
+    </section>
+
+    <div id="site-footer"></div>
+
+    <script src="assets/js/site.js"></script>
+    <script>
+      // Accordion
+      document.querySelectorAll(".faq-question").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const item = btn.closest(".faq-item");
+          const answer = item.querySelector(".faq-answer");
+          const isOpen = item.classList.contains("open");
+
+          // Close all
+          document.querySelectorAll(".faq-item.open").forEach((openItem) => {
+            openItem.classList.remove("open");
+            openItem.querySelector(".faq-answer").style.maxHeight = null;
+            openItem
+              .querySelector(".faq-question")
+              .setAttribute("aria-expanded", "false");
+          });
+
+          // Open clicked if it was closed
+          if (!isOpen) {
+            item.classList.add("open");
+            answer.style.maxHeight = answer.scrollHeight + "px";
+            btn.setAttribute("aria-expanded", "true");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
