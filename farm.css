@@ -1,0 +1,112 @@
+/* ── Two-column narrative block ── */
+.farm-narrative {
+  background: var(--cream);
+  padding: 120px 72px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+}
+.farm-narrative.reverse {
+  direction: rtl;
+}
+.farm-narrative.reverse > * {
+  direction: ltr;
+}
+.farm-narrative-text h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(38px, 4vw, 58px);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--forest);
+  margin: 16px 0 28px;
+}
+.farm-narrative-text h2 em {
+  font-style: italic;
+}
+.farm-narrative-text p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.95;
+  color: var(--stone);
+  max-width: 480px;
+}
+.farm-narrative-text p + p {
+  margin-top: 20px;
+}
+.farm-narrative-img {
+  overflow: hidden;
+}
+.farm-narrative-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s ease;
+}
+.farm-narrative-img:hover img {
+  transform: scale(1.03);
+}
+
+/* ── Dark narrative block ── */
+.farm-narrative.dark {
+  background: var(--forest);
+}
+.farm-narrative.dark .farm-narrative-text h2 {
+  color: var(--white);
+}
+.farm-narrative.dark .farm-narrative-text p {
+  color: rgba(244, 239, 228, 0.6);
+}
+
+/* ── Warm narrative block ── */
+.farm-narrative.warm {
+  background: var(--cream-warm);
+}
+
+/* ── Stats band ── */
+.farm-stats {
+  background: var(--forest-mid);
+  padding: 80px 72px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+.farm-stat {
+  text-align: center;
+}
+.farm-stat h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(40px, 4vw, 60px);
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.farm-stat p {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(244, 239, 228, 0.45);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .farm-narrative {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 80px 32px;
+  }
+  .farm-narrative.reverse {
+    direction: ltr;
+  }
+  .farm-narrative-text p {
+    max-width: 100%;
+  }
+  .farm-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+    padding: 64px 32px;
+  }
+}
