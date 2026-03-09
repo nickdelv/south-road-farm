@@ -381,6 +381,17 @@ nav.scrolled {
 .btn-light:hover {
   border-color: var(--cream);
 }
+.cta-secondary-link {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--stone);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.cta-secondary-wrap {
+  margin-top: 32px;
+}
 
 footer {
   background: var(--forest-mid);
