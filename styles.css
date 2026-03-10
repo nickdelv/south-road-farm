@@ -124,6 +124,7 @@ nav.scrolled {
   text-align: center;
   color: var(--white);
   animation: fadeUp 1.4s ease 0.4s both;
+  padding: 0 32px;
 }
 @keyframes fadeUp {
   from {
@@ -156,7 +157,7 @@ nav.scrolled {
 }
 .hero-sub {
   font-family: "Crimson Text", serif;
-  font-size: clamp(16px, 2vw, 22px);
+  font-size: clamp(19px, 2vw, 22px);
   font-weight: 300;
   font-style: italic;
   color: rgba(253, 251, 247, 0.82);
@@ -498,10 +499,6 @@ footer {
 .page-header {
   background: var(--forest);
   padding: 160px 72px 100px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: end;
 }
 
 .page-header h1 {
@@ -517,13 +514,14 @@ footer {
   font-style: italic;
 }
 
-.page-header-right p {
+.page-header-intro {
   font-family: "Jost", sans-serif;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.9;
   color: rgba(244, 239, 228, 0.6);
-  max-width: 400px;
+  max-width: 560px;
+  margin-top: 28px;
 }
 
 /* ── Hamburger button (hidden on desktop) ── */
@@ -595,6 +593,15 @@ footer {
 
 /* Mobile (<600px): full-screen fade */
 @media (max-width: 599px) {
+  nav {
+    padding: 20px 32px;
+  }
+  nav.scrolled {
+    padding: 16px 32px;
+  }
+  .hero-eyebrow {
+    text-shadow: 0 1px 16px rgba(0, 0, 0, 0.7);
+  }
   .nav-overlay {
     inset: 0;
     display: flex;
@@ -616,6 +623,18 @@ footer {
   .nav-overlay-links a {
     font-size: clamp(36px, 9vw, 40px);
     letter-spacing: 0.02em;
+  }
+
+  /* CTA buttons */
+  .btn-dark,
+  .btn-outline {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+  .btn-dark {
+    margin-bottom: 12px;
   }
 }
 
@@ -694,8 +713,6 @@ footer {
 
   /* Page header */
   .page-header {
-    grid-template-columns: 1fr;
-    gap: 24px;
     padding: 120px 32px 72px;
   }
 }
