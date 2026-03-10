@@ -1,15 +1,23 @@
-/* INTRO */
-.intro {
+/* ── Hero height override for index ── */
+.hero-index {
+  height: 85vh;
+}
+
+/* ── Intro section — copy + photos in one cream block ── */
+.intro-section {
   background: var(--cream);
-  padding: 120px 48px;
+  padding: 100px 48px 80px;
+}
+
+.intro {
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 80px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 72px;
 }
 .intro-text h2 {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Crimson Text", serif;
   font-size: clamp(40px, 4.5vw, 62px);
   font-weight: 300;
   line-height: 1.1;
@@ -30,7 +38,42 @@
   margin-top: 20px;
 }
 
-/* HERO (index-only elements) */
+.intro-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.intro-photo-cell {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+.intro-photo-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.intro-footer {
+  max-width: 1200px;
+  margin: 24px auto 0;
+}
+.intro-footer-link {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--stone);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.2s;
+}
+.intro-footer-link:hover {
+  color: var(--forest);
+}
+
+/* ── Hero index-only elements ── */
 .hero-meta {
   margin-top: 36px;
   font-size: 13px;
@@ -75,7 +118,7 @@
   }
 }
 
-/* PROPERTY */
+/* ── Property tease ── */
 .property-tease {
   background: var(--cream-warm);
   padding: 110px 48px;
@@ -85,7 +128,7 @@
   margin: 0 auto;
 }
 .property-tease h2 {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Crimson Text", serif;
   font-size: clamp(38px, 4vw, 60px);
   font-weight: 300;
   color: var(--forest);
@@ -102,20 +145,31 @@
   gap: 3px;
   margin-bottom: 64px;
 }
+
+/* ── Carousel ── */
 .prop-item {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 3/4;
+  aspect-ratio: 3 / 4;
 }
-.prop-item img {
+.prop-carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.prop-carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.45s ease;
+}
+.prop-carousel-track img {
+  flex: 0 0 100%;
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.7s ease;
-}
-.prop-item:hover img {
-  transform: scale(1.06);
 }
 .prop-label {
   position: absolute;
@@ -125,36 +179,95 @@
   padding: 28px 20px 20px;
   background: linear-gradient(transparent, rgba(23, 26, 18, 0.72));
   color: var(--white);
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
+  pointer-events: none;
 }
+.prop-carousel-prev,
+.prop-carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(23, 26, 18, 0.45);
+  color: var(--white);
+  border: none;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+  z-index: 2;
+}
+.prop-carousel-prev:hover,
+.prop-carousel-next:hover {
+  background: rgba(23, 26, 18, 0.72);
+}
+.prop-carousel-prev {
+  left: 10px;
+}
+.prop-carousel-next {
+  right: 10px;
+}
+.prop-carousel-dots {
+  position: absolute;
+  bottom: 44px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+.prop-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(253, 251, 247, 0.45);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
+}
+.prop-dot.active {
+  background: var(--white);
+}
+
+/* ── Stats ── */
 .stats-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
-  padding-top: 60px;
+  gap: 0;
+  margin: 40px 0 40px;
   border-top: 1px solid rgba(23, 26, 18, 0.12);
+  border-bottom: 1px solid rgba(23, 26, 18, 0.12);
 }
 .stat {
   text-align: center;
+  padding: 28px 20px;
+  border-right: 1px solid rgba(23, 26, 18, 0.12);
+}
+.stat:last-child {
+  border-right: none;
 }
 .stat h4 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 48px;
+  font-family: "Crimson Text", serif;
+  font-size: clamp(28px, 3vw, 40px);
   font-weight: 300;
   color: var(--forest);
   line-height: 1;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 .stat p {
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--stone);
 }
 
-/* STORY */
+/* ── Story panel ── */
 .story-panel {
   background: var(--forest);
   display: grid;
@@ -178,7 +291,7 @@
   padding: 88px 88px;
 }
 .story-text h2 {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Crimson Text", serif;
   font-size: clamp(36px, 3.5vw, 54px);
   font-weight: 300;
   color: var(--white);
@@ -195,4 +308,47 @@
   color: rgba(244, 239, 228, 0.6);
   margin-bottom: 44px;
   max-width: 460px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .intro-section {
+    padding: 80px 32px 64px;
+  }
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 48px;
+  }
+  .intro-photos {
+    grid-template-columns: 1fr 1fr;
+  }
+  .intro-photo-cell:last-child {
+    display: none;
+  }
+  .property-tease {
+    padding: 80px 32px;
+  }
+  .property-grid {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stat:nth-child(2) {
+    border-right: none;
+  }
+  .stat:nth-child(3) {
+    border-top: 1px solid rgba(23, 26, 18, 0.12);
+  }
+  .story-panel {
+    grid-template-columns: 1fr;
+  }
+  .story-img {
+    min-height: 320px;
+  }
+  .story-text {
+    padding: 64px 32px;
+  }
 }

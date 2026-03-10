@@ -156,7 +156,7 @@
 }
 
 .inquire-aside h3 {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Crimson Text", serif;
   font-size: clamp(28px, 3vw, 40px);
   font-weight: 300;
   line-height: 1.15;
@@ -231,7 +231,7 @@
   fill: none;
 }
 .ty-headline {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Crimson Text", serif;
   font-size: clamp(40px, 5vw, 68px);
   font-weight: 300;
   line-height: 1.05;

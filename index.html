@@ -7,17 +7,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&family=Jost:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="stylesheet" href="styles.css?v=2" />
-    <link rel="stylesheet" href="index.css?v=2" />
+    <link rel="stylesheet" href="styles.css?v=3" />
+    <link rel="stylesheet" href="index.css?v=3" />
   </head>
   <body>
     <div id="site-header"></div>
 
-    <section class="hero" id="hero">
+    <!-- HERO -->
+    <section class="hero hero-index" id="hero">
       <div
         class="hero-bg"
         style="background-image: url(&quot;assets/images/image14.jpg&quot;)"
@@ -40,7 +41,8 @@
       </div>
     </section>
 
-    <section style="background: var(--cream)">
+    <!-- INTRO + PHOTOS — single cream section -->
+    <section class="intro-section">
       <div class="intro">
         <div>
           <p class="section-eyebrow" style="padding-top: 12px">
@@ -63,74 +65,34 @@
           </p>
         </div>
       </div>
+      <div class="intro-photos">
+        <div class="intro-photo-cell">
+          <img
+            src="assets/images/image9.jpg"
+            alt="Friday evening welcome drinks at golden hour"
+          />
+        </div>
+        <div class="intro-photo-cell">
+          <img
+            src="assets/images/image10.jpg"
+            alt="Saturday night at the food trucks"
+          />
+        </div>
+        <div class="intro-photo-cell">
+          <img
+            src="assets/images/image8.jpg"
+            alt="Sunday morning at the farmhouse"
+          />
+        </div>
+      </div>
+      <div class="intro-footer">
+        <a href="weekend.html" class="intro-footer-link"
+          >See how the weekend unfolds →</a
+        >
+      </div>
     </section>
 
-    <div class="arc-header">
-      <span class="section-eyebrow">Friday through Sunday</span>
-      <h2>Three days.<br /><em>Entirely yours.</em></h2>
-    </div>
-
-    <div class="moment">
-      <div class="moment-img">
-        <img
-          src="assets/images/image9.jpg"
-          alt="Friday evening welcome drinks"
-        />
-      </div>
-      <div class="moment-text">
-        <p class="moment-tag">Friday Evening</p>
-        <h3>Arrive.<br /><em>Settle in.</em></h3>
-        <div class="moment-rule"></div>
-        <p>
-          Your people trickle in through the afternoon. The farmhouse fills up.
-          Someone opens a bottle. The bar is set up in the courtyard and welcome
-          drinks happen without an agenda — just the first golden hour of a long
-          weekend taking shape exactly as it should.
-        </p>
-      </div>
-    </div>
-
-    <div class="moment reverse">
-      <div class="moment-img">
-        <img
-          src="assets/images/image10.jpg"
-          alt="Saturday night at the taco truck"
-        />
-      </div>
-      <div class="moment-text">
-        <p class="moment-tag">Saturday Night</p>
-        <h3>No script.<br /><em>Just the party.</em></h3>
-        <div class="moment-rule"></div>
-        <p>
-          The ceremony is done. The first dance is done. Now comes the part
-          nobody forgets — food trucks in the courtyard, the bar still open,
-          music turned all the way up, jackets shed hours ago. When the music
-          winds down, the people staying in the farmhouse don't go home. They
-          just go inside. The night finds its own pace.
-        </p>
-      </div>
-    </div>
-
-    <div class="moment">
-      <div class="moment-img">
-        <img
-          src="assets/images/image8.jpg"
-          alt="Sunday morning in the farmhouse"
-        />
-      </div>
-      <div class="moment-text">
-        <p class="moment-tag">Sunday Morning</p>
-        <h3>Slow down.<br /><em>Linger a little.</em></h3>
-        <div class="moment-rule"></div>
-        <p>
-          The farmhouse kitchen. Coffee. Whatever's left over from the night
-          before. No rush, no checkout pressure. Sunday morning at South Road
-          Farm is part of every booking — a few last unhurried hours before the
-          weekend releases you back to the world.
-        </p>
-      </div>
-    </div>
-
+    <!-- FULL BLEED -->
     <div class="full-bleed">
       <img
         src="assets/images/image7.jpg"
@@ -138,52 +100,101 @@
       />
       <div class="full-bleed-overlay">
         <p class="full-bleed-quote">
-          Not a ballroom. Not a barn rental.<br />Something different.
+          Shoes off. Music up.<br /><em>Nowhere to be.</em>
         </p>
       </div>
     </div>
 
+    <!-- PROPERTY -->
     <section class="property-tease">
       <div class="property-inner">
         <p class="section-eyebrow">The Property</p>
         <h2>
           66 acres designed to be<br /><em>moved through, not sat in.</em>
         </h2>
-        <div class="property-grid">
-          <div class="prop-item">
-            <img src="assets/images/image16.jpg" alt="The barns" />
-            <div class="prop-label">The Barns</div>
-          </div>
-          <div class="prop-item">
-            <img src="assets/images/image17.jpg" alt="Ceremony on the lawn" />
-            <div class="prop-label">Ceremony Sites</div>
-          </div>
-          <div class="prop-item">
-            <img src="assets/images/image11.jpg" alt="The farmhouse" />
-            <div class="prop-label">The Farmhouse</div>
-          </div>
-        </div>
         <div class="stats-row">
           <div class="stat">
-            <h4>66</h4>
-            <p>Private acres</p>
+            <h4>$12k+</h4>
+            <p>Full weekend, starting price</p>
           </div>
           <div class="stat">
             <h4>150</h4>
             <p>Guest capacity</p>
           </div>
           <div class="stat">
-            <h4>$12k+</h4>
-            <p>Full weekend, starting price</p>
+            <h4>3 days</h4>
+            <p>Friday through Sunday</p>
           </div>
           <div class="stat">
-            <h4>1793</h4>
-            <p>Est. Fayette, Maine</p>
+            <h4>Sleeps 10</h4>
+            <p>On-site farmhouse, included</p>
+          </div>
+        </div>
+        <div class="property-grid">
+          <div class="prop-item">
+            <div class="prop-carousel" data-carousel>
+              <div class="prop-carousel-track">
+                <img src="assets/images/image16.jpg" alt="The barns" />
+                <img src="assets/images/image17.jpg" alt="The ceremony lawn" />
+                <img src="assets/images/image11.jpg" alt="The farmhouse" />
+              </div>
+              <div class="prop-carousel-dots"></div>
+              <button class="prop-carousel-prev" aria-label="Previous">
+                &#8592;
+              </button>
+              <button class="prop-carousel-next" aria-label="Next">
+                &#8594;
+              </button>
+            </div>
+            <div class="prop-label">The Barns</div>
+          </div>
+
+          <div class="prop-item">
+            <div class="prop-carousel" data-carousel>
+              <div class="prop-carousel-track">
+                <img
+                  src="assets/images/image17.jpg"
+                  alt="Ceremony on the lawn"
+                />
+                <img src="assets/images/image11.jpg" alt="The farmhouse" />
+                <img src="assets/images/image16.jpg" alt="The barns" />
+              </div>
+              <div class="prop-carousel-dots"></div>
+              <button class="prop-carousel-prev" aria-label="Previous">
+                &#8592;
+              </button>
+              <button class="prop-carousel-next" aria-label="Next">
+                &#8594;
+              </button>
+            </div>
+            <div class="prop-label">Ceremony Sites</div>
+          </div>
+
+          <div class="prop-item">
+            <div class="prop-carousel" data-carousel>
+              <div class="prop-carousel-track">
+                <img src="assets/images/image11.jpg" alt="The farmhouse" />
+                <img src="assets/images/image16.jpg" alt="The barns" />
+                <img
+                  src="assets/images/image17.jpg"
+                  alt="Ceremony on the lawn"
+                />
+              </div>
+              <div class="prop-carousel-dots"></div>
+              <button class="prop-carousel-prev" aria-label="Previous">
+                &#8592;
+              </button>
+              <button class="prop-carousel-next" aria-label="Next">
+                &#8594;
+              </button>
+            </div>
+            <div class="prop-label">The Farmhouse</div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- STORY -->
     <section class="story-panel">
       <div class="story-img">
         <img src="assets/images/image4.jpg" alt="Dancing at the reception" />
@@ -199,10 +210,11 @@
           hand, largely himself. This place has the feeling it has because of
           how it was made.
         </p>
-        <a href="#" class="btn-light">Read the Full Story</a>
+        <a href="farm.html" class="btn-light">Read the Full Story</a>
       </div>
     </section>
 
+    <!-- CTA -->
     <section class="cta">
       <p class="section-eyebrow">Ready to Talk?</p>
       <h2>We host a handful of<br />weddings <em>each season.</em></h2>
@@ -225,6 +237,50 @@
 
     <div id="site-footer"></div>
 
-    <script src="site.js?v=2"></script>
+    <script src="site.js?v=3"></script>
+    <script>
+      // Property carousel — single image today, multi-image ready
+      document.querySelectorAll("[data-carousel]").forEach(function (carousel) {
+        const track = carousel.querySelector(".prop-carousel-track");
+        const imgs = track.querySelectorAll("img");
+        const dotsWrap = carousel.querySelector(".prop-carousel-dots");
+        const prev = carousel.querySelector(".prop-carousel-prev");
+        const next = carousel.querySelector(".prop-carousel-next");
+
+        if (imgs.length <= 1) {
+          prev.style.display = "none";
+          next.style.display = "none";
+          dotsWrap.style.display = "none";
+          return;
+        }
+
+        let current = 0;
+
+        imgs.forEach(function (_, i) {
+          const dot = document.createElement("button");
+          dot.className = "prop-dot" + (i === 0 ? " active" : "");
+          dot.setAttribute("aria-label", "Go to image " + (i + 1));
+          dot.addEventListener("click", function () {
+            goTo(i);
+          });
+          dotsWrap.appendChild(dot);
+        });
+
+        function goTo(n) {
+          current = (n + imgs.length) % imgs.length;
+          track.style.transform = "translateX(-" + current * 100 + "%)";
+          dotsWrap.querySelectorAll(".prop-dot").forEach(function (d, i) {
+            d.classList.toggle("active", i === current);
+          });
+        }
+
+        prev.addEventListener("click", function () {
+          goTo(current - 1);
+        });
+        next.addEventListener("click", function () {
+          goTo(current + 1);
+        });
+      });
+    </script>
   </body>
 </html>

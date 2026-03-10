@@ -48,7 +48,7 @@ nav.scrolled {
   padding: 18px 48px;
 }
 .nav-wordmark {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Crimson Text", serif;
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.18em;
@@ -141,7 +141,7 @@ nav.scrolled {
   font-weight: 400;
 }
 .hero-title {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Crimson Text", serif;
   font-size: clamp(60px, 9vw, 120px);
   font-weight: 300;
   line-height: 0.95;
@@ -151,7 +151,7 @@ nav.scrolled {
   font-style: italic;
 }
 .hero-sub {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Crimson Text", serif;
   font-size: clamp(16px, 2vw, 22px);
   font-weight: 300;
   font-style: italic;
@@ -181,7 +181,7 @@ nav.scrolled {
   display: block;
 }
 .arc-header h2 {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Crimson Text", serif;
   font-size: clamp(44px, 5.5vw, 80px);
   font-weight: 300;
   color: var(--white);
@@ -232,7 +232,7 @@ nav.scrolled {
   margin-bottom: 22px;
 }
 .moment-text h3 {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Crimson Text", serif;
   font-size: clamp(40px, 4vw, 60px);
   font-weight: 300;
   color: var(--white);
@@ -296,7 +296,7 @@ nav.scrolled {
   justify-content: center;
 }
 .full-bleed-quote {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Crimson Text", serif;
   font-size: clamp(28px, 4vw, 54px);
   font-weight: 300;
   font-style: italic;
@@ -314,7 +314,7 @@ nav.scrolled {
   text-align: center;
 }
 .cta h2 {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Crimson Text", serif;
   font-size: clamp(44px, 5.5vw, 80px);
   font-weight: 300;
   color: var(--forest);
@@ -402,7 +402,7 @@ footer {
   align-items: start;
 }
 .footer-mark {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Crimson Text", serif;
   font-size: 26px;
   font-weight: 300;
   letter-spacing: 0.15em;
@@ -495,7 +495,7 @@ footer {
 }
 
 .page-header h1 {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Crimson Text", serif;
   font-size: clamp(52px, 7vw, 96px);
   font-weight: 300;
   line-height: 1;
