@@ -134,7 +134,7 @@
 
 /* ── Right column ── */
 .inquire-aside {
-  padding-top: 8px;
+  padding-top: 0px;
 }
 
 .inquire-aside-block {
@@ -173,6 +173,9 @@
   font-weight: 300;
   line-height: 1.9;
   color: var(--stone);
+}
+.inquire-aside-block p + p {
+  margin-top: 16px;
 }
 
 .aside-rule {

@@ -94,6 +94,9 @@
   color: rgba(244, 239, 228, 0.6);
   max-width: 400px;
 }
+.wknd-row.dark .wknd-row-text .section-eyebrow {
+  color: var(--amber);
+}
 .wknd-row.dark .wknd-row-text p + p {
   margin-top: 16px;
 }
