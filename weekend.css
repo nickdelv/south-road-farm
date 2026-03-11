@@ -14,7 +14,7 @@
 }
 .hero-weekend .hero-content {
   text-align: left;
-  padding: 0 72px 80px;
+  padding: 0 var(--pad-x-wide) var(--pad-v-sm);
 }
 .hero-weekend .hero-title {
   font-size: clamp(64px, 10vw, 128px);
@@ -34,7 +34,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 72px;
+  padding: var(--pad-v-sm) var(--pad-x-wide);
 }
 .wknd-row-img {
   overflow: hidden;
@@ -126,7 +126,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 52px 72px;
+  padding: 52px var(--pad-x-wide);
 }
 .wknd-panel-overlay p {
   font-family: "Crimson Text", serif;
@@ -141,15 +141,9 @@
 
 /* ── Responsive ── */
 @media (max-width: 900px) {
-  .hero-weekend .hero-content {
-    padding: 0 32px 56px;
-  }
   .wknd-row {
     grid-template-columns: 1fr;
     height: auto;
-  }
-  .wknd-row-text {
-    padding: 52px 32px;
   }
   .wknd-row-img {
     height: 320px;
@@ -161,6 +155,6 @@
     height: 320px;
   }
   .wknd-panel-overlay {
-    padding: 36px 32px;
+    padding: 36px var(--pad-x-wide);
   }
 }

@@ -1,7 +1,7 @@
 /* ── Body layout ── */
 .inquire-body {
   background: var(--cream);
-  padding: 100px 72px 120px;
+  padding: var(--pad-v) var(--pad-x-wide) var(--pad-v);
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 100px;
@@ -278,7 +278,6 @@
   .inquire-body {
     grid-template-columns: 1fr;
     gap: 64px;
-    padding: 72px 32px 80px;
   }
   .form-row {
     grid-template-columns: 1fr;

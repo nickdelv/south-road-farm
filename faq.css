@@ -6,7 +6,7 @@
 /* ── FAQ body ── */
 .faq-body {
   background: var(--cream);
-  padding: 0 72px 120px;
+  padding: 0 var(--pad-x-wide) var(--pad-v);
 }
 
 /* ── Group ── */
@@ -113,7 +113,7 @@
 /* ── Still have questions interstitial ── */
 .faq-interstitial {
   background: var(--forest);
-  padding: 80px 72px;
+  padding: var(--pad-v-sm) var(--pad-x-wide);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -134,12 +134,8 @@
 
 /* ── Responsive ── */
 @media (max-width: 900px) {
-  .faq-body {
-    padding: 0 32px 80px;
-  }
   .faq-interstitial {
     flex-direction: column;
     align-items: flex-start;
-    padding: 64px 32px;
   }
 }

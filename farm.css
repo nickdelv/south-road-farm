@@ -1,7 +1,7 @@
 /* ── Two-column narrative block ── */
 .farm-narrative {
   background: var(--cream);
-  padding: 120px 72px;
+  padding: var(--pad-v) var(--pad-x-wide);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 100px;
@@ -77,7 +77,7 @@
 /* ── Timeline ── */
 .farm-timeline {
   background: var(--forest);
-  padding: 120px 72px;
+  padding: var(--pad-v) var(--pad-x-wide);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 100px;
@@ -173,7 +173,6 @@
   .farm-narrative {
     grid-template-columns: 1fr;
     gap: 48px;
-    padding: 80px 32px;
   }
   .farm-narrative.reverse {
     direction: ltr;
@@ -184,7 +183,6 @@
   .farm-timeline {
     grid-template-columns: 1fr;
     gap: 48px;
-    padding: 80px 32px;
   }
   .farm-timeline-entries {
     padding-left: 24px;
@@ -206,5 +204,11 @@
   .full-bleed-bare.medium {
     height: 66vw;
     min-height: 260px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .farm-narrative-img {
+    height: 520px;
   }
 }
