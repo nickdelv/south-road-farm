@@ -7,11 +7,8 @@
   gap: 100px;
   align-items: center;
 }
-.farm-narrative.reverse {
-  direction: rtl;
-}
-.farm-narrative.reverse > * {
-  direction: ltr;
+.farm-narrative.reverse .farm-narrative-img {
+  order: 2;
 }
 .farm-narrative-text h2 {
   font-family: "Crimson Text", serif;
@@ -36,6 +33,13 @@
 }
 .farm-narrative-img {
   overflow: hidden;
+  max-height: 75vh;
+}
+.farm-narrative-img.portrait-3-4 {
+  aspect-ratio: 3 / 4;
+}
+.farm-narrative-img.portrait-4-5 {
+  aspect-ratio: 4 / 5;
 }
 .farm-narrative-img img {
   width: 100%;
@@ -52,7 +56,7 @@
   color: var(--white);
 }
 .farm-narrative.dark .farm-narrative-text p {
-  color: rgba(244, 239, 228, 0.6);
+  color: rgba(var(--cream-rgb), 0.6);
 }
 
 /* ── Full-bleed image ── */
@@ -98,7 +102,7 @@
   font-size: 16px;
   font-weight: 300;
   line-height: 1.95;
-  color: rgba(244, 239, 228, 0.6);
+  color: rgba(var(--cream-rgb), 0.6);
 }
 
 /* Spine + entries */
@@ -165,7 +169,7 @@
   font-weight: 400;
   font-style: italic;
   line-height: 1.4;
-  color: rgba(244, 239, 228, 0.75);
+  color: rgba(var(--cream-rgb), 0.75);
 }
 
 /* ── Responsive ── */
@@ -174,8 +178,8 @@
     grid-template-columns: 1fr;
     gap: 48px;
   }
-  .farm-narrative.reverse {
-    direction: ltr;
+  .farm-narrative.reverse .farm-narrative-img {
+    order: 0;
   }
   .farm-narrative-text p {
     max-width: 100%;
@@ -210,5 +214,6 @@
 @media (min-width: 600px) and (max-width: 900px) {
   .farm-narrative-img {
     height: 520px;
+    max-height: none;
   }
 }

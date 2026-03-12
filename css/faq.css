@@ -1,8 +1,3 @@
-/* ── faq-header-right: extra property not in shared .page-header-right rule ── */
-.faq-header-right p {
-  align-self: end;
-}
-
 /* ── FAQ body ── */
 .faq-body {
   background: var(--cream);
@@ -29,7 +24,7 @@
 
 /* ── Accordion item ── */
 .faq-item {
-  border-top: 1px solid rgba(58, 74, 48, 0.12);
+  border-top: 1px solid rgba(var(--forest-ui-rgb), 0.12);
 }
 .faq-question {
   width: 100%;
@@ -115,8 +110,8 @@
   background: var(--forest);
   padding: var(--pad-v-sm) var(--pad-x-wide);
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 40px;
 }
 .faq-interstitial p {
@@ -126,16 +121,4 @@
   font-style: italic;
   color: var(--white);
   line-height: 1.2;
-}
-.faq-interstitial a {
-  flex-shrink: 0;
-  align-self: center;
-}
-
-/* ── Responsive ── */
-@media (max-width: 900px) {
-  .faq-interstitial {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }

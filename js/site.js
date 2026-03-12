@@ -10,7 +10,7 @@
       });
   }
 
-  loadInclude("site-header", "header.html", function () {
+  loadInclude("site-header", "components/header.html", function () {
     // Active nav link
     const page = location.pathname.split("/").pop() || "index.html";
     document
@@ -82,7 +82,7 @@
     }
   });
 
-  loadInclude("site-footer", "footer.html");
+  loadInclude("site-footer", "components/footer.html");
 
   // Fade-in on scroll — applies to any .fade-in element on any page
   const fadeObserver = new IntersectionObserver(

@@ -7,8 +7,8 @@
 .hero-weekend .hero-overlay {
   background: linear-gradient(
     to top,
-    rgba(23, 26, 18, 0.72) 0%,
-    rgba(23, 26, 18, 0.15) 55%,
+    rgba(var(--forest-rgb), 0.72) 0%,
+    rgba(var(--forest-rgb), 0.15) 55%,
     transparent 100%
   );
 }
@@ -91,7 +91,7 @@
   font-size: 16px;
   font-weight: 300;
   line-height: 1.9;
-  color: rgba(244, 239, 228, 0.6);
+  color: rgba(var(--cream-rgb), 0.6);
   max-width: 400px;
 }
 .wknd-row.dark .wknd-row-text .section-eyebrow {
@@ -121,7 +121,7 @@
 .wknd-panel-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(23, 26, 18, 0.38);
+  background: rgba(var(--forest-rgb), 0.38);
   display: flex;
   align-items: center;
   justify-content: center;
