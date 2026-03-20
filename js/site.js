@@ -1,4 +1,7 @@
 (function () {
+  const APPS_SCRIPT_URL =
+    "https://script.google.com/macros/s/AKfycbxKeE-Atv4v1tFV__MsKn5AxYBF1QdHPhs1xXFMQbTwENMEqRw2YazRvrwogLqIzho/exec";
+
   function loadInclude(id, file, onLoad) {
     fetch(file)
       .then(function (r) {
@@ -82,7 +85,38 @@
     }
   });
 
-  loadInclude("site-footer", "components/footer.html");
+  loadInclude("site-footer", "components/footer.html", function () {
+    // Subscribe form — wired up after footer loads
+    const subscribeForm = document.getElementById("subscribe-form");
+    if (!subscribeForm) return;
+
+    subscribeForm.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const email = document.getElementById("subscribe-email").value.trim();
+      const row = document.getElementById("subscribe-row");
+      const success = document.getElementById("subscribe-success");
+      const btn = subscribeForm.querySelector("button");
+
+      btn.disabled = true;
+      btn.textContent = "\u2026";
+
+      const body = new URLSearchParams({ type: "subscribe", email });
+
+      try {
+        await fetch(APPS_SCRIPT_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: body.toString(),
+        });
+      } catch (err) {
+        // Apps Script returns a CORS error even on success — show success anyway
+      }
+
+      row.style.display = "none";
+      success.style.display = "block";
+    });
+  });
 
   // Fade-in on scroll — applies to any .fade-in element on any page
   const fadeObserver = new IntersectionObserver(
