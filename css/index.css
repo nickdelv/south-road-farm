@@ -202,7 +202,7 @@
   padding: 28px 20px;
   background: var(--cream-warm);
 }
-.stat h4 {
+.stat h3 {
   font-family: "Crimson Text", serif;
   font-size: clamp(28px, 3vw, 40px);
   font-weight: 300;
