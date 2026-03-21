@@ -49,9 +49,12 @@ nav {
   background: rgba(var(--forest-rgb), 0.5);
   transition: padding 0.4s ease;
 }
+nav.nav-opaque,
+nav.scrolled {
+  background: rgba(var(--forest-rgb), 0.95);
+}
 nav.scrolled {
   padding: 18px var(--pad-x);
-  background: rgba(var(--forest-rgb), 0.95);
 }
 .nav-wordmark {
   font-family: "Crimson Text", serif;
@@ -147,7 +150,7 @@ nav.scrolled {
   }
 }
 .hero-eyebrow {
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: 0.32em;
   text-transform: uppercase;
   color: rgba(253, 251, 247, 0.9);
@@ -178,7 +181,7 @@ nav.scrolled {
 
 /* SECTION EYEBROW */
 .section-eyebrow {
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--amber);
@@ -324,6 +327,9 @@ footer {
   font-size: 15px;
   color: rgba(var(--cream-rgb), 0.5);
   line-height: 1.85;
+}
+footer > div:first-child > .footer-info {
+  margin-top: 28px;
 }
 .footer-info a {
   color: var(--amber-light);
@@ -606,12 +612,15 @@ footer {
 }
 
 /* ── Footer subscribe form ── */
-footer {
-  grid-template-columns: 1fr 1fr 1fr 1fr; /* extend to 4 cols */
-}
-
 .footer-subscribe {
   max-width: 360px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 599px) {
+  .footer-subscribe {
+    max-width: none;
+  }
 }
 
 .footer-subscribe-label {
@@ -717,11 +726,5 @@ footer {
 @media (max-width: 900px) {
   footer {
     grid-template-columns: 1fr; /* already set, this reinforces */
-  }
-}
-
-@media (max-width: 599px) {
-  .footer-subscribe {
-    max-width: none;
   }
 }

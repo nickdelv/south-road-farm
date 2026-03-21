@@ -80,8 +80,18 @@
       );
       observer.observe(hero);
     } else {
-      // No hero on this page — keep nav opaque always
-      nav.classList.add("scrolled");
+      // No hero — opaque background immediately, collapse on scroll past page header
+      nav.classList.add("nav-opaque");
+      const pageHeader = document.querySelector(".page-header");
+      if (pageHeader) {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            nav.classList.toggle("scrolled", !entry.isIntersecting);
+          },
+          { threshold: 0.05 },
+        );
+        observer.observe(pageHeader);
+      }
     }
   });
 
