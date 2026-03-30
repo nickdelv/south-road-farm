@@ -85,7 +85,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 100px;
-  align-items: start;
+  align-items: center;
 }
 .farm-timeline-header h2 {
   font-family: "Crimson Text", serif;
@@ -155,7 +155,7 @@
 .timeline-year {
   display: block;
   font-family: "Jost", sans-serif;
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -170,6 +170,92 @@
   font-style: italic;
   line-height: 1.4;
   color: rgba(var(--cream-rgb), 0.75);
+}
+
+/* ── Pull quotes ── */
+.farm-quote {
+  margin: 28px 0;
+  padding-left: 20px;
+  border-left: 1px solid var(--amber);
+  max-width: 480px;
+}
+
+.farm-quote p {
+  font-family: "Crimson Text", serif;
+  font-size: clamp(17px, 1.5vw, 20px);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--forest);
+}
+
+.farm-quote cite {
+  display: block;
+  font-family: "Jost", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-top: 12px;
+}
+
+/* Dark variant — used inside .farm-narrative.dark if ever needed */
+.farm-narrative.dark .farm-quote p {
+  color: rgba(var(--cream-rgb), 0.75);
+}
+
+/* ── Stacked image column ── */
+.farm-narrative-img-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Remove max-height constraint on stacked children */
+.farm-narrative-img-stack .farm-narrative-img {
+  max-height: none;
+}
+
+/* Landscape aspect ratios */
+.farm-narrative-img.landscape-3-2 {
+  aspect-ratio: 3 / 2;
+}
+
+.farm-narrative-img.landscape-sketch {
+  aspect-ratio: 4 / 3;
+}
+
+/* ── Collage stack: tilted middle photo overlapping neighbors ── */
+.farm-narrative-img-stack.collage {
+  gap: 0;
+  padding: 0 12px;
+}
+
+.farm-narrative-img-stack.collage .farm-narrative-img {
+  position: relative;
+  z-index: 0;
+}
+
+.farm-narrative-img-stack.collage .farm-narrative-img:nth-child(2) {
+  transform: rotate(-2.5deg);
+  z-index: 1;
+  margin-top: -24px;
+  margin-bottom: -24px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ── Timeline historical photo ── */
+.farm-timeline-photo {
+  margin-top: 48px;
+  overflow: hidden;
+}
+
+.farm-timeline-photo img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 /* ── Responsive ── */
@@ -209,6 +295,12 @@
     height: 66vw;
     min-height: 260px;
   }
+  .farm-narrative-img-stack:not(.collage) {
+    gap: 8px;
+  }
+  .farm-timeline-photo {
+    margin-top: 32px;
+  }
 }
 
 @media (min-width: 600px) and (max-width: 900px) {
@@ -216,39 +308,4 @@
     height: 520px;
     max-height: none;
   }
-}
-
-/* ── Pull quotes ── */
-.farm-quote {
-  margin: 28px 0;
-  padding-left: 20px;
-  border-left: 1px solid var(--amber);
-  max-width: 480px;
-}
-
-.farm-quote p {
-  font-family: "Crimson Text", serif;
-  font-size: clamp(17px, 1.5vw, 20px);
-  font-weight: 400;
-  font-style: italic;
-  line-height: 1.7;
-  color: var(--forest);
-  max-width: 480px;
-}
-
-.farm-quote cite {
-  display: block;
-  font-family: "Jost", sans-serif;
-  font-size: 11px;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--amber);
-  margin-top: 12px;
-}
-
-/* Dark variant — used inside .farm-narrative.dark if ever needed */
-.farm-narrative.dark .farm-quote p {
-  color: rgba(var(--cream-rgb), 0.75);
 }

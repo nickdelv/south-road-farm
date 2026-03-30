@@ -8,6 +8,9 @@ const thankYou = document.getElementById("thank-you");
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
 
+  // Honeypot
+  if (form.website.value) return;
+
   const btn = form.querySelector("button[type='submit']");
   btn.textContent = "Sending\u2026";
   btn.disabled = true;

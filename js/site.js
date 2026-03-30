@@ -103,6 +103,9 @@
     subscribeForm.addEventListener("submit", async function (e) {
       e.preventDefault();
 
+      // Honeypot
+      if (document.getElementById("subscribe-website").value) return;
+
       const email = document.getElementById("subscribe-email").value.trim();
       const row = document.getElementById("subscribe-row");
       const success = document.getElementById("subscribe-success");
