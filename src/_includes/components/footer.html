@@ -1,19 +1,24 @@
 <footer>
   <div>
-    <a href="index.html" class="footer-mark">South Road Farm</a>
+    <a href="/" class="footer-mark">{{ client.name }}</a>
     <div class="footer-sub">Fayette, Maine</div>
     <div class="footer-info">
       <p>
-        <a href="mailto:hello@southroad.farm">hello@southroad.farm</a>
+        <a href="mailto:{{ client.email }}">{{ client.email }}</a>
       </p>
-      <p>220 South Road<br />Fayette, ME 04349</p>
+      <p>
+        {{ client.address.street }}
+        <br />
+        {{ client.address.city }}, {{ client.address.state }} {{
+        client.address.zip }}
+      </p>
     </div>
   </div>
   <ul class="footer-nav">
-    <li><a href="weekend.html">The Weekend</a></li>
-    <li><a href="farm.html">The Farm</a></li>
-    <li><a href="faq.html">FAQ</a></li>
-    <li><a href="contact.html">Inquire</a></li>
+    <li><a href="/weekend/">The Weekend</a></li>
+    <li><a href="/farm/">The Farm</a></li>
+    <li><a href="/faq/">FAQ</a></li>
+    <li><a href="/contact/">Inquire</a></li>
   </ul>
   <div class="footer-info">
     <div class="footer-subscribe">
@@ -51,14 +56,15 @@
         </p>
         <p class="subscribe-error" id="subscribe-error">
           Something went wrong —
-          <a href="mailto:hello@southroad.farm">email us directly</a>.
+          <a href="mailto:{{ client.email }}">email us directly</a>
+          .
         </p>
       </form>
     </div>
     <!-- Instagram link — re-enable once we have marketing photos
     <p>
       <a
-        href="https://www.instagram.com/southroad.farm/"
+        href="{{ client.social.instagram }}"
         target="_blank"
         rel="noopener noreferrer"
         >Instagram</a
@@ -68,7 +74,7 @@
   </div>
 </footer>
 <div class="footer-base">
-  <p>©2026 South Road Farm. All rights reserved.</p>
+  <p>&copy;{{ currentYear }} {{ client.name }}. All rights reserved.</p>
   <p>
     Site by
     <a
@@ -76,7 +82,8 @@
       target="_blank"
       rel="noopener noreferrer"
       class="footer-credit-link"
-      >Mossland</a
     >
+      Mossland
+    </a>
   </p>
 </div>

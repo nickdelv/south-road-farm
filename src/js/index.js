@@ -41,7 +41,7 @@ document.querySelectorAll("[data-carousel]").forEach(function (carousel) {
     function (e) {
       touchStartX = e.changedTouches[0].clientX;
     },
-    { passive: true },
+    { passive: true }
   );
   carousel.addEventListener(
     "touchend",
@@ -49,6 +49,6 @@ document.querySelectorAll("[data-carousel]").forEach(function (carousel) {
       var dx = e.changedTouches[0].clientX - touchStartX;
       if (Math.abs(dx) > 50) goTo(dx < 0 ? current + 1 : current - 1);
     },
-    { passive: true },
+    { passive: true }
   );
 });

@@ -1,0 +1,45 @@
+---
+title: Page Not Found
+description: The page you're looking for doesn't exist. Head back to South Road Farm.
+permalink: /404.html
+noindex: true
+---
+
+{% extends "layouts/base.html" %} {% block head %}
+<style>
+  .error-page {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  .error-page .section-eyebrow {
+    margin-bottom: 1rem;
+  }
+  .error-page h2 {
+    font-family: "Crimson Text", serif;
+    font-size: clamp(52px, 7vw, 96px);
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+  }
+  .error-page p {
+    max-width: 36ch;
+    margin: 0 auto 2.5rem;
+    opacity: 0.75;
+  }
+</style>
+{% endblock %} {% block body %}
+<div class="error-page">
+  <p class="section-eyebrow">404</p>
+  <h2>
+    Lost in
+    <br />
+    <em>the fields.</em>
+  </h2>
+  <p>That page doesn't exist. Head back home and find your way from there.</p>
+  <a href="/" class="btn-dark">Back to South Road Farm</a>
+</div>
+{% endblock %}

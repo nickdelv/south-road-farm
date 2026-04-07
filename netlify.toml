@@ -1,0 +1,34 @@
+[build]
+  command = "npm run build"
+  publish = "public"
+
+# 301 redirects for old .html URLs
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/farm.html"
+  to = "/farm/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/weekend.html"
+  to = "/weekend/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/faq.html"
+  to = "/faq/"
+  status = 301
+  force = true

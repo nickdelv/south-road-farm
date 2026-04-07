@@ -1,0 +1,21 @@
+{
+  "name": "South Road Farm",
+  "domain": "https://southroad.farm",
+  "email": "hello@southroad.farm",
+  "phone": "",
+  "phoneTel": "",
+  "address": {
+    "street": "220 South Road",
+    "city": "Fayette",
+    "state": "ME",
+    "zip": "04349"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/southroad.farm/",
+    "facebook": "",
+    "tiktok": "",
+    "pinterest": "",
+    "youtube": "",
+    "linkedin": ""
+  }
+}
