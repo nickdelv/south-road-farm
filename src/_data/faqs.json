@@ -1,0 +1,276 @@
+{
+  "main": [
+    {
+      "label": "Pricing &amp; Availability",
+      "items": [
+        {
+          "q": "How much does it cost?",
+          "a": "Weekends at South Road Farm start at $12,000. That's a single, all-in price — no à la carte fees, no vendor surcharges, no hidden add-ons. You get the full property: both barns, the farmhouse, all ceremony sites, and every outdoor space from Friday afternoon through Sunday midday. Pricing varies by weekend, with peak dates in September and October priced higher. Reach out and we'll send a full breakdown."
+        },
+        {
+          "q": "When are you available?",
+          "a": "We book weddings May through October. We intentionally keep the calendar small — a limited number of weekends per season — so that every event gets our full attention. If you have a date in mind, <a href=\"/contact/\">reach out early</a>. Popular weekends, particularly in September and October, tend to go first."
+        },
+        {
+          "q": "How long is the rental period?",
+          "a": "The property is yours from Friday afternoon through Sunday at noon. That includes time to arrive, set up, rehearse, get ready, celebrate, and wind down — without feeling rushed at any point. Sunday morning is part of every booking, not an add-on."
+        },
+        {
+          "q": "How do we hold a date?",
+          "a": "Reach out through our <a href=\"/contact/\">contact form</a> or email us at <a href=\"mailto:hello@southroad.farm\">hello@southroad.farm</a>. We'll follow up with availability and next steps. A signed agreement and deposit officially hold your date."
+        }
+      ]
+    },
+    {
+      "label": "The Property",
+      "items": [
+        {
+          "q": "How many guests can the property accommodate?",
+          "a": "South Road Farm comfortably hosts up to 150 guests. There's ample space for dining, dancing, and gathering both indoors and out — across two barns, multiple decks, the courtyard, and the surrounding grounds."
+        },
+        {
+          "q": "What's included with the farmhouse?",
+          "a": "The farmhouse is included in every weekend rental — no separate fee. It sleeps 8–10 comfortably across 4 bedrooms and 2.5 bathrooms. It's perfect for the wedding party, immediate family, or out-of-town guests who want to be on-site. You decide who stays there."
+        },
+        {
+          "q": "Are there accommodations nearby for other guests?",
+          "a": "Yes — there are Airbnbs, inns, and hotels within 20–30 minutes of the farm. We're happy to share suggestions when you reach out."
+        },
+        {
+          "q": "Can we tour the property before booking?",
+          "a": "Absolutely — we encourage it. Reach out to schedule a private tour and we'll walk you through the barns, farmhouse, ceremony sites, and outdoor spaces. There's a lot to take in, and seeing it in person makes all the difference."
+        }
+      ]
+    },
+    {
+      "label": "Planning &amp; Vendors",
+      "items": [
+        {
+          "q": "Is a wedding planner required?",
+          "a": "Yes — we require that couples work with a professional wedding planner or day-of coordinator. It's not a formality; it's what allows everything to run smoothly and lets you actually be present on the day. You're welcome to choose whoever aligns with your vision and budget."
+        },
+        {
+          "q": "Do you have a list of preferred vendors?",
+          "a": "We're building one. In the meantime, we're happy to share recommendations for planners, photographers, caterers, and other vendors when you reach out — we've got a good sense of who works well in this part of Maine."
+        },
+        {
+          "q": "Can we hire our own caterer?",
+          "a": "Yes. We don't require specific vendors, so you're free to bring in a caterer that fits your taste and vision. The property is set up well for food trucks, plated service, and buffet-style setups alike — with power hookups, courtyard space, and room to make it a proper scene."
+        },
+        {
+          "q": "Can we provide our own alcohol?",
+          "a": "Yes — many couples do. You'll need to hire a licensed and insured bar service to handle the pour on the day of your event, but what you stock the bar with is entirely up to you."
+        },
+        {
+          "q": "Is a shuttle service required?",
+          "a": "Yes. On-site parking accommodates around 50 vehicles, so for larger guest lists a shuttle is required. It keeps traffic moving smoothly and, honestly, makes for a better guest experience — nobody's navigating dark country roads at the end of the night. We're happy to share recommendations for local shuttle services."
+        }
+      ]
+    },
+    {
+      "label": "Day Of",
+      "items": [
+        {
+          "q": "What time do events need to wrap up?",
+          "a": "Amplified music ends at 11:00 pm and non-overnight guests are out by 11:30 pm — both per town ordinance. After that, the property is yours. Anyone staying in the farmhouse can keep the evening going at their own pace — the fire pit, the kitchen, the night."
+        },
+        {
+          "q": "Are there ceremony site options?",
+          "a": "Yes — two distinct options. An open-field site with panoramic views in every direction, and a wooded site nestled into the trees for something more intimate. Both include a hand-built wooden arch. We're happy to walk you through both on a tour."
+        }
+      ]
+    }
+  ],
+  "venueShared": [
+    {
+      "q": "What does a weekend at South Road Farm cost?",
+      "a": "Weekend rentals start at $12,000. That's a single, all-in price — no à la carte fees, no vendor surcharges, no hidden add-ons. You get the full property: both barns, the farmhouse, all ceremony sites, and every outdoor space from Friday afternoon through Sunday midday. Pricing varies by weekend, with peak dates in September and October priced higher. Reach out and we'll send a full breakdown."
+    },
+    {
+      "q": "How many guests can South Road Farm accommodate?",
+      "a": "South Road Farm comfortably hosts up to 150 guests for ceremonies and receptions, with space for dining, dancing, and celebrating both indoors and out — across two barns, the courtyard, and the surrounding grounds."
+    },
+    {
+      "q": "How long is the weekend rental?",
+      "a": "The property is yours from Friday afternoon through Sunday at noon. That includes time to arrive, set up, rehearse, celebrate, and wind down without feeling rushed at any point. Sunday morning is part of every booking, not an add-on."
+    },
+    {
+      "q": "Can we choose our own vendors?",
+      "a": "Yes. You're free to choose your own caterer, bar service, photographer, florist, and entertainment. We do require a licensed and insured bar service to handle alcohol, and a professional wedding planner or day-of coordinator."
+    },
+    {
+      "q": "Is shuttle service required?",
+      "a": "Yes — on-site parking accommodates approximately 50 vehicles, so for larger guest lists a shuttle is required. Most couples arrange shuttles from a central hotel block in Augusta. We're happy to share vendor recommendations."
+    },
+    {
+      "q": "Is the farmhouse included in the rental price?",
+      "a": "Yes. The farmhouse is included in every weekend rental at no additional charge. It sleeps up to 10 guests across four bedrooms and is part of the weekend package."
+    }
+  ],
+  "byVenue": {
+    "wedding-venues-maine": [
+      {
+        "q": "How far is South Road Farm from major cities?",
+        "a": "South Road Farm is about 30 minutes from Augusta, 45 minutes from Lewiston-Auburn, and about an hour north of Portland. It's about 3 hours from Boston and 2.5 hours from Burlington, Vermont."
+      },
+      {
+        "q": "What months is South Road Farm available?",
+        "a": "We host weddings May through October. Peak season is September and October for fall foliage. Summer weekends book quickly — reach out early if you have a specific date in mind."
+      },
+      {
+        "q": "Do you require specific vendors?",
+        "a": "No. You're free to choose your own caterer, bar service, photographer, florist, and entertainment. We do require a licensed and insured bar service for alcohol, and a professional wedding planner or day-of coordinator."
+      },
+      {
+        "q": "How many guests can South Road Farm accommodate?",
+        "a": "We comfortably host up to 150 guests for ceremonies and receptions, with space for dining, dancing, and celebrating both indoors and out."
+      }
+    ],
+    "barn-wedding-venues-maine": [
+      {
+        "q": "Are the barns heated?",
+        "a": "The main reception barn is not heated, which is why we operate May through October. Early May and late October can be cool — couples planning shoulder season dates often bring in space heaters for the barn, which works well and is easy to arrange. The farmhouse is fully heated and available as a warm refuge throughout the weekend."
+      },
+      {
+        "q": "What is the capacity of the barns?",
+        "a": "The main barn accommodates up to 150 guests for a seated dinner and dancing. The secondary barn works well for cocktail hour for the same group or as a more intimate dinner space for smaller weddings."
+      },
+      {
+        "q": "Can we do both the ceremony and reception at South Road Farm?",
+        "a": "Yes — and most couples do. We have two ceremony sites (an open field with panoramic views and a wooded grove for something more intimate) as well as the barns for the reception. You never need to leave the property."
+      },
+      {
+        "q": "What is the barn's lighting situation?",
+        "a": "Both barns have permanent, curated lighting already in place — a mix of modern and barn-style fixtures that work beautifully against the original timber and natural wood tones. The lighting is part of what makes the space. Open flames and candles are not permitted, but the installed lighting creates a warm, layered atmosphere that most couples find needs very little added."
+      }
+    ],
+    "outdoor-wedding-venues-maine": [
+      {
+        "q": "What happens if it rains during the ceremony?",
+        "a": "We recommend couples have a rain plan in place, which your wedding planner will help coordinate. Having two barns gives you real flexibility — the main barn can serve as a backup ceremony space, or the cocktail barn can be repurposed for the ceremony while the main barn holds the reception. Your planner and our team will walk through contingency configurations during the planning process."
+      },
+      {
+        "q": "Can we do an outdoor reception as well as an outdoor ceremony?",
+        "a": "Yes — the property has power hookups and space for large tents if you want to keep dinner and dancing outside. Many couples do a hybrid: outdoor ceremony and cocktail hour, then move into the barns for dinner and dancing."
+      },
+      {
+        "q": "When is golden hour at the farm?",
+        "a": "Golden hour timing depends on the season. In June it falls around 7:30–8pm, in September around 6:30–7pm. Most couples time their cocktail hour to coincide with it — the light on the farm during that window is extraordinary."
+      },
+      {
+        "q": "Are there fire pits available?",
+        "a": "Yes — fire pits are part of the property and available throughout the weekend. They're particularly popular during cocktail hour and late night."
+      }
+    ],
+    "wedding-venues-near-portland-maine": [
+      {
+        "q": "How do guests get to South Road Farm from Portland?",
+        "a": "The most common route is I-295 North to Route 202 West toward Augusta, then north to Fayette — about an hour depending on traffic. We provide all guests with detailed directions and the farm is well-marked. Many couples arrange shuttle service from a central hotel in Augusta for guests who prefer not to drive."
+      },
+      {
+        "q": "Are there hotels near the farm?",
+        "a": "Yes — Augusta has a full range of hotel options 30 minutes away, and the lakes region has numerous Airbnbs and inns within 20 minutes of the property. We're happy to share a lodging guide with your guests as part of the planning process."
+      },
+      {
+        "q": "How does South Road Farm compare to Portland-area venues in price?",
+        "a": "Weekend rentals at South Road Farm start at $12,000 — which includes the full property, both barns, and the farmhouse for up to 10 overnight guests. Portland-area barn venues at a comparable level typically run significantly higher, often for a single-day rental without on-site accommodations. The distance north is, in part, what makes the pricing what it is."
+      }
+    ],
+    "wedding-venues-near-augusta-maine": [
+      {
+        "q": "What is the closest major city to South Road Farm?",
+        "a": "Augusta is the closest city at about 30 minutes. Lewiston-Auburn is about 45 minutes, and Waterville is about 45 minutes in the other direction. Portland is about an hour south."
+      },
+      {
+        "q": "Are there things for guests to do near the farm?",
+        "a": "The central Maine lakes region has plenty to offer — Cobbossee Lake, Maranacook Lake, and Echo Lake are all within 20 minutes. Augusta has restaurants, the Maine State Museum, and the Capitol. Many couples make a full weekend of it with pre- or post-wedding activities in the area."
+      },
+      {
+        "q": "Is South Road Farm accessible for elderly guests or guests with mobility needs?",
+        "a": "Both barns are ramp accessible. The property has some natural terrain — grassy lawns, gravel paths between spaces — and we work with couples to make sure guests can navigate the day comfortably. Reach out to discuss specific needs and we'll walk you through the full layout."
+      },
+      {
+        "q": "What's the weather like in central Maine for weddings?",
+        "a": "We operate May through October. June through August offers warm days and cool evenings. September and October bring the famous New England fall foliage — some of the most beautiful conditions of the year. May can be unpredictable but has its own charm."
+      }
+    ],
+    "full-weekend-wedding-venues-maine": [
+      {
+        "q": "Can we host a rehearsal dinner on Friday?",
+        "a": "Yes — many couples use Friday evening for a welcome dinner or rehearsal dinner on the property. The secondary barn and courtyard work well for this. It's one of the advantages of the full-weekend format."
+      },
+      {
+        "q": "Can we host a farewell brunch on Sunday?",
+        "a": "Absolutely. Sunday morning brunch is one of the things that makes the full-weekend format special. The farmhouse kitchen is fully equipped, and the property is beautiful in the morning. Many couples arrange catering for Sunday, while others keep it casual with groceries and cooking together."
+      },
+      {
+        "q": "What time does music need to end on Saturday?",
+        "a": "Per local guidelines, amplified music ends by 11:00pm and non-overnight guests should depart by 11:30pm. Overnight guests in the farmhouse are welcome to stay up and enjoy the property quietly after that."
+      }
+    ],
+    "barn-wedding-venues-new-england": [
+      {
+        "q": "How does South Road Farm compare to Vermont and New Hampshire barn venues?",
+        "a": "South Road Farm is honestly on the lower end of the market for what you're getting. Full-weekend exclusive use of 66 acres, two barns, and an included farmhouse starting at $12,000 — comparable properties in Vermont and New Hampshire typically run significantly higher, often for a single Saturday without on-site accommodations. Maine tends to offer more property and more privacy per dollar, and South Road Farm reflects that."
+      },
+      {
+        "q": "Is Maine a good destination wedding location for guests coming from Boston or New York?",
+        "a": "Yes — Maine has become increasingly popular as a destination wedding state, especially central and midcoast Maine. Guests from Boston are looking at about 3 hours. From New York, about 5–6 hours or a short flight to Portland. The drive through New Hampshire and into Maine is genuinely beautiful."
+      },
+      {
+        "q": "What sets South Road Farm apart from other New England barn venues?",
+        "a": "The full-weekend exclusive rental model is rare. Most barn venues rent by the day. South Road Farm gives you Friday through Sunday — the property, both barns, and the farmhouse — with no other events on the property. The authentic 19th-century construction (not a modern barn built to look rustic) is also genuinely unusual."
+      },
+      {
+        "q": "Does South Road Farm have accommodations, or do guests stay nearby?",
+        "a": "The farmhouse on the property sleeps up to 10 guests and is included in every weekend rental. Additional guests stay in Augusta (30 minutes) or the surrounding lakes region, which has numerous Airbnbs and inns."
+      }
+    ],
+    "wedding-venues-with-accommodations-maine": [
+      {
+        "q": "How many people does the farmhouse sleep?",
+        "a": "The farmhouse comfortably sleeps up to 10 guests across four bedrooms and 2.5 bathrooms."
+      },
+      {
+        "q": "Can guests who aren't staying in the farmhouse access it during the weekend?",
+        "a": "The farmhouse is reserved for overnight guests, with the exception of wedding party use for getting ready on the day of the wedding. The barn and courtyard areas are where the broader celebration happens throughout the weekend."
+      },
+      {
+        "q": "Where do additional guests stay?",
+        "a": "Augusta has a full range of hotel options about 30 minutes away. The central Maine lakes region has numerous Airbnbs and small inns within 15–20 minutes of the property. We provide a lodging guide to couples during the planning process."
+      }
+    ],
+    "rustic-wedding-venues-maine": [
+      {
+        "q": "How old are the barns at South Road Farm?",
+        "a": "The main barn's post-and-beam framing dates to the early 1800s. The property itself has been settled since 1793. The structures have been carefully restored over the past several years while preserving the original construction."
+      },
+      {
+        "q": "Is the rustic aesthetic flexible — can we dress it up or down?",
+        "a": "Yes — the barn works beautifully as a blank canvas. Some couples keep it minimal, letting the original materials do the work. Others bring in florals, drapery, and elaborate lighting. The bones support both approaches equally well."
+      },
+      {
+        "q": "Does the venue provide any decor or furnishings?",
+        "a": "South Road Farm includes a hand-built wooden arch for ceremonies. Event furniture — tables, chairs, linens, and ceremony seating — is not provided by the venue and is typically rented through local vendors, which your wedding planner can help coordinate. Several rental companies serve the Augusta area."
+      },
+      {
+        "q": "What's the barn floor situation?",
+        "a": "The main barn has a solid floor suitable for dancing. Your wedding planner and we will go over the layout in detail during your planning process so you can configure the space for your vision."
+      }
+    ],
+    "private-estate-wedding-venues-maine": [
+      {
+        "q": "Is the entire property exclusively ours for the weekend?",
+        "a": "Yes. When you book a weekend at South Road Farm, the entire 66-acre property is exclusively yours from Friday afternoon to Sunday morning. No other events, no other couples, no shared spaces with anyone outside your wedding."
+      },
+      {
+        "q": "Can we have multiple events over the weekend — rehearsal dinner, wedding, brunch?",
+        "a": "Absolutely — and most couples do. The full-weekend format is designed for exactly this. Rehearsal dinner or welcome drinks on Friday, the wedding on Saturday, and a farewell brunch on Sunday are all possible on the property."
+      },
+      {
+        "q": "How many weddings does South Road Farm host per season?",
+        "a": "We host a limited number of weddings each season, by design. Keeping the calendar limited means every couple gets our full attention and the property is maintained to the same standard weekend after weekend."
+      }
+    ]
+  }
+}

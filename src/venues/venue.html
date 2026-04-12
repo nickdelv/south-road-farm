@@ -1,0 +1,207 @@
+---
+pagination:
+  data: venues
+  size: 1
+  alias: venue
+  addAllPagesToCollections: true
+permalink: "/venues/{{ venue.slug }}/"
+---
+
+{% extends "layouts/base.html" %} {% block head %}
+<link rel="stylesheet" href="/css/venue.css" />
+{% endblock %} {% block body %}
+
+<section class="venue-hero" id="hero">
+  <div
+    class="hero-bg"
+    style="background-image: url('{{ venue.heroImage }}');"
+  ></div>
+  <div class="venue-hero-overlay"></div>
+  <div class="venue-hero-content">
+    <p class="venue-eyebrow">South Road Farm &nbsp;·&nbsp; Fayette, Maine</p>
+    <h1 class="venue-headline">{{ venue.headline }}</h1>
+    <p class="venue-subhead">{{ venue.subhead }}</p>
+    <a href="/contact/" class="btn-dark">
+      {{ venue.ctaText or "Inquire About Your Date" }}
+    </a>
+  </div>
+</section>
+
+<section class="venue-intro">
+  <div class="venue-intro-inner">
+    <p class="venue-intro-text">{{ venue.intro }}</p>
+    <p class="venue-proximity">{{ venue.proximity }}</p>
+  </div>
+</section>
+
+<section class="venue-stats">
+  <div class="stats-row">
+    <div class="stat">
+      <h3>$12k+</h3>
+      <p>Full weekend, starting price</p>
+    </div>
+    <div class="stat">
+      <h3>150</h3>
+      <p>Guest capacity</p>
+    </div>
+    <div class="stat">
+      <h3>3 days</h3>
+      <p>Friday through Sunday</p>
+    </div>
+    <div class="stat">
+      <h3>Sleeps 10</h3>
+      <p>On-site farmhouse, included</p>
+    </div>
+  </div>
+</section>
+
+{% for section in venue.bodyContent %}
+<section
+  class="venue-body{% if loop.index is even %} venue-body--alt{% endif %}"
+>
+  <div class="venue-body-inner">
+    <h2>{{ section.heading }}</h2>
+    <p>{{ section.text }}</p>
+  </div>
+</section>
+{% endfor %}
+
+<section class="venue-quote">
+  <div class="venue-quote-inner">
+    <blockquote>
+      <p>"{{ venue.quote.text }}"</p>
+      <cite>— {{ venue.quote.attribution }}</cite>
+    </blockquote>
+  </div>
+</section>
+
+<section class="venue-features">
+  <div class="venue-features-inner">
+    <h2>What's included in every weekend</h2>
+    <ul class="feature-list">
+      <li>Exclusive use of the full 66-acre property Friday through Sunday</li>
+      <li>
+        Two restored barns — main reception barn and secondary cocktail barn
+      </li>
+      <li>
+        Two ceremony sites — open field with panoramic views and wooded grove
+      </li>
+      <li>Farmhouse accommodations for up to 10 guests, included</li>
+      <li>Fire pits, courtyard, ceremony lawn, and all outdoor spaces</li>
+      <li>Power hookups for food trucks</li>
+      <li>
+        Freedom to choose your own vendors — no required caterer or bar service
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="venue-map">
+  <div class="venue-map-scrapbook">
+    <img
+      class="venue-map-img"
+      src="/assets/images/venue-map.webp"
+      alt="Watercolor aerial map of South Road Farm showing the Reception Barn, Cocktail Barn, Farmhouse, Courtyard, and Ceremony Green"
+      width="1312"
+      height="816"
+      loading="lazy"
+    />
+    <img
+      class="venue-map-sketch-img"
+      src="/assets/images/farm-sketch.webp"
+      alt="Sketch of the South Road Farm barns"
+      width="792"
+      height="612"
+      loading="lazy"
+    />
+  </div>
+</section>
+
+<section class="venue-local">
+  <div class="venue-local-inner">
+    <h2>The area around South Road Farm</h2>
+    <p>{{ venue.localContext }}</p>
+  </div>
+</section>
+
+<section class="venue-faq">
+  <div class="venue-faq-inner">
+    <h2>Common questions</h2>
+    {% for item in faqs.venueShared %}
+    <details class="faq-item">
+      <summary>{{ item.q }}</summary>
+      <p>{{ item.a }}</p>
+    </details>
+    {% endfor %} {% for item in faqs.byVenue[venue.slug] %}
+    <details class="faq-item">
+      <summary>{{ item.q }}</summary>
+      <p>{{ item.a }}</p>
+    </details>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="venue-story">
+  <div class="venue-story-inner">
+    <h2>About the farm</h2>
+    <p>
+      South Road Farm has been on this land since 1793. The post-and-beam barns
+      went up in the early 1800s. The property ran as a working farm
+      continuously until 2018 — longer than Maine has been a state. What you see
+      now is the result of several years of restoration work done largely by
+      hand by Dave, a lifelong carpenter and co-owner of the property.
+    </p>
+    <p>
+      We host a limited number of weddings each season, by design. Every couple
+      gets the same thing: the whole property, the whole weekend, our full
+      attention.
+    </p>
+    <a href="/farm/" class="link-arrow">Read the full story →</a>
+  </div>
+</section>
+
+{% if venue.relatedPages %}
+<section class="venue-related">
+  <div class="venue-related-inner">
+    <p class="section-eyebrow">Explore More</p>
+    <h2>Other ways to think about your wedding</h2>
+    <div class="venue-related-grid">
+      {% for relatedSlug in venue.relatedPages %} {% for v in venues %} {% if
+      v.slug == relatedSlug %}
+      <a href="/venues/{{ v.slug }}/" class="venue-related-card">
+        <p class="venue-related-card-title">{{ v.title }}</p>
+        <p class="venue-related-card-headline">{{ v.headline }}</p>
+        <span class="venue-related-arrow">Read more →</span>
+      </a>
+      {% endif %} {% endfor %} {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="cta">
+  <p class="section-eyebrow">Ready to Talk?</p>
+  <h2>
+    Your weekend
+    <br />
+    <em>starts here.</em>
+  </h2>
+  <p>
+    South Road Farm is available May through October. We keep bookings limited
+    to keep every weekend personal. Reach out and we'll send availability,
+    pricing, and next steps.
+  </p>
+  <div>
+    <a href="/contact/" class="btn-dark">
+      {{ venue.ctaText or "Inquire About Your Date" }}
+    </a>
+    <a href="/weekend/" class="btn-outline">See how the weekend unfolds</a>
+  </div>
+  <div class="cta-secondary-wrap">
+    <a href="/faq/" class="cta-secondary-link">
+      Have questions first? Browse the FAQ →
+    </a>
+  </div>
+</section>
+
+{% endblock %}

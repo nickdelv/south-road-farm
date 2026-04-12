@@ -50,12 +50,16 @@
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
     <link rel="stylesheet" href="/css/shared.css" />
 
-    {% block head %}{% endblock %}
+    {% block head %}{% if pageCss %}
+    <link rel="stylesheet" href="/css/{{ pageCss }}" />
+    {% endif %}{% endblock %}
   </head>
   <body>
     {% include "components/header.html" %}
 
-    <main class="{{ mainClass }}">{% block body %}{% endblock %}</main>
+    <main class="{{ mainClass }}">
+      {% block body %}{{ content | safe }}{% endblock %}
+    </main>
 
     {% include "components/footer.html" %}
 
