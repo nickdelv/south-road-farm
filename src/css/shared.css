@@ -327,6 +327,12 @@ footer {
   color: var(--cream);
   text-decoration: none;
   display: block;
+  line-height: 0;
+}
+.footer-mark img {
+  display: block;
+  width: 100px;
+  height: 100px;
 }
 .footer-sub {
   font-size: 13px;

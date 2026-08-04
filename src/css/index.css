@@ -1,6 +1,11 @@
 /* ── Hero height override for index ── */
 .hero-index {
   height: 85vh;
+  justify-content: flex-start;
+}
+.hero-index .hero-content {
+  text-align: left;
+  padding: 0 var(--pad-x-wide);
 }
 
 /* ── Intro section — copy + photos in one cream block ── */
