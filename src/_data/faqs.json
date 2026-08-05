@@ -1,7 +1,7 @@
 {
   "main": [
     {
-      "label": "Pricing &amp; Availability",
+      "label": "Pricing & Availability",
       "items": [
         {
           "q": "How much does it cost?",
@@ -34,7 +34,7 @@
         },
         {
           "q": "Are there accommodations nearby for other guests?",
-          "a": "Yes — there are Airbnbs, inns, and hotels within 20–30 minutes of the farm. We're happy to share suggestions when you reach out."
+          "a": "Yes — Augusta is about 30 minutes away and has a solid range of options: Hampton Inn, Homewood Suites, Maine Evergreen Hotel, Senator Inn & Spa, and Days Inn, among others. There are also Airbnbs and inns in the lakes region within 15–20 minutes. We're happy to share a lodging guide during the planning process."
         },
         {
           "q": "Can we tour the property before booking?",
@@ -43,7 +43,7 @@
       ]
     },
     {
-      "label": "Planning &amp; Vendors",
+      "label": "Planning & Vendors",
       "items": [
         {
           "q": "Is a wedding planner required?",
