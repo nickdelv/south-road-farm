@@ -263,7 +263,7 @@
 }
 .full-bleed-quote {
   font-family: "Crimson Text", serif;
-  font-size: clamp(28px, 4vw, 54px);
+  font-size: clamp(40px, 4vw, 54px);
   font-weight: 300;
   color: var(--white);
   text-align: center;
@@ -312,7 +312,7 @@
 
 @media (max-width: 599px) {
   .hero-meta {
-    text-align: center;
+    text-align: left;
     white-space: normal;
   }
   .intro-photos {
