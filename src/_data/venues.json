@@ -308,5 +308,48 @@
       "wedding-venues-with-accommodations-maine",
       "wedding-venues-maine"
     ]
+  },
+  {
+    "slug": "domestic-destination-wedding-maine",
+    "title": "Domestic Destination Wedding in Maine",
+    "headline": "The Destination Wedding, Without the Passport",
+    "subhead": "The getaway feel, the full weekend away — without losing half your guest list to get it.",
+    "description": "A full-weekend getaway wedding on 66 acres in Maine — the destination feel without the passport, the flights, or the guest list that can't make it.",
+    "heroImage": "/assets/images/alex-nick-wedding-384.webp",
+    "heroImageAlt": "Wedding weekend at South Road Farm in Fayette, Maine",
+    "intro": "Your college roommate can drive up Friday morning. Your grandmother can come. Nobody has to check whether their passport is expired or burn a week of PTO just to watch you get married. That's what a domestic destination wedding actually solves — you still get the getaway, the weekend away, the place nobody in the group would end up on their own. You just stop losing half your guest list to get it.",
+    "proximity": "Located in Fayette, Maine — about an hour north of Portland and three hours from Boston.",
+    "bodyContent": [
+      {
+        "heading": "The problem with weddings abroad",
+        "text": "Most people invited to an international destination wedding don't go. Not because they don't love you — because it's expensive, it's complicated, and a week in Italy is easier to want than to pull off. By the time you account for flights, hotels, time off work, and the ones who just quietly RSVP \"no,\" you're getting married in front of a fraction of the people you actually wanted there. So the destination is moving, not disappearing. More couples every year are choosing domestic getaways — places that still feel like a trip, but where showing up doesn't require a visa and a connecting flight. The appeal was never really about the country. It was about the weekend."
+      },
+      {
+        "heading": "Sixty-six acres in the Maine woods",
+        "text": "South Road Farm is that kind of place. Not a venue you rent for an afternoon — a private 66-acre farm in Fayette, Maine, with two barns, a farmhouse that sleeps your wedding party, and enough room that the whole weekend is yours. One wedding at a time. No other events, no shared spaces, no strangers. Your people arrive Friday afternoon and settle in. The rehearsal dinner is in the barn or out on the lawn. Saturday is the wedding. Sunday morning everyone's still there — coffee on the porch, a long goodbye, the kind of morning-after that doesn't happen when everyone scatters to separate hotels."
+      },
+      {
+        "heading": "Close enough to get to, far enough to feel away",
+        "text": "Fayette is about an hour north of Portland and three hours from Boston. It's a real drive into the woods — lakes, back roads, no cell service for the last stretch — but it's not a production to get there. Most of your New England guests are a car ride away. The ones flying in land in Portland and rent a car. That's the whole point. Far enough that it feels like you went somewhere. Close enough that the people who matter most don't have to choose between coming to your wedding and everything else in their life."
+      },
+      {
+        "heading": "What the weekend looks like",
+        "text": "You get the full property from Friday through Sunday. The barn is restored, open-beam, and fits up to 150 for ceremony, reception, or both. The farmhouse sleeps your wedding party under one roof the night before. And the grounds — 66 acres of fields, tree lines, and a pond — have room for lawn games, bonfires, a Friday night welcome dinner, whatever you want the weekend to hold. There's no package to customize or vendor list to navigate. You bring your own caterer, your own florist, your own whatever. The farm is the place. You build the weekend."
+      },
+      {
+        "heading": "The case for staying domestic",
+        "text": "A destination wedding was never really about the destination. It was about disappearing together for a few days with the people you love — somewhere that isn't home, somewhere with a story. South Road Farm is that, minus the part where half your guest list can't make it. No passport. No connecting flight. No apology text from your cousin who just can't swing it. Just the weekend, the woods, and everyone actually there."
+      }
+    ],
+    "quote": {
+      "text": "The moonrise over the barn and stable transported me to a time when its pale light stretched a farmer's day. Morning coffee on the deck, overlooking the hills to Androscoggin Lake in Wayne, carried me further back, to when my ancestors first settled there in the late 18th century.",
+      "attribution": "Dyanna Lincoln, whose family farmed this land for decades"
+    },
+    "localContext": "South Road Farm sits in the central Maine lakes region — one of the quietest and most scenic parts of the state. Echo Lake and Parker Pond are within a few miles, offering swimming, kayaking, and the kind of morning loon calls that become part of your wedding weekend. Augusta is 30 minutes away with hotels, restaurants on Water Street, and easy access to I-95 for guests traveling from southern Maine or Boston. The drive into Fayette on Routes 17 and 41 — rolling hills, farmland, lake views — is the kind of approach that makes your guests feel like they've arrived somewhere before they even reach the property.",
+    "relatedPages": [
+      "full-weekend-wedding-venues-maine",
+      "barn-wedding-venues-maine",
+      "wedding-venues-with-accommodations-maine"
+    ]
   }
 ]
