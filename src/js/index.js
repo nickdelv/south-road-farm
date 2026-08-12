@@ -1,54 +1,60 @@
-// Property carousel — single image today, multi-image ready
-document.querySelectorAll("[data-carousel]").forEach(function (carousel) {
-  const track = carousel.querySelector(".prop-carousel-track");
-  const imgs = track.querySelectorAll("img");
-  const dotsWrap = carousel.querySelector(".prop-carousel-dots");
-  const next = carousel.querySelector(".prop-carousel-next");
+// Mosaic gallery — arrow navigation + drag-to-scroll
+(function () {
+  var scroll = document.querySelector(".gallery-scroll");
+  if (!scroll) return;
 
-  if (imgs.length <= 1) {
-    next.style.display = "none";
-    dotsWrap.style.display = "none";
-    return;
-  }
+  var leftBtn = document.querySelector(".gallery-arrow-left");
+  var rightBtn = document.querySelector(".gallery-arrow-right");
+  var scrollAmount = 400;
 
-  let current = 0;
-
-  imgs.forEach(function (_, i) {
-    const dot = document.createElement("button");
-    dot.className = "prop-dot" + (i === 0 ? " active" : "");
-    dot.setAttribute("aria-label", "Go to image " + (i + 1));
-    dot.addEventListener("click", function () {
-      goTo(i);
-    });
-    dotsWrap.appendChild(dot);
+  // Arrow click handlers
+  leftBtn.addEventListener("click", function () {
+    scroll.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  });
+  rightBtn.addEventListener("click", function () {
+    scroll.scrollBy({ left: scrollAmount, behavior: "smooth" });
   });
 
-  function goTo(n) {
-    current = (n + imgs.length) % imgs.length;
-    track.style.transform = "translateX(-" + current * 100 + "%)";
-    dotsWrap.querySelectorAll(".prop-dot").forEach(function (d, i) {
-      d.classList.toggle("active", i === current);
-    });
+  // Arrow visibility based on scroll position
+  function updateArrows() {
+    var atStart = scroll.scrollLeft <= 4;
+    var atEnd =
+      scroll.scrollLeft + scroll.clientWidth >= scroll.scrollWidth - 4;
+    leftBtn.classList.toggle("hidden", atStart);
+    rightBtn.classList.toggle("hidden", atEnd);
   }
+  scroll.addEventListener("scroll", updateArrows, { passive: true });
+  updateArrows();
 
-  next.addEventListener("click", function () {
-    goTo(current + 1);
+  // Drag-to-scroll for desktop
+  var isDragging = false;
+  var startX = 0;
+  var scrollStart = 0;
+
+  scroll.addEventListener("mousedown", function (e) {
+    isDragging = true;
+    startX = e.pageX;
+    scrollStart = scroll.scrollLeft;
+    scroll.classList.add("is-dragging");
   });
 
-  var touchStartX = 0;
-  carousel.addEventListener(
-    "touchstart",
-    function (e) {
-      touchStartX = e.changedTouches[0].clientX;
-    },
-    { passive: true }
-  );
-  carousel.addEventListener(
-    "touchend",
-    function (e) {
-      var dx = e.changedTouches[0].clientX - touchStartX;
-      if (Math.abs(dx) > 50) goTo(dx < 0 ? current + 1 : current - 1);
-    },
-    { passive: true }
-  );
-});
+  window.addEventListener("mousemove", function (e) {
+    if (!isDragging) return;
+    e.preventDefault();
+    var dx = e.pageX - startX;
+    scroll.scrollLeft = scrollStart - dx;
+  });
+
+  window.addEventListener("mouseup", function () {
+    if (!isDragging) return;
+    isDragging = false;
+    scroll.classList.remove("is-dragging");
+  });
+
+  // Prevent click events on images after dragging
+  scroll.addEventListener("click", function (e) {
+    if (Math.abs(scroll.scrollLeft - scrollStart) > 5) {
+      e.preventDefault();
+    }
+  });
+})();

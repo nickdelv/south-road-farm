@@ -57,32 +57,6 @@ ogImage: /assets/images/image14.webp
       </p>
     </div>
   </div>
-  <div class="intro-photos container">
-    <div class="intro-photo-cell">
-      <img
-        src="/assets/images/image9.webp"
-        alt="Friday evening welcome drinks at golden hour"
-        width="1600"
-        height="1067"
-      />
-    </div>
-    <div class="intro-photo-cell">
-      <img
-        src="/assets/images/image10.webp"
-        alt="Saturday night at the food trucks"
-        width="1067"
-        height="1600"
-      />
-    </div>
-    <div class="intro-photo-cell">
-      <img
-        src="/assets/images/image8.webp"
-        alt="Sunday morning at the farmhouse"
-        width="1600"
-        height="1067"
-      />
-    </div>
-  </div>
   <div class="intro-footer container">
     <a href="/weekend/" class="intro-footer-link">
       See how the weekend unfolds →
@@ -134,91 +108,27 @@ ogImage: /assets/images/image14.webp
         <p>On-site farmhouse, included</p>
       </div>
     </div>
-    <div class="property-grid">
-      <div class="prop-item">
-        <div class="prop-carousel" data-carousel>
-          <div class="prop-carousel-track">
-            <img
-              src="/assets/images/image16.webp"
-              alt="Restored wedding reception barn at South Road Farm, Fayette Maine"
-              width="1600"
-              height="1067"
-            />
-            <img
-              src="/assets/images/image17.webp"
-              alt="Outdoor wedding ceremony lawn at South Road Farm, Fayette Maine"
-              width="1600"
-              height="1067"
-            />
-            <img
-              src="/assets/images/image11.webp"
-              alt="South Road Farm farmhouse, sleeps 10 for wedding party accommodation"
-              width="1800"
-              height="1200"
-            />
-          </div>
-          <div class="prop-carousel-dots"></div>
-          <button class="prop-carousel-next" aria-label="Next">&#8594;</button>
+  </div>
+  <div class="gallery-wrap">
+    <button class="gallery-arrow gallery-arrow-left" aria-label="Scroll left">
+      &#8592;
+    </button>
+    <div class="gallery-scroll">
+      <div class="gallery-grid">
+        {% for photo in gallery %}
+        <div class="gallery-cell gallery-{{ photo.size }}">
+          <img
+            src="/assets/images/{{ photo.src }}"
+            alt="{{ photo.alt }}"
+            loading="lazy"
+          />
         </div>
-        <div class="prop-label">The Barns</div>
-      </div>
-
-      <div class="prop-item">
-        <div class="prop-carousel" data-carousel>
-          <div class="prop-carousel-track">
-            <img
-              src="/assets/images/image17.webp"
-              alt="Wedding ceremony on the lawn at South Road Farm, Fayette Maine"
-              width="1600"
-              height="1067"
-            />
-            <img
-              src="/assets/images/image11.webp"
-              alt="South Road Farm farmhouse, sleeps 10 for wedding party accommodation"
-              width="1800"
-              height="1200"
-            />
-            <img
-              src="/assets/images/image16.webp"
-              alt="Restored wedding reception barn at South Road Farm, Fayette Maine"
-              width="1600"
-              height="1067"
-            />
-          </div>
-          <div class="prop-carousel-dots"></div>
-          <button class="prop-carousel-next" aria-label="Next">&#8594;</button>
-        </div>
-        <div class="prop-label">The Grounds</div>
-      </div>
-
-      <div class="prop-item">
-        <div class="prop-carousel" data-carousel>
-          <div class="prop-carousel-track">
-            <img
-              src="/assets/images/image11.webp"
-              alt="South Road Farm farmhouse, sleeps 10 for wedding party accommodation"
-              width="1800"
-              height="1200"
-            />
-            <img
-              src="/assets/images/image16.webp"
-              alt="Restored wedding reception barn at South Road Farm, Fayette Maine"
-              width="1600"
-              height="1067"
-            />
-            <img
-              src="/assets/images/image17.webp"
-              alt="Wedding ceremony on the lawn at South Road Farm, Fayette Maine"
-              width="1600"
-              height="1067"
-            />
-          </div>
-          <div class="prop-carousel-dots"></div>
-          <button class="prop-carousel-next" aria-label="Next">&#8594;</button>
-        </div>
-        <div class="prop-label">The Farmhouse</div>
+        {% endfor %}
       </div>
     </div>
+    <button class="gallery-arrow gallery-arrow-right" aria-label="Scroll right">
+      &#8594;
+    </button>
   </div>
 </section>
 

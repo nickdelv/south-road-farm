@@ -45,22 +45,6 @@
   margin-top: 20px;
 }
 
-.intro-photos {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 8px;
-}
-.intro-photo-cell {
-  aspect-ratio: 3 / 4;
-  overflow: hidden;
-}
-.intro-photo-cell img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
 .intro-footer {
   margin-top: 24px;
 }
@@ -90,7 +74,10 @@
 /* ── Property tease ── */
 .property-tease {
   background: var(--cream-warm);
-  padding: var(--pad-v) var(--pad-x);
+  padding: var(--pad-v) 0;
+}
+.property-tease .property-inner {
+  padding: 0 var(--pad-x);
 }
 .property-tease h2 {
   font-family: "Crimson Text", serif;
@@ -104,96 +91,94 @@
 .property-tease h2 em {
   font-style: italic;
 }
-.property-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3px;
+.property-tease .stats-row {
+  margin: 40px 0;
 }
 
-/* ── Carousel ── */
-.prop-item {
+/* ── Mosaic gallery ── */
+.gallery-wrap {
   position: relative;
+  margin-top: 48px;
+}
+.gallery-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  cursor: grab;
+}
+.gallery-scroll::-webkit-scrollbar {
+  display: none;
+}
+.gallery-scroll.is-dragging {
+  cursor: grabbing;
+  user-select: none;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-flow: column dense;
+  grid-auto-columns: 280px;
+  gap: 4px;
+  height: 560px;
+  width: max-content;
+}
+.gallery-cell {
   overflow: hidden;
-  aspect-ratio: 3 / 4;
 }
-.prop-carousel {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
-.prop-carousel-track {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.45s ease;
-}
-.prop-carousel-track img {
-  flex: 0 0 100%;
+.gallery-cell img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-}
-.prop-label {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 28px 20px 20px;
-  background: linear-gradient(transparent, rgba(var(--forest-rgb), 0.72));
-  color: var(--white);
-  font-size: 13px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+  -webkit-user-drag: none;
+  user-select: none;
   pointer-events: none;
 }
-.prop-carousel-next {
+.gallery-large {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+.gallery-tall {
+  grid-row: span 2;
+}
+.gallery-wide {
+  grid-column: span 2;
+}
+
+/* Gallery nav arrows */
+.gallery-arrow {
   position: absolute;
-  bottom: 10px;
-  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
   background: rgba(var(--forest-rgb), 0.5);
   color: var(--white);
   border: none;
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   font-size: 20px;
   font-weight: 700;
-  transition: background 0.2s;
-  z-index: 2;
+  transition:
+    background 0.2s,
+    opacity 0.3s;
 }
-.prop-carousel-next:hover {
-  background: rgba(var(--forest-rgb), 0.65);
+.gallery-arrow:hover {
+  background: rgba(var(--forest-rgb), 0.75);
 }
-.prop-carousel-dots {
-  position: absolute;
-  bottom: 64px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 6px;
-  z-index: 2;
+.gallery-arrow.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
-.prop-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: rgba(253, 251, 247, 0.45);
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  transition: background 0.2s;
+.gallery-arrow-left {
+  left: 12px;
 }
-.prop-dot.active {
-  background: var(--white);
-}
-
-.property-tease .stats-row {
-  margin: 40px 0;
+.gallery-arrow-right {
+  right: 12px;
 }
 
 /* ── Story panel ── */
@@ -282,19 +267,9 @@
     gap: 32px;
     margin-bottom: 48px;
   }
-  .intro-photos {
-    grid-template-columns: 1fr 1fr;
-  }
-  .intro-photo-cell:last-child {
-    display: none;
-  }
-  .property-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  .prop-item:last-child {
-    grid-column: 1 / -1;
-    width: 50%;
-    margin: 0 auto;
+  .gallery-grid {
+    height: 440px;
+    grid-auto-columns: 220px;
   }
   .story-panel {
     grid-template-columns: 1fr;
@@ -315,19 +290,13 @@
     text-align: left;
     white-space: normal;
   }
-  .intro-photos {
-    grid-template-columns: 1fr;
+  .gallery-grid {
+    height: 320px;
+    grid-auto-columns: 160px;
   }
-  .intro-photo-cell:nth-child(2) {
-    display: none;
-  }
-  .property-grid {
-    grid-template-columns: 1fr;
-    gap: 3px;
-  }
-  .prop-item:last-child {
-    grid-column: auto;
-    width: auto;
-    margin: 0;
+  .gallery-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
   }
 }
