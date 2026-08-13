@@ -310,6 +310,43 @@ nav.scrolled {
   margin-top: 32px;
 }
 
+/* ── Image quote panel ──
+   Full-bleed image with overlaid centered quote.
+   Used by: index.html, weekend.html
+   ──────────────────────────────────────────── */
+.image-quote-panel {
+  position: relative;
+  height: 480px;
+  overflow: hidden;
+}
+.image-quote-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.image-quote-panel-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(var(--forest-rgb), 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 52px var(--pad-x-wide);
+}
+.image-quote-panel-overlay p {
+  font-family: "Crimson Text", serif;
+  font-size: clamp(36px, 4vw, 54px);
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.2;
+  max-width: 740px;
+}
+.image-quote-panel-overlay p em {
+  font-style: italic;
+}
+
 footer {
   background: var(--forest-mid);
   padding: 64px var(--pad-x);
@@ -520,6 +557,14 @@ footer > div:first-child > .footer-info {
 
   .stats-row {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Image quote panel */
+  .image-quote-panel {
+    height: 320px;
+  }
+  .image-quote-panel-overlay {
+    padding: 36px var(--pad-x-wide);
   }
 
   /* Nav */
