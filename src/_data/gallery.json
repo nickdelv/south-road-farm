@@ -6,7 +6,12 @@
     "alt": "Friday evening welcome drinks at golden hour",
     "size": "wide"
   },
-  { "src": "carousel-image-3.webp", "alt": "South Road Farm", "size": "wide" },
+  {
+    "src": "carousel-image-3.webp",
+    "alt": "South Road Farm",
+    "size": "wide",
+    "objectPosition": "center 20%"
+  },
   { "src": "carousel-image-4.webp", "alt": "South Road Farm", "size": "large" },
   { "src": "carousel-image-1.webp", "alt": "South Road Farm", "size": "tall" },
   {
@@ -21,8 +26,8 @@
   },
   { "src": "carousel-image-8.webp", "alt": "South Road Farm", "size": "wide" },
   {
-    "src": "image11.webp",
-    "alt": "Woman laughing at the food trucks",
+    "src": "image8.webp",
+    "alt": "Donuts on display",
     "size": "small"
   },
   { "src": "carousel-image-6.webp", "alt": "South Road Farm", "size": "tall" },
@@ -42,7 +47,8 @@
   {
     "src": "carousel-image-24.webp",
     "alt": "South Road Farm",
-    "size": "small"
+    "size": "small",
+    "objectPosition": "center 100%"
   },
   {
     "src": "carousel-image-18.webp",
@@ -50,8 +56,8 @@
     "size": "small"
   },
   {
-    "src": "image8.webp",
-    "alt": "Sunday morning at the farmhouse",
+    "src": "image11.webp",
+    "alt": "Woman laughing at the food trucks",
     "size": "small"
   },
   {

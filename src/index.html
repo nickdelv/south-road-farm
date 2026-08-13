@@ -123,6 +123,13 @@ ogImage: /assets/images/image14.webp
             src="/assets/images/{{ photo.src }}"
             alt="{{ photo.alt }}"
             loading="lazy"
+            {%
+            if
+            photo.objectPosition
+            %}style="object-position: {{ photo.objectPosition }}"
+            {%
+            endif
+            %}
           />
         </div>
         {% endfor %}
