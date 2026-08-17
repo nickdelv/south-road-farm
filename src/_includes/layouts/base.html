@@ -48,10 +48,10 @@
     />
 
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
-    <link rel="stylesheet" href="/css/shared.css" />
+    <link rel="stylesheet" href="/css/shared.css?v=1" />
 
     {% block head %}{% if pageCss %}
-    <link rel="stylesheet" href="/css/{{ pageCss }}" />
+    <link rel="stylesheet" href="/css/{{ pageCss }}?v=1" />
     {% endif %}{% endblock %}
   </head>
   <body>
@@ -63,7 +63,7 @@
 
     {% include "components/footer.html" %}
 
-    <script defer src="/js/site.js"></script>
+    <script defer src="/js/site.js?v=1"></script>
     {% block scripts %}{% endblock %}
   </body>
 </html>

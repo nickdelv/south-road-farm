@@ -66,6 +66,9 @@ nav.scrolled {
   color: var(--white);
   text-decoration: none;
 }
+.nav-wordmark img {
+  display: block;
+}
 .nav-links {
   display: flex;
   gap: 36px;
