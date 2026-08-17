@@ -17,6 +17,7 @@
   --forest-ui: #3a4a30; /* mid UI green: borders, dividers, placeholders */
   --forest-ui-rgb: 58, 74, 48; /* raw triplet for rgba() use */
   --forest-rgb: 23, 26, 18; /* raw triplet for rgba() use */
+  --forest-mid-rgb: 42, 47, 31; /* raw triplet for rgba() use */
   --cream-rgb: 244, 239, 228; /* raw triplet for rgba() use */
 
   /* Spacing tokens */
@@ -51,7 +52,7 @@ nav {
 }
 nav.nav-opaque,
 nav.scrolled {
-  background: rgba(var(--forest-rgb), 0.95);
+  background: var(--forest);
 }
 nav.scrolled {
   padding: 18px var(--pad-x);
