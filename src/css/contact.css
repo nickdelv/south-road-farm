@@ -257,6 +257,10 @@
   max-width: 400px;
   margin-bottom: 40px;
 }
+.ty-calendar {
+  margin-bottom: 40px;
+}
+
 .ty-link {
   font-family: "Jost", sans-serif;
   font-size: 12px;

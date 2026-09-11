@@ -1,9 +1,15 @@
 const APPS_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbxKeE-Atv4v1tFV__MsKn5AxYBF1QdHPhs1xXFMQbTwENMEqRw2YazRvrwogLqIzho/exec";
+  "https://script.google.com/macros/s/AKfycby9N0dBoW3Tq0Mb5sq2akwrKcNur6AFBw1UOBQxTmG3GqJMIW_L61Ll0LBpSVL9KrTR/exec";
 
 const form = document.getElementById("inquire-form");
 const formWrap = document.getElementById("form-wrap");
 const thankYou = document.getElementById("thank-you");
+
+form.addEventListener("keydown", function (e) {
+  if (e.key === "Enter" && e.target.tagName === "SELECT") {
+    e.preventDefault();
+  }
+});
 
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
@@ -16,8 +22,10 @@ form.addEventListener("submit", async function (e) {
   btn.disabled = true;
 
   const params = new URLSearchParams({
-    name: form.name.value,
+    first_name: form.first_name.value,
+    last_name: form.last_name.value,
     email: form.email.value,
+    phone: form.phone.value,
     wedding_date: form.wedding_date.value,
     guest_count: form.guest_count.value,
     referral: form.referral.value,

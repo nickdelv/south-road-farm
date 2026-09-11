@@ -29,18 +29,34 @@ ogImage: /assets/images/image14.webp
     <form id="inquire-form">
       <div class="form-row">
         <div class="form-field">
-          <label for="name">
-            Your Name
+          <label for="first_name">
+            First Name
             <span class="req">*</span>
           </label>
           <input
             type="text"
-            id="name"
-            name="name"
-            placeholder="First and last"
+            id="first_name"
+            name="first_name"
+            placeholder="Jane"
             required
           />
         </div>
+        <div class="form-field">
+          <label for="last_name">
+            Last Name
+            <span class="req">*</span>
+          </label>
+          <input
+            type="text"
+            id="last_name"
+            name="last_name"
+            placeholder="Smith"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="form-row">
         <div class="form-field">
           <label for="email">
             Email Address
@@ -52,6 +68,15 @@ ogImage: /assets/images/image14.webp
             name="email"
             placeholder="you@example.com"
             required
+          />
+        </div>
+        <div class="form-field">
+          <label for="phone">Phone</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="(207) 555-0123"
           />
         </div>
       </div>
@@ -84,11 +109,9 @@ ogImage: /assets/images/image14.webp
         <select id="referral" name="referral">
           <option value="" disabled selected>Select one</option>
           <option value="instagram">Instagram</option>
+          <option value="tiktok">TikTok</option>
           <option value="google">Google search</option>
           <option value="friend">Friend or family referral</option>
-          <option value="wedding-site">
-            Wedding website (The Knot, Zola, etc.)
-          </option>
           <option value="vendor">Vendor referral</option>
           <option value="other">Other</option>
         </select>
@@ -138,14 +161,38 @@ ogImage: /assets/images/image14.webp
       </svg>
     </div>
     <h2 class="ty-headline">
-      We got it.
+      We got it —
       <br />
-      <em>Talk soon.</em>
+      <em>grab 15 minutes.</em>
     </h2>
     <div class="ty-rule"></div>
+    <div class="ty-calendar">
+      <!-- Google Calendar Appointment Scheduling begin -->
+      <link
+        href="https://calendar.google.com/calendar/scheduling-button-script.css"
+        rel="stylesheet"
+      />
+      <script
+        src="https://calendar.google.com/calendar/scheduling-button-script.js"
+        async
+      ></script>
+      <script>
+        (function () {
+          var target = document.currentScript;
+          window.addEventListener("load", function () {
+            calendar.schedulingButton.load({
+              url: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ3VSZft8dt5LOjfctWoClX_10bwAW4osKkijs-YSvfdHvU0XU1Os0dEhpnfsEruBlsLeMEhi1I_?gv=true",
+              color: "#171a12",
+              label: "Grab 15 Minutes",
+              target,
+            });
+          });
+        })();
+      </script>
+      <!-- end Google Calendar Appointment Scheduling -->
+    </div>
     <p class="ty-body">
-      We'll be back in touch within 24 hours. In the meantime, if you haven't
-      yet, take a look at how the weekend unfolds.
+      Can't find a time right now? No worries — we'll follow up by email.
     </p>
     <a href="/weekend/" class="ty-link">See the Weekend →</a>
   </div>
@@ -160,9 +207,9 @@ ogImage: /assets/images/image14.webp
         <em>not a pitch.</em>
       </h3>
       <p>
-        We'll reach out to introduce ourselves, answer any questions you have,
-        and share availability and pricing. If it feels like a good fit on both
-        sides, we'll set up a time to walk you through the property in person.
+        We'll get back to you quickly — usually within a few hours — to
+        introduce ourselves and answer any questions. If it feels like a good
+        fit, we'd love to have you out for a tour in person.
       </p>
       <p>
         No pressure, no hard sell. We keep the calendar small on purpose — this
