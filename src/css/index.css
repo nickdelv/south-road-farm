@@ -94,6 +94,25 @@
 .property-tease .stats-row {
   margin: 40px 0;
 }
+.stat-promo {
+  display: inline-block;
+  margin-top: -1px;
+  padding: 10px 16px;
+  border: 1px solid var(--amber);
+}
+.stat-promo-label {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 5px;
+}
+.stat-promo p {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+  color: var(--forest);
+}
 
 /* ── Mosaic gallery ── */
 .gallery-wrap {
