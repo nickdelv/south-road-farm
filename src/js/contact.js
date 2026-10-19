@@ -29,6 +29,7 @@ form.addEventListener("submit", async function (e) {
     wedding_date: form.wedding_date.value,
     guest_count: form.guest_count.value,
     referral: form.referral.value,
+    social_handle: form.social_handle.value,
     message: form.message.value,
   });
 
