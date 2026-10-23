@@ -826,6 +826,29 @@ footer > div:first-child > .footer-info {
   text-decoration: none;
 }
 
+.footer-social {
+  display: flex;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.footer-social a {
+  color: rgba(var(--cream-rgb), 0.4);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-social a:hover {
+  color: var(--cream);
+}
+
+.footer-social svg {
+  width: 18px;
+  height: 18px;
+}
+
 /* Tablet/mobile: subscribe stacks naturally with other footer cols */
 @media (max-width: 900px) {
   footer {
