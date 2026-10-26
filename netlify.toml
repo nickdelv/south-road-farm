@@ -32,3 +32,9 @@
   to = "/faq/"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/giveaway.html"
+  to = "/giveaway/"
+  status = 301
+  force = true

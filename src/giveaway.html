@@ -1,0 +1,493 @@
+---
+title: "Win a Free Wedding Weekend"
+description: "Enter to win a free wedding weekend at South Road Farm in Fayette, Maine. This November. Tell us your story."
+ogImage: /assets/images/image14.webp
+---
+
+{% extends "layouts/base.html" %} {% block head %}
+<link rel="stylesheet" href="/css/giveaway.css" />
+{% endblock %} {% block body %}
+
+<!-- ============ HERO ============ -->
+<section class="gw-hero" id="hero">
+  <p class="gw-hero-eyebrow">South Road Farm &middot; Fayette, Maine</p>
+  <h1 class="gw-hero-headline">
+    Win a
+    <span>free</span>
+    <br />
+    wedding weekend.
+  </h1>
+  <p class="gw-hero-date">
+    Get married
+    <br />
+    this November.
+  </p>
+  <p class="gw-hero-sub">
+    That's
+    <span id="gw-wedding-days"></span>
+    days from now. We know.
+  </p>
+
+  <p class="gw-countdown-label">Entries close November 2</p>
+  <div class="gw-countdown" id="gw-countdown">
+    <div class="gw-countdown-unit">
+      <span class="gw-countdown-num" id="gw-days">00</span>
+      <span class="gw-countdown-label">Days</span>
+    </div>
+    <div class="gw-countdown-sep">:</div>
+    <div class="gw-countdown-unit">
+      <span class="gw-countdown-num" id="gw-hours">00</span>
+      <span class="gw-countdown-label">Hours</span>
+    </div>
+    <div class="gw-countdown-sep">:</div>
+    <div class="gw-countdown-unit">
+      <span class="gw-countdown-num" id="gw-minutes">00</span>
+      <span class="gw-countdown-label">Min</span>
+    </div>
+    <div class="gw-countdown-sep">:</div>
+    <div class="gw-countdown-unit">
+      <span class="gw-countdown-num" id="gw-seconds">00</span>
+      <span class="gw-countdown-label">Sec</span>
+    </div>
+  </div>
+
+  <a href="#gw-form-section" class="gw-hero-cta">Enter Now</a>
+</section>
+
+<!-- ============ THE DEAL ============ -->
+<section class="gw-deal">
+  <p class="gw-section-label">Here's the Deal</p>
+  <p class="gw-deal-intro">
+    We're giving one couple a free wedding weekend at our farm. No catch. Tell
+    us your story. We pick the couple whose story we love most. You pick your
+    weekend — November 20–22 or Thanksgiving weekend, November 27–29.
+  </p>
+  <p class="gw-deal-intro">
+    This is a real wedding on a real timeline. You'll need to move fast — book
+    vendors, send invites, figure it out. We'll help where we can, but the
+    planning is on you.
+  </p>
+  <p class="gw-deal-intro">
+    We know this isn't for everyone. But we hope it's for someone.
+  </p>
+  <div class="gw-deal-cols">
+    <div class="gw-deal-col">
+      <h3>What you get</h3>
+      <ul>
+        <li>One barn — ceremony + reception</li>
+        <li>Courtyard, decks &amp; fire pit</li>
+        <li>Ceremony benches + hand-built arch</li>
+        <li>Farmhouse (sleeps 4)</li>
+        <li>Vendor contacts + day-of coordination help</li>
+      </ul>
+      <p class="gw-deal-value">~$5,000 value</p>
+    </div>
+    <div class="gw-deal-col">
+      <h3>What you handle</h3>
+      <ul>
+        <li>Bar service (licensed &amp; insured, dry hire)</li>
+        <li>Caterer or food trucks (licensed &amp; insured)</li>
+        <li>Tables + chairs rental</li>
+        <li>Your officiant + marriage license</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section class="gw-timeline">
+  <div class="gw-timeline-item">
+    <span class="gw-timeline-num">Nov 2</span>
+    <span class="gw-timeline-label">Entries Close</span>
+  </div>
+  <div class="gw-timeline-item">
+    <span class="gw-timeline-num">Nov 4</span>
+    <span class="gw-timeline-label">Winner Announced</span>
+  </div>
+  <div class="gw-timeline-item">
+    <span class="gw-timeline-num">Nov 20–22 or 27–29</span>
+    <span class="gw-timeline-label">Your Wedding</span>
+  </div>
+  <div class="gw-timeline-item">
+    <span class="gw-timeline-num">50</span>
+    <span class="gw-timeline-label">Max Guests</span>
+  </div>
+</section>
+
+<!-- ============ FORM ============ -->
+<section class="gw-form-section" id="gw-form-section">
+  <p class="gw-section-label">Enter the Giveaway</p>
+  <h2 class="gw-form-headline">Tell us your story.</h2>
+  <p class="gw-form-intro">
+    Fill this out together. Be honest, be you. We're reading every one.
+  </p>
+
+  <div class="gw-form-wrap" id="gw-form-wrap">
+    <form id="gw-form">
+      <!-- Partner 1 -->
+      <div class="gw-form-row">
+        <div class="gw-form-field">
+          <label for="partner1_first">
+            Partner 1 First Name
+            <span class="req">*</span>
+          </label>
+          <input
+            type="text"
+            id="partner1_first"
+            name="partner1_first"
+            required
+          />
+        </div>
+        <div class="gw-form-field">
+          <label for="partner1_last">
+            Partner 1 Last Name
+            <span class="req">*</span>
+          </label>
+          <input type="text" id="partner1_last" name="partner1_last" required />
+        </div>
+      </div>
+
+      <!-- Partner 2 -->
+      <div class="gw-form-row">
+        <div class="gw-form-field">
+          <label for="partner2_first">
+            Partner 2 First Name
+            <span class="req">*</span>
+          </label>
+          <input
+            type="text"
+            id="partner2_first"
+            name="partner2_first"
+            required
+          />
+        </div>
+        <div class="gw-form-field">
+          <label for="partner2_last">
+            Partner 2 Last Name
+            <span class="req">*</span>
+          </label>
+          <input type="text" id="partner2_last" name="partner2_last" required />
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="gw-form-row">
+        <div class="gw-form-field">
+          <label for="gw-email">
+            Email
+            <span class="req">*</span>
+          </label>
+          <input type="email" id="gw-email" name="email" required />
+        </div>
+        <div class="gw-form-field">
+          <label for="gw-phone">
+            Phone
+            <span class="req">*</span>
+          </label>
+          <input type="tel" id="gw-phone" name="phone" required />
+        </div>
+      </div>
+
+      <!-- Location + Social -->
+      <div class="gw-form-row">
+        <div class="gw-form-field">
+          <label for="gw-location">
+            Where you live
+            <span class="req">*</span>
+          </label>
+          <input
+            type="text"
+            id="gw-location"
+            name="location"
+            placeholder="City, State"
+            required
+          />
+        </div>
+        <div class="gw-form-field">
+          <label for="gw-social">Social handle</label>
+          <input
+            type="text"
+            id="gw-social"
+            name="social_handle"
+            placeholder="@handle (IG or TikTok)"
+          />
+        </div>
+      </div>
+
+      <!-- Story -->
+      <div class="gw-form-field">
+        <label for="gw-story">
+          Your story
+          <span class="req">*</span>
+        </label>
+        <textarea
+          id="gw-story"
+          name="story"
+          required
+          placeholder="Who are you two? Why now? Why here? Take as much space as you need."
+        ></textarea>
+      </div>
+
+      <!-- Guest Count -->
+      <div class="gw-form-row">
+        <div class="gw-form-field">
+          <label for="gw-guests">
+            Rough guest count
+            <span class="req">*</span>
+          </label>
+          <select id="gw-guests" name="guest_count" required>
+            <option value="" disabled selected>Select</option>
+            <option value="under-20">Under 20</option>
+            <option value="20-35">20 – 35</option>
+            <option value="35-50">35 – 50</option>
+          </select>
+        </div>
+        <div class="gw-form-field"></div>
+      </div>
+
+      <!-- Weekend Preference -->
+      <div class="gw-form-field">
+        <label>
+          Preferred weekend
+          <span class="req">*</span>
+        </label>
+        <div class="gw-radios">
+          <label class="gw-radio">
+            <input
+              type="radio"
+              name="weekend_preference"
+              value="nov-20-22"
+              required
+            />
+            <span>November 20–22</span>
+          </label>
+          <label class="gw-radio">
+            <input
+              type="radio"
+              name="weekend_preference"
+              value="nov-27-29"
+              required
+            />
+            <span>November 27–29 (Thanksgiving)</span>
+          </label>
+          <label class="gw-radio">
+            <input
+              type="radio"
+              name="weekend_preference"
+              value="either"
+              required
+            />
+            <span>Either works</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Checkboxes -->
+      <div class="gw-checkboxes">
+        <label class="gw-checkbox">
+          <input type="checkbox" name="agree_rules" required />
+          <span>
+            I've read the
+            <a href="#gw-rules">official rules</a>
+            below
+          </span>
+        </label>
+        <label class="gw-checkbox">
+          <input type="checkbox" name="agree_photo" required />
+          <span>
+            We agree to photo and video release for South Road Farm's marketing
+            use
+          </span>
+        </label>
+        <label class="gw-checkbox">
+          <input type="checkbox" name="agree_age" required />
+          <span>We're both 18 or older</span>
+        </label>
+      </div>
+
+      <!-- Honeypot -->
+      <input
+        type="text"
+        id="gw-website"
+        name="website"
+        tabindex="-1"
+        autocomplete="off"
+        style="
+          position: absolute;
+          left: -9999px;
+          width: 1px;
+          height: 1px;
+          overflow: hidden;
+        "
+      />
+
+      <!-- Submit -->
+      <div class="gw-form-submit">
+        <button type="submit">Submit Your Entry</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Thank You -->
+  <div class="gw-thank-you" id="gw-thank-you">
+    <div class="gw-ty-check">
+      <svg viewBox="0 0 24 24">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+    </div>
+    <h2 class="gw-ty-headline">You're in.</h2>
+    <p class="gw-ty-body">
+      We'll announce a winner by November 4. In the meantime, follow along.
+    </p>
+    <a
+      href="{{ client.social.instagram }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="gw-ty-link"
+    >
+      @southroad.farm on Instagram &rarr;
+    </a>
+  </div>
+</section>
+
+<!-- Entries Closed (shown by JS when deadline passes) -->
+<section class="gw-closed" id="gw-closed" style="display: none">
+  <h2>Entries are closed.</h2>
+  <p>
+    The entry window closed November 2. Winner announcement coming November 4.
+  </p>
+</section>
+
+<!-- ============ OFFICIAL RULES ============ -->
+<section class="gw-rules" id="gw-rules">
+  <p class="gw-section-label">The Fine Print</p>
+  <div class="gw-rules-item">
+    <button class="gw-rules-toggle" aria-expanded="false">
+      <span>Official Rules</span>
+      <span class="gw-rules-icon" aria-hidden="true"></span>
+    </button>
+    <div class="gw-rules-content">
+      <div class="gw-rules-inner">
+        <h4>No Purchase Necessary</h4>
+        <p>
+          No purchase or payment of any kind is necessary to enter or win. A
+          purchase will not improve your chances of winning.
+        </p>
+
+        <h4>Eligibility</h4>
+        <p>
+          Open to couples where both partners are at least 18 years of age. Both
+          partners must be able to legally marry in the State of Maine and be
+          available for a wedding at South Road Farm on November 20–22 or
+          November 27–29, 2026. Employees of South Road Farm and their immediate
+          family members are not eligible.
+        </p>
+
+        <h4>Entry Period</h4>
+        <p>
+          Entries are accepted from October 26, 2026 at 12:00 AM Eastern Time
+          through November 2, 2026 at 11:59 PM Eastern Time. One entry per
+          couple. Duplicate or incomplete entries will be disqualified.
+        </p>
+
+        <h4>How to Enter</h4>
+        <p>
+          Complete the entry form on this page during the entry period. All
+          required fields must be filled in. By entering, you agree to these
+          official rules.
+        </p>
+
+        <h4>Judging</h4>
+        <p>
+          The winner will be selected by the owners of South Road Farm, Nick and
+          Dave, based on the following criteria: the couple's story, their fit
+          with the spirit of the venue, and their ability to realistically plan
+          and execute a wedding by the selected weekend in November 2026. This
+          is a contest judged on merit, not a random drawing.
+        </p>
+
+        <h4>Prize</h4>
+        <p>
+          One (1) winner will receive exclusive use of one barn, courtyard,
+          decks, fire pit, ceremony benches, arch, and the farmhouse (sleeps 4)
+          at South Road Farm for the winning couple's selected weekend —
+          November 20–22 or November 27–29, 2026 (Friday midday through Sunday
+          midday). Approximate retail value: $5,000. Prize also includes vendor
+          referrals and day-of coordination assistance from South Road Farm.
+        </p>
+
+        <h4>What Is Not Included</h4>
+        <p>The prize does not include:</p>
+        <ul>
+          <li>Catering or food service</li>
+          <li>Bar service or alcohol</li>
+          <li>Table and chair rentals</li>
+          <li>Officiant or marriage license</li>
+          <li>Event liability insurance</li>
+          <li>
+            Transportation, accommodations beyond the farmhouse, or any other
+            costs not expressly listed above
+          </li>
+        </ul>
+
+        <h4>Winner Notification</h4>
+        <p>
+          The winner will be notified by email no later than November 4, 2026.
+          The winner must respond and confirm acceptance by November 6, 2026. If
+          the winner does not respond by the acceptance deadline, South Road
+          Farm reserves the right to select an alternate winner.
+        </p>
+
+        <h4>Conditions of Winning</h4>
+        <p>
+          The winning couple must sign a venue use agreement covering rules,
+          responsibilities, liability waiver, and cleanup expectations. The
+          winning couple must grant South Road Farm full rights to photograph
+          and video record the event for marketing purposes and agree to inform
+          their guests that the event will be photographed and filmed. The
+          maximum guest count is 50.
+        </p>
+
+        <h4>Taxes</h4>
+        <p>
+          The winner is solely responsible for any federal, state, or local
+          taxes applicable to the prize. South Road Farm recommends consulting a
+          tax advisor.
+        </p>
+
+        <h4>Right to Cancel</h4>
+        <p>
+          South Road Farm reserves the right to not award the prize if, in its
+          sole judgment, no suitable entry is received.
+        </p>
+
+        <h4>Social Media Disclaimer</h4>
+        <p>
+          This giveaway is not sponsored, endorsed, administered by, or
+          associated with Instagram, TikTok, or Meta Platforms, Inc.
+        </p>
+
+        <h4>Governing Law</h4>
+        <p>
+          This contest is governed by the laws of the State of Maine. Void where
+          prohibited.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MINI CTA ============ -->
+<section class="gw-cta">
+  <p>
+    Questions?
+    <a href="mailto:{{ client.email }}">{{ client.email }}</a>
+  </p>
+  <a href="/weekend/" class="gw-cta-link">
+    See the full South Road Farm experience &rarr;
+  </a>
+</section>
+
+{% endblock %} {% block scripts %}
+<script defer src="/js/giveaway.js"></script>
+{% endblock %}

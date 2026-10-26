@@ -1,0 +1,816 @@
+/* ===================================================
+   GIVEAWAY PAGE
+   Different energy: bold, urgent, direct.
+   All classes prefixed gw- to avoid collisions.
+   =================================================== */
+
+/* ---------- HERO ---------- */
+.gw-hero {
+  background: var(--forest);
+  padding: 160px var(--pad-x) 80px;
+  text-align: center;
+}
+
+.gw-hero-eyebrow {
+  font-family: "Jost", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 32px;
+}
+
+.gw-hero-headline {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: clamp(48px, 13vw, 140px);
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.gw-hero-headline span {
+  color: var(--amber);
+}
+
+.gw-hero-date {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: clamp(36px, 8vw, 80px);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-top: 20px;
+}
+
+.gw-hero-sub {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: rgba(var(--cream-rgb), 0.55);
+  margin-top: 28px;
+}
+
+/* ---------- COUNTDOWN ---------- */
+p.gw-countdown-label {
+  font-family: "Jost", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(var(--cream-rgb), 0.4);
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.gw-countdown {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 12px;
+}
+
+.gw-countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 64px;
+}
+
+.gw-countdown-num {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: clamp(32px, 8vw, 56px);
+  color: var(--amber);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.gw-countdown-label {
+  font-family: "Jost", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(var(--cream-rgb), 0.4);
+  margin-top: 8px;
+}
+
+.gw-countdown-sep {
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: clamp(28px, 6vw, 44px);
+  color: rgba(var(--cream-rgb), 0.2);
+  line-height: 1;
+  align-self: flex-start;
+  padding-top: 2px;
+}
+
+/* ---------- HERO CTA ---------- */
+.gw-hero-cta {
+  display: inline-block;
+  margin-top: 48px;
+  padding: 16px 48px;
+  border: 1px solid rgba(var(--cream-rgb), 0.25);
+  color: rgba(var(--cream-rgb), 0.7);
+  font-family: "Jost", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
+}
+
+.gw-hero-cta:hover {
+  border-color: rgba(var(--cream-rgb), 0.55);
+  color: var(--cream);
+}
+
+/* ---------- SECTION LABEL (reused) ---------- */
+.gw-section-label {
+  font-family: "Jost", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 20px;
+}
+
+/* ---------- THE DEAL ---------- */
+.gw-deal {
+  background: var(--cream);
+  padding: 72px var(--pad-x);
+}
+
+.gw-deal-intro {
+  font-family: "Jost", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--forest);
+  max-width: 600px;
+  margin-bottom: 48px;
+}
+
+.gw-deal-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  max-width: 740px;
+}
+
+.gw-deal-col h3 {
+  font-family: "Jost", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--forest);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(var(--forest-ui-rgb), 0.15);
+}
+
+.gw-deal-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gw-deal-col li {
+  font-family: "Jost", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--stone);
+  padding: 6px 0;
+  padding-left: 16px;
+  position: relative;
+}
+
+.gw-deal-col li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--amber);
+}
+
+.gw-deal-value {
+  font-family: "Jost", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--amber);
+  margin-top: 16px;
+  padding-left: 16px;
+}
+
+/* ---------- TIMELINE STRIP ---------- */
+.gw-timeline {
+  background: var(--forest);
+  padding: 48px var(--pad-x);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+
+.gw-timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.gw-timeline-num {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: clamp(20px, 3vw, 28px);
+  color: var(--white);
+  letter-spacing: 0.02em;
+}
+
+.gw-timeline-label {
+  font-family: "Jost", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(var(--cream-rgb), 0.4);
+}
+
+/* ---------- FORM SECTION ---------- */
+.gw-form-section {
+  background: var(--cream);
+  padding: 72px var(--pad-x);
+}
+
+.gw-form-headline {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: clamp(32px, 6vw, 52px);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--forest);
+  margin-bottom: 12px;
+}
+
+.gw-form-intro {
+  font-family: "Jost", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--stone);
+  max-width: 520px;
+  margin-bottom: 48px;
+}
+
+.gw-form-wrap {
+  max-width: 680px;
+  transition: opacity 0.4s ease;
+}
+
+.gw-form-wrap.fading {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Form rows */
+.gw-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.gw-form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 28px;
+}
+
+.gw-form-field label {
+  font-family: "Jost", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--forest);
+  margin-bottom: 10px;
+}
+
+.gw-form-field label .req {
+  color: var(--amber);
+  margin-left: 2px;
+}
+
+.gw-form-field input,
+.gw-form-field select,
+.gw-form-field textarea {
+  font-family: "Jost", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--forest);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(var(--forest-ui-rgb), 0.3);
+  padding: 10px 0;
+  outline: none;
+  transition: border-color 0.2s ease;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  width: 100%;
+}
+
+.gw-form-field select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%233a4a30' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 4px center;
+  padding-right: 24px;
+}
+
+.gw-form-field input:focus,
+.gw-form-field select:focus,
+.gw-form-field textarea:focus {
+  border-bottom-color: var(--forest);
+}
+
+.gw-form-field input::placeholder,
+.gw-form-field textarea::placeholder {
+  color: rgba(var(--forest-ui-rgb), 0.35);
+}
+
+.gw-form-field textarea {
+  resize: vertical;
+  min-height: 140px;
+  line-height: 1.7;
+}
+
+/* ---------- CHECKBOXES ---------- */
+.gw-checkboxes {
+  margin-top: 8px;
+  margin-bottom: 32px;
+}
+
+.gw-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+  cursor: pointer;
+}
+
+.gw-checkbox input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(var(--forest-ui-rgb), 0.3);
+  border-radius: 2px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  cursor: pointer;
+  position: relative;
+  transition:
+    background 0.15s,
+    border-color 0.15s;
+}
+
+.gw-checkbox input[type="checkbox"]:checked {
+  background: var(--amber);
+  border-color: var(--amber);
+}
+
+.gw-checkbox input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 9px;
+  border: solid var(--white);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.gw-checkbox span {
+  font-family: "Jost", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--stone);
+}
+
+.gw-checkbox a {
+  color: var(--forest);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.gw-checkbox a:hover {
+  color: var(--amber);
+}
+
+/* ---------- RADIO BUTTONS ---------- */
+.gw-radios {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.gw-radio {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.gw-radio input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(var(--forest-ui-rgb), 0.3);
+  border-radius: 50%;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+  transition:
+    background 0.15s,
+    border-color 0.15s;
+}
+
+.gw-radio input[type="radio"]:checked {
+  border-color: var(--amber);
+}
+
+.gw-radio input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--amber);
+}
+
+.gw-radio span {
+  font-family: "Jost", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--stone);
+}
+
+/* ---------- SUBMIT ---------- */
+.gw-form-submit {
+  margin-top: 4px;
+}
+
+.gw-form-submit button {
+  width: 100%;
+  padding: 18px 48px;
+  background: var(--amber);
+  color: var(--forest);
+  font-family: "Jost", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.gw-form-submit button:hover {
+  background: var(--amber-light);
+}
+
+.gw-form-submit button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* ---------- THANK YOU STATE ---------- */
+.gw-thank-you {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  max-width: 680px;
+}
+
+.gw-thank-you.visible {
+  opacity: 1;
+}
+
+.gw-ty-check {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(var(--forest-ui-rgb), 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.gw-ty-check svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--amber);
+  stroke-width: 2;
+  fill: none;
+}
+
+.gw-ty-headline {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: clamp(36px, 6vw, 56px);
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--forest);
+  margin-bottom: 16px;
+}
+
+.gw-ty-body {
+  font-family: "Jost", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--stone);
+  margin-bottom: 24px;
+}
+
+.gw-ty-link {
+  font-family: "Jost", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--forest);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.gw-ty-link:hover {
+  color: var(--amber);
+}
+
+/* ---------- ENTRIES CLOSED STATE ---------- */
+.gw-closed {
+  background: var(--cream);
+  padding: 72px var(--pad-x);
+  text-align: center;
+}
+
+.gw-closed h2 {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: clamp(32px, 6vw, 52px);
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--forest);
+  margin-bottom: 16px;
+}
+
+.gw-closed p {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--stone);
+}
+
+/* ---------- OFFICIAL RULES ---------- */
+.gw-rules {
+  background: var(--forest);
+  padding: 56px var(--pad-x);
+}
+
+.gw-rules-item {
+  max-width: 680px;
+}
+
+.gw-rules-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(var(--cream-rgb), 0.1);
+  padding: 16px 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.gw-rules-toggle span:first-child {
+  font-family: "Jost", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: rgba(var(--cream-rgb), 0.6);
+  transition: color 0.2s;
+}
+
+.gw-rules-toggle:hover span:first-child {
+  color: var(--cream);
+}
+
+.gw-rules-icon {
+  width: 12px;
+  height: 12px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.gw-rules-icon::before,
+.gw-rules-icon::after {
+  content: "";
+  position: absolute;
+  background: rgba(var(--cream-rgb), 0.4);
+  transition: transform 0.3s ease;
+}
+
+.gw-rules-icon::before {
+  width: 12px;
+  height: 1px;
+  top: 50%;
+  left: 0;
+}
+
+.gw-rules-icon::after {
+  width: 1px;
+  height: 12px;
+  left: 50%;
+  top: 0;
+}
+
+.gw-rules-item.open .gw-rules-icon::after {
+  transform: rotate(90deg);
+}
+
+.gw-rules-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.gw-rules-inner {
+  padding: 24px 0 16px;
+}
+
+.gw-rules-inner h4 {
+  font-family: "Jost", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.gw-rules-inner h4:first-child {
+  margin-top: 0;
+}
+
+.gw-rules-inner p {
+  font-family: "Jost", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(var(--cream-rgb), 0.5);
+  margin-bottom: 12px;
+}
+
+.gw-rules-inner ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+}
+
+.gw-rules-inner li {
+  font-family: "Jost", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(var(--cream-rgb), 0.5);
+  padding-left: 16px;
+  position: relative;
+}
+
+.gw-rules-inner li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: rgba(var(--cream-rgb), 0.25);
+}
+
+/* ---------- MINI CTA ---------- */
+.gw-cta {
+  background: var(--cream);
+  padding: 56px var(--pad-x);
+  text-align: center;
+}
+
+.gw-cta p {
+  font-family: "Jost", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--stone);
+  margin-bottom: 12px;
+}
+
+.gw-cta p a {
+  color: var(--forest);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.gw-cta p a:hover {
+  color: var(--amber);
+}
+
+.gw-cta-link {
+  font-family: "Jost", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--forest);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.gw-cta-link:hover {
+  color: var(--amber);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .gw-hero {
+    padding: 140px var(--pad-x) 64px;
+  }
+
+  .gw-deal-cols {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .gw-timeline {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    padding: 40px var(--pad-x);
+  }
+
+  .gw-form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+@media (max-width: 599px) {
+  .gw-hero {
+    padding: 120px var(--pad-x) 56px;
+  }
+
+  .gw-hero-headline {
+    font-size: clamp(40px, 13vw, 80px);
+  }
+
+  .gw-countdown {
+    gap: 12px;
+  }
+
+  .gw-countdown-unit {
+    min-width: 0;
+  }
+
+  .gw-deal {
+    padding: 56px var(--pad-x);
+  }
+
+  .gw-timeline {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .gw-form-section {
+    padding: 56px var(--pad-x);
+  }
+}
