@@ -1,0 +1,68 @@
+---
+title: "Farm Guide"
+permalink: /guide/tncktw/
+eleventyExcludeFromCollections: true
+---
+
+{% extends "layouts/base.html" %} {% block head %}
+<meta name="robots" content="noindex, nofollow" />
+<style>
+  .guide-body {
+    padding: var(--pad-v-sm) var(--pad-x-wide);
+    max-width: 640px;
+  }
+  .guide-body p {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.85;
+    color: var(--stone);
+  }
+  .guide-body p + p {
+    margin-top: 16px;
+  }
+  .guide-body .btn-dark {
+    margin-top: 36px;
+  }
+  .guide-contact {
+    margin-top: 48px;
+    font-size: 14px;
+    color: rgba(var(--forest-rgb), 0.45);
+  }
+  .guide-contact a {
+    color: var(--amber);
+    text-decoration: none;
+  }
+  .guide-contact a:hover {
+    text-decoration: underline;
+  }
+</style>
+{% endblock %} {% block body %}
+
+<section class="page-header">
+  <p class="section-eyebrow">South Road Farm</p>
+  <h1>Farm Guide</h1>
+  <p class="page-header-intro">Version 2027-1</p>
+</section>
+
+<section class="guide-body">
+  <p>
+    This Guide is part of your South Road Farm Wedding Venue Agreement. It
+    covers our property rules, key numbers, and deadlines. Please share it with
+    your planner and vendors.
+  </p>
+  <a
+    class="btn-dark"
+    href="/assets/south-road-farm-guide-2027-1.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Open the Guide (PDF)
+  </a>
+  <p class="guide-contact">
+    Questions? Email
+    <a href="mailto:{{ client.email }}">{{ client.email }}</a>
+    .
+  </p>
+</section>
+
+{% endblock %}
