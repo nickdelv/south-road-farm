@@ -260,6 +260,10 @@
 .ty-calendar {
   margin-bottom: 40px;
 }
+iframe[src^="https://calendar.google.com/calendar/appointments/schedules/"] {
+  background: #fff;
+  color-scheme: light;
+}
 
 .ty-link {
   font-family: "Jost", sans-serif;

@@ -48,5 +48,9 @@ form.addEventListener("submit", async function (e) {
     formWrap.style.display = "none";
     thankYou.style.display = "block";
     requestAnimationFrame(() => thankYou.classList.add("visible"));
+
+    // Auto-open the scheduling popup
+    const calBtn = document.querySelector(".ty-calendar button");
+    if (calBtn) calBtn.click();
   }, 400);
 });
