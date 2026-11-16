@@ -1,0 +1,26 @@
+/* ── Photography credits ── */
+.credits {
+  background: var(--cream);
+  padding: var(--pad-v-sm) var(--pad-x-wide) var(--pad-v);
+}
+.credits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.credits-list li {
+  margin-bottom: 20px;
+}
+.credits-list a {
+  font-family: "Crimson Text", serif;
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 400;
+  color: var(--forest);
+  text-decoration: none;
+  border-bottom: 1px solid var(--amber);
+  padding-bottom: 2px;
+  transition: color 0.2s;
+}
+.credits-list a:hover {
+  color: var(--amber);
+}

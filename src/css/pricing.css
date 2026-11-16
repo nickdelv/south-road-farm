@@ -1,0 +1,291 @@
+/* ── Pricing body ── */
+.pricing-body {
+  background: var(--cream);
+  padding: 0 var(--pad-x-wide) var(--pad-v);
+}
+
+/* ── Section group ── */
+.pricing-group {
+  margin-top: 56px;
+}
+.pricing-group:first-child {
+  margin-top: 0;
+  padding-top: 72px;
+}
+.pricing-group .section-eyebrow {
+  margin-bottom: 0;
+}
+.pricing-group-heading {
+  font-family: "Crimson Text", serif;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--forest);
+  margin: 12px 0 40px;
+}
+.pricing-group-divider {
+  border-top: 1px solid rgba(var(--forest-ui-rgb), 0.08);
+  padding-top: 56px;
+}
+
+/* ── Two-column layout (includes / bring) ── */
+.pricing-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+.pricing-col h3 {
+  font-family: "Jost", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 24px;
+}
+
+/* ── Dash lists (shared by includes/bring + require) ── */
+.pricing-col ul,
+.pricing-require ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.pricing-col ul li,
+.pricing-require ul li {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: var(--stone);
+  padding-left: 16px;
+  position: relative;
+}
+.pricing-col ul li::before,
+.pricing-require ul li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--amber);
+}
+
+/* ── Note text ── */
+.pricing-note {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: var(--stone);
+  margin-top: 40px;
+  max-width: 640px;
+}
+
+/* ── Add-on ── */
+.pricing-addon {
+  margin-top: 40px;
+}
+.pricing-addon p {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: var(--stone);
+  max-width: 640px;
+}
+.pricing-addon strong {
+  font-weight: 500;
+  color: var(--forest);
+}
+
+/* ── Cost guide ── */
+.pricing-guide-intro {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: var(--stone);
+  max-width: 640px;
+  margin-bottom: 40px;
+}
+.section-eyebrow.pricing-guide-subhead {
+  margin-bottom: 16px;
+  margin-top: 32px;
+}
+.pricing-guide-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.pricing-guide-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(var(--forest-ui-rgb), 0.08);
+  max-width: 640px;
+}
+.pricing-guide-item-label {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--forest);
+}
+.pricing-guide-item-range {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--forest);
+  white-space: nowrap;
+  text-align: right;
+}
+.pricing-guide-item-note {
+  font-family: "Jost", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--stone);
+  margin-top: 4px;
+  max-width: 640px;
+}
+.pricing-guide-total {
+  font-family: "Crimson Text", serif;
+  font-size: clamp(20px, 2vw, 24px);
+  font-weight: 400;
+  color: var(--forest);
+  margin-top: 32px;
+  max-width: 640px;
+}
+.pricing-guide-footer {
+  font-family: "Jost", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--stone);
+  margin-top: 16px;
+  max-width: 640px;
+}
+.pricing-guide-footer a {
+  color: var(--forest);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.pricing-guide-footer a:hover {
+  color: var(--amber);
+}
+
+/* ── How booking works (forest bg) ── */
+.pricing-steps {
+  background: var(--forest);
+  padding: var(--pad-v) var(--pad-x-wide);
+}
+.pricing-steps h2 {
+  font-family: "Crimson Text", serif;
+  font-size: clamp(36px, 3.5vw, 54px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--white);
+  margin: 16px 0 48px;
+}
+.pricing-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px;
+}
+.pricing-step-number {
+  font-family: "Jost", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 12px;
+}
+.pricing-step h3 {
+  font-family: "Crimson Text", serif;
+  font-size: clamp(18px, 1.5vw, 22px);
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.pricing-step p {
+  font-family: "Jost", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(var(--cream-rgb), 0.6);
+}
+.pricing-step-link {
+  font-family: "Jost", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--amber);
+  text-decoration: none;
+  margin-top: 12px;
+  display: inline-block;
+}
+.pricing-step-link:hover {
+  color: var(--white);
+}
+
+/* ── Partner perks ── */
+.pricing-perks {
+  background: var(--cream);
+  padding: var(--pad-v-sm) var(--pad-x-wide);
+}
+.pricing-perks .pricing-group-heading {
+  margin: 0;
+}
+.pricing-perks-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 32px;
+}
+.pricing-perk h3 {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--forest);
+  margin-bottom: 8px;
+}
+.pricing-perk h3 a {
+  color: var(--forest);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.pricing-perk h3 a:hover {
+  color: var(--amber);
+}
+.pricing-perk p {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--stone);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .pricing-cols {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .pricing-steps-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .pricing-perks-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .pricing-guide-item {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 599px) {
+  .pricing-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

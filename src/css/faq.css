@@ -118,7 +118,7 @@
   font-family: "Crimson Text", serif;
   font-size: clamp(28px, 3vw, 40px);
   font-weight: 300;
-  font-style: italic;
+  font-style: normal;
   color: var(--white);
   line-height: 1.2;
 }

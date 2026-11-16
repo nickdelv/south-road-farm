@@ -1,0 +1,120 @@
+{
+  "sections": [
+    {
+      "id": "land",
+      "heading": "Land & views.",
+      "intro": "Rolling fields, old stone walls, and a tree line that catches every sunset. Sixty-seven acres of room to breathe.",
+      "photos": [
+        {
+          "src": "south-road-farm-2026-18.webp",
+          "alt": "Fall foliage panorama across the valley",
+          "layout": "full"
+        },
+        {
+          "src": "3K7A2224.webp",
+          "alt": "Bride in the woods by the fire pit at golden hour",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A4196.webp",
+          "alt": "Bride on the deck overlooking the valley at twilight",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A2591.webp",
+          "alt": "Bride with bouquet by the arch at sunset, fall foliage behind",
+          "layout": "full"
+        },
+        {
+          "src": "south-road-farm-2026-5.webp",
+          "alt": "Adirondack chairs in the woods surrounded by fall leaves",
+          "layout": "half-landscape"
+        },
+        {
+          "src": "FayetteFarm_2944.webp",
+          "alt": "View through the barn doors out to the rolling hills",
+          "layout": "half-landscape"
+        }
+      ]
+    },
+    {
+      "id": "barns",
+      "heading": "The barns.",
+      "intro": "Two restored barns — one for dinner, one for dancing. Hand-built beams, string lights, and open decks that look out over the valley.",
+      "photos": [
+        {
+          "src": "3K7A9676.webp",
+          "alt": "The barns at South Road Farm in black and white",
+          "layout": "full"
+        },
+        {
+          "src": "south-road-farm-2026-101.webp",
+          "alt": "The bar with flowers under the covered structure",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A3830.webp",
+          "alt": "Bride with veil in front of the barn at twilight",
+          "layout": "half"
+        },
+        {
+          "src": "south-road-farm-2026-38.webp",
+          "alt": "Barn deck overlooking the valley",
+          "layout": "full"
+        },
+        {
+          "src": "south-road-farm-2026-39.webp",
+          "alt": "Barn deck and railing with blue sky",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A1222.webp",
+          "alt": "South Road Farm Est 1793 sign with barn entrance and flowers",
+          "layout": "half"
+        }
+      ]
+    },
+    {
+      "id": "farmhouse",
+      "heading": "The farmhouse.",
+      "intro": "Sleeps 10, included with your weekend.",
+      "photos": [
+        {
+          "src": "south-road-farm-2026-11.webp",
+          "alt": "The farmhouse exterior with covered porch and fall foliage",
+          "layout": "full"
+        },
+        {
+          "src": "3K7A9697.webp",
+          "alt": "Wedding dress hanging from exposed beams in the farmhouse",
+          "layout": "half"
+        },
+        {
+          "src": "south-road-farm-2026-77.webp",
+          "alt": "Farmhouse kitchen with blue cabinets and butcher block counters",
+          "layout": "half"
+        },
+        {
+          "src": "south-road-farm-2026-54.webp",
+          "alt": "Farmhouse living room with exposed beams and wood stove",
+          "layout": "full"
+        },
+        {
+          "src": "3K7A9661.webp",
+          "alt": "Farmhouse dining room and living room bathed in afternoon light",
+          "layout": "full"
+        },
+        {
+          "src": "3K7A9790.webp",
+          "alt": "Groom playing piano in the farmhouse",
+          "layout": "half"
+        },
+        {
+          "src": "south-road-farm-2026-56.webp",
+          "alt": "Farmhouse bathroom doorway with leopard wallpaper",
+          "layout": "half"
+        }
+      ]
+    }
+  ]
+}

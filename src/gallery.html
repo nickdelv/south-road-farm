@@ -1,0 +1,49 @@
+---
+title: Gallery
+description: Photos of South Road Farm — 67 acres in Fayette, Maine. Explore the land, the barns, and the farmhouse.
+ogImage: /assets/images/3K7A4526.webp
+---
+
+{% extends "layouts/base.html" %} {% block head %}
+<link rel="stylesheet" href="/css/gallery.css" />
+{% endblock %} {% block body %}
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <p class="section-eyebrow">Gallery</p>
+  <h1>Take a Look Around</h1>
+  <p class="page-header-intro">67 acres in Fayette, Maine.</p>
+</section>
+
+<!-- GALLERY SECTIONS -->
+<section class="gallery-body">
+  {% for section in galleryPage.sections %}
+  <div class="gallery-section" id="{{ section.id }}">
+    <h2 class="gallery-section-heading">{{ section.heading }}</h2>
+    <p class="gallery-section-intro">{{ section.intro }}</p>
+    <div class="gallery-grid">
+      {% for photo in section.photos %}
+      <div class="gallery-photo gallery-photo--{{ photo.layout }}">
+        <img
+          src="/assets/images/{{ photo.src }}"
+          alt="{{ photo.alt }}"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <p class="section-eyebrow">Ready to See It in Person?</p>
+  <h2>Book a tour.</h2>
+  <p>Come walk the property with Nick or Dave — in person or virtual.</p>
+  <div>
+    <a href="/contact/" class="btn-dark">Schedule a Visit</a>
+    <a href="/weekend/" class="btn-outline">See the Weekend</a>
+  </div>
+</section>
+{% endblock %}

@@ -1,5 +1,5 @@
-/* ── Two-column narrative block ── */
-.farm-narrative {
+/* ── Origin section ── */
+.farm-origin {
   background: var(--cream);
   padding: var(--pad-v) var(--pad-x-wide);
   display: grid;
@@ -7,10 +7,27 @@
   gap: 100px;
   align-items: center;
 }
-.farm-narrative.reverse .farm-narrative-img {
-  order: 2;
+.farm-origin-imgs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
-.farm-narrative-text h2 {
+.farm-origin-img {
+  overflow: hidden;
+}
+.farm-origin-imgs .farm-origin-img:first-child {
+  aspect-ratio: 3 / 4;
+}
+.farm-origin-imgs .farm-origin-img:last-child {
+  aspect-ratio: 3 / 4;
+}
+.farm-origin-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.farm-origin-text h2 {
   font-family: "Crimson Text", serif;
   font-size: clamp(36px, 3.5vw, 54px);
   font-weight: 400;
@@ -18,169 +35,25 @@
   color: var(--forest);
   margin: 16px 0 28px;
 }
-.farm-narrative-text h2 em {
-  font-style: italic;
-}
-.farm-narrative-text p {
+.farm-origin-text p {
   font-size: 16px;
   font-weight: 300;
   line-height: 1.95;
   color: var(--stone);
   max-width: 480px;
 }
-.farm-narrative-text p + p {
+.farm-origin-text p + p {
   margin-top: 20px;
 }
-.farm-narrative-img {
-  overflow: hidden;
-  max-height: 75vh;
-}
-.farm-narrative-img.portrait-3-4 {
-  aspect-ratio: 3 / 4;
-}
-.farm-narrative-img.portrait-4-5 {
-  aspect-ratio: 4 / 5;
-}
-.farm-narrative-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
 
-/* Dark variant */
-.farm-narrative.dark {
-  background: var(--forest);
-}
-.farm-narrative.dark .farm-narrative-text h2 {
-  color: var(--white);
-}
-.farm-narrative.dark .farm-narrative-text p {
-  color: rgba(var(--cream-rgb), 0.6);
-}
-
-/* ── Full-bleed image ── */
-.full-bleed-bare {
-  overflow: hidden;
-}
-.full-bleed-bare img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.full-bleed-bare.tall {
-  height: 80vh;
-  min-height: 520px;
-}
-.full-bleed-bare.medium {
-  height: 60vh;
-  min-height: 400px;
-}
-
-/* ── Timeline ── */
-.farm-timeline {
-  background: var(--forest);
-  padding: var(--pad-v) var(--pad-x-wide);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 100px;
-  align-items: center;
-}
-.farm-timeline-header h2 {
-  font-family: "Crimson Text", serif;
-  font-size: clamp(36px, 3.5vw, 54px);
-  font-weight: 400;
-  line-height: 1.1;
-  color: var(--white);
-  margin: 16px 0 28px;
-}
-.farm-timeline-header h2 em {
-  font-style: italic;
-}
-.farm-timeline-header p {
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.95;
-  color: rgba(var(--cream-rgb), 0.6);
-}
-
-/* Spine + entries */
-.farm-timeline-entries {
-  position: relative;
-  padding-left: 32px;
-}
-.farm-timeline-entries::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background: var(--amber);
-  opacity: 0.35;
-}
-
-.timeline-entry {
-  position: relative;
-  padding: 0 0 36px 32px;
-}
-.timeline-entry:last-child {
-  padding-bottom: 0;
-}
-
-.timeline-entry::before {
-  content: "";
-  position: absolute;
-  left: -24px;
-  top: 7px;
-  width: 16px;
-  height: 1px;
-  background: var(--amber);
-  opacity: 0.5;
-}
-
-.timeline-entry::after {
-  content: "";
-  position: absolute;
-  left: -35px;
-  top: 3px;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--amber);
-  opacity: 0.8;
-}
-
-.timeline-year {
-  display: block;
-  font-family: "Jost", sans-serif;
-  font-size: 11px;
-  font-weight: 400;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--amber);
-  margin-bottom: 6px;
-}
-.timeline-fact {
-  display: block;
-  font-family: "Crimson Text", serif;
-  font-size: clamp(16px, 1.4vw, 20px);
-  font-weight: 400;
-  font-style: italic;
-  line-height: 1.4;
-  color: rgba(var(--cream-rgb), 0.75);
-}
-
-/* ── Pull quotes ── */
-.farm-quote {
+/* ── Pull quote ── */
+.farm-origin-text .farm-quote {
   margin: 28px 0;
   padding-left: 20px;
   border-left: 1px solid var(--amber);
   max-width: 480px;
 }
-
-.farm-quote p {
+.farm-origin-text .farm-quote p {
   font-family: "Crimson Text", serif;
   font-size: clamp(17px, 1.5vw, 20px);
   font-weight: 400;
@@ -188,8 +61,7 @@
   line-height: 1.7;
   color: var(--forest);
 }
-
-.farm-quote cite {
+.farm-origin-text .farm-quote cite {
   display: block;
   font-family: "Jost", sans-serif;
   font-size: 11px;
@@ -201,58 +73,104 @@
   margin-top: 12px;
 }
 
-/* Dark variant — used inside .farm-narrative.dark if ever needed */
-.farm-narrative.dark .farm-quote p {
-  color: rgba(var(--cream-rgb), 0.75);
+/* ── Photo block ── */
+.farm-photo-block {
+  background: var(--cream);
+  padding: 0 var(--pad-x-wide) var(--pad-v);
 }
-
-/* ── Stacked image column ── */
-.farm-narrative-img-stack {
+.farm-photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.farm-photo-grid-item img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+.farm-photo-grid-item--full {
+  grid-column: 1 / -1;
+}
+.farm-photo-grid-item--full img {
+  max-height: 600px;
+  height: 100%;
+}
+.farm-photo-grid-item--half img {
+  height: auto;
+}
+.farm-photo-grid-item--stack {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
+}
+.farm-photo-grid-item--stack img {
+  flex: 1;
+  min-height: 0;
 }
 
-/* Remove max-height constraint on stacked children */
-.farm-narrative-img-stack .farm-narrative-img {
-  max-height: none;
+/* ── What makes us different ── */
+.farm-difference {
+  background: var(--cream);
+  padding: 0 var(--pad-x-wide) var(--pad-v);
+}
+.farm-difference h2 {
+  font-family: "Crimson Text", serif;
+  font-size: clamp(36px, 3.5vw, 54px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--forest);
+  margin: 16px 0 48px;
+}
+.farm-difference-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px 100px;
+  max-width: 960px;
+}
+.farm-difference-item h3 {
+  font-family: "Crimson Text", serif;
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--forest);
+  margin: 0 0 12px;
+}
+.farm-difference-item p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: var(--stone);
 }
 
-/* Landscape aspect ratios */
-.farm-narrative-img.landscape-3-2 {
-  aspect-ratio: 3 / 2;
+/* ── History teaser ── */
+.farm-history-teaser {
+  background: var(--forest);
+  padding: var(--pad-v) var(--pad-x-wide);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
 }
-
-.farm-narrative-img.landscape-sketch {
-  aspect-ratio: 4 / 3;
+.farm-history-teaser h2 {
+  font-family: "Crimson Text", serif;
+  font-size: clamp(36px, 3.5vw, 54px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--white);
+  margin: 16px 0 28px;
 }
-
-/* ── Collage stack: tilted middle photo overlapping neighbors ── */
-.farm-narrative-img-stack.collage {
-  gap: 0;
-  padding: 0 12px;
+.farm-history-teaser p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.95;
+  color: rgba(var(--cream-rgb), 0.6);
+  max-width: 560px;
+  margin-bottom: 36px;
 }
-
-.farm-narrative-img-stack.collage .farm-narrative-img {
-  position: relative;
-  z-index: 0;
-}
-
-.farm-narrative-img-stack.collage .farm-narrative-img:nth-child(2) {
-  transform: rotate(-2.5deg);
-  z-index: 1;
-  margin-top: -24px;
-  margin-bottom: -24px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-}
-
-/* ── Timeline historical photo ── */
-.farm-timeline-photo {
-  margin-top: 48px;
+.farm-history-teaser-img {
   overflow: hidden;
 }
-
-.farm-timeline-photo img {
+.farm-history-teaser-img img {
   width: 100%;
   display: block;
   object-fit: cover;
@@ -260,52 +178,25 @@
 
 /* ── Responsive ── */
 @media (max-width: 900px) {
-  .farm-narrative {
+  .farm-origin {
     grid-template-columns: 1fr;
     gap: 48px;
   }
-  .farm-narrative.reverse .farm-narrative-img {
-    order: 0;
-  }
-  .farm-narrative-text p {
+  .farm-origin-text p {
     max-width: 100%;
   }
-  .farm-timeline {
+  .farm-photo-grid {
+    grid-template-columns: 1fr;
+  }
+  .farm-photo-grid-item--full img {
+    max-height: 400px;
+  }
+  .farm-difference-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .farm-history-teaser {
     grid-template-columns: 1fr;
     gap: 48px;
-  }
-  .farm-timeline-entries {
-    padding-left: 24px;
-  }
-  .timeline-entry {
-    padding: 0 0 32px 24px;
-  }
-  .timeline-entry::before {
-    left: -16px;
-    width: 12px;
-  }
-  .timeline-entry::after {
-    left: -27px;
-  }
-  .full-bleed-bare.tall {
-    height: 56vw;
-    min-height: 300px;
-  }
-  .full-bleed-bare.medium {
-    height: 66vw;
-    min-height: 260px;
-  }
-  .farm-narrative-img-stack:not(.collage) {
-    gap: 8px;
-  }
-  .farm-timeline-photo {
-    margin-top: 32px;
-  }
-}
-
-@media (min-width: 600px) and (max-width: 900px) {
-  .farm-narrative-img {
-    height: 520px;
-    max-height: none;
   }
 }

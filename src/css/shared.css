@@ -170,7 +170,7 @@ nav.scrolled {
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
 }
 .hero-title em {
-  font-style: italic;
+  font-style: normal;
 }
 .hero-sub {
   font-family: "Crimson Text", serif;
@@ -212,7 +212,7 @@ nav.scrolled {
   margin: 20px 0 24px;
 }
 .cta h2 em {
-  font-style: italic;
+  font-style: normal;
 }
 .cta p {
   font-size: 17px;
@@ -364,7 +364,7 @@ nav.scrolled {
   max-width: 740px;
 }
 .image-quote-panel-overlay p em {
-  font-style: italic;
+  font-style: normal;
 }
 
 footer {
@@ -486,7 +486,7 @@ footer > div:first-child > .footer-info {
 }
 
 .page-header h1 em {
-  font-style: italic;
+  font-style: normal;
 }
 
 .page-header-intro {
@@ -566,6 +566,19 @@ footer > div:first-child > .footer-info {
   text-decoration: none;
 }
 
+/* Nav collapse (≤1060px) */
+@media (max-width: 1060px) {
+  nav {
+    z-index: 200;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-hamburger {
+    display: flex;
+  }
+}
+
 /* Tablet + mobile (≤900px): layout collapse, token shrink */
 @media (max-width: 900px) {
   :root {
@@ -587,17 +600,6 @@ footer > div:first-child > .footer-info {
     padding: 36px var(--pad-x-wide);
   }
 
-  /* Nav */
-  nav {
-    z-index: 200;
-  }
-  .nav-links {
-    display: none;
-  }
-  .nav-hamburger {
-    display: flex;
-  }
-
   /* Footer */
   footer {
     grid-template-columns: 1fr;
@@ -617,8 +619,8 @@ footer > div:first-child > .footer-info {
   }
 }
 
-/* Tablet only (600–900px): nav overlay as dropdown panel */
-@media (min-width: 600px) and (max-width: 900px) {
+/* Tablet only (600–1060px): nav overlay as dropdown panel */
+@media (min-width: 600px) and (max-width: 1060px) {
   .nav-overlay {
     top: 72px;
     right: 32px;

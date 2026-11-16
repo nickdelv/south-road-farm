@@ -5,7 +5,15 @@
       "items": [
         {
           "q": "How much does it cost?",
-          "a": "Weekends at South Road Farm start at $15,000. That's a single, all-in price — no à la carte fees, no vendor surcharges, no hidden add-ons. You get the full property: both barns, the farmhouse, all ceremony sites, and every outdoor space from Friday afternoon through Sunday midday. Pricing varies by weekend, with peak dates in September and October priced higher. Reach out and we'll send a full breakdown.<br><br><strong>2027 early booking:</strong> The first five bookings receive $5,000 off. All remaining 2027 dates receive $3,000 off."
+          "a": "Weekends at South Road Farm start at $15,000. That's a single, all-in price — no à la carte fees, no vendor surcharges, no hidden add-ons. You get the full property: both barns, the farmhouse, all ceremony sites, and every outdoor space from Friday afternoon through Sunday midday. Same price, all season long.<br><br><strong>2027 early booking:</strong> $5,000 off for our first 2027 couples."
+        },
+        {
+          "q": "What's included in the venue fee?",
+          "a": "Everything you need for the weekend. Both barns and the decks, the grounds with fire pits and Adirondack chairs, outdoor lighting, tables and chairs, hand-built ceremony benches and the wooden arch, the farmhouse (sleeps 10), and parking for about 50 vehicles. The property is exclusively yours from Friday afternoon through Sunday at noon — no other wedding on site. For a full breakdown, see our <a href=\"/pricing/\">pricing page</a>."
+        },
+        {
+          "q": "What do we need to bring or arrange on our own?",
+          "a": "The venue covers the space — you cover the experience. That means a caterer or food trucks, alcohol and a licensed bartender, music, a professional wedding planner or day-of coordinator, event insurance, and a shuttle service if you expect more than 50 vehicles. If you want anything beyond the tables, chairs, and ceremony benches we provide — linens, cocktail tables, lounge furniture, extra decor — that's on you to rent. We'll connect you with vendors we trust who already know the property."
         },
         {
           "q": "When are you available?",
@@ -64,6 +72,14 @@
         {
           "q": "Is a shuttle service required?",
           "a": "Yes. On-site parking accommodates around 50 vehicles, so for larger guest lists a shuttle is required. It keeps traffic moving smoothly and, honestly, makes for a better guest experience — nobody's navigating dark country roads at the end of the night. We're happy to share recommendations for local shuttle services."
+        },
+        {
+          "q": "Do we need event insurance?",
+          "a": "Yes. We require a three-day event liability policy that covers the full weekend — Friday through Sunday. That way you're covered for everything from a Friday welcome dinner to a Sunday brunch. It's standard for venue rentals and typically runs a few hundred dollars through your homeowner's insurance or a provider like WedSafe or Markel. Your planner can walk you through it."
+        },
+        {
+          "q": "When can vendors arrive for setup?",
+          "a": "Vendors can begin setup Friday afternoon. Most couples use Friday for deliveries, layout, and rehearsal, then finalize decor and details Saturday morning. Teardown and pickup happen Sunday morning before noon. Your day-of coordinator manages the schedule — we just need the property clear by midday Sunday."
         }
       ]
     },
@@ -84,7 +100,7 @@
   "venueShared": [
     {
       "q": "What does a weekend at South Road Farm cost?",
-      "a": "Weekend rentals start at $15,000. That's a single, all-in price — no à la carte fees, no vendor surcharges, no hidden add-ons. You get the full property: both barns, the farmhouse, all ceremony sites, and every outdoor space from Friday afternoon through Sunday midday. Pricing varies by weekend, with peak dates in September and October priced higher. Reach out and we'll send a full breakdown."
+      "a": "Weekend rentals start at $15,000. That's a single, all-in price — no à la carte fees, no vendor surcharges, no hidden add-ons. You get the full property: both barns, the farmhouse, all ceremony sites, and every outdoor space from Friday afternoon through Sunday midday. Same price, all season long.<br><br><strong>2027 early booking:</strong> $5,000 off for our first 2027 couples."
     },
     {
       "q": "How many guests can South Road Farm accommodate?",
@@ -211,7 +227,7 @@
     "barn-wedding-venues-new-england": [
       {
         "q": "How does South Road Farm compare to Vermont and New Hampshire barn venues?",
-        "a": "South Road Farm is honestly on the lower end of the market for what you're getting. Full-weekend exclusive use of 66 acres, two barns, and an included farmhouse starting at $15,000 — comparable properties in Vermont and New Hampshire typically run significantly higher, often for a single Saturday without on-site accommodations. Maine tends to offer more property and more privacy per dollar, and South Road Farm reflects that."
+        "a": "South Road Farm is honestly on the lower end of the market for what you're getting. Full-weekend exclusive use of 67 acres, two barns, and an included farmhouse starting at $15,000 — comparable properties in Vermont and New Hampshire typically run significantly higher, often for a single Saturday without on-site accommodations. Maine tends to offer more property and more privacy per dollar, and South Road Farm reflects that."
       },
       {
         "q": "Is Maine a good destination wedding location for guests coming from Boston or New York?",
@@ -261,7 +277,7 @@
     "domestic-destination-wedding-maine": [
       {
         "q": "What makes South Road Farm a destination wedding venue?",
-        "a": "It's a private 66-acre property in central Maine — remote enough to feel like a genuine getaway, but accessible enough that most New England guests can drive there. The full-weekend format (Friday through Sunday), on-site farmhouse, and exclusive use of the property create the immersive, away-from-it-all experience that defines a destination wedding, without requiring anyone to leave the country."
+        "a": "It's a private 67-acre property in central Maine — remote enough to feel like a genuine getaway, but accessible enough that most New England guests can drive there. The full-weekend format (Friday through Sunday), on-site farmhouse, and exclusive use of the property create the immersive, away-from-it-all experience that defines a destination wedding, without requiring anyone to leave the country."
       },
       {
         "q": "How do guests get to Fayette, Maine?",
@@ -279,7 +295,7 @@
     "private-estate-wedding-venues-maine": [
       {
         "q": "Is the entire property exclusively ours for the weekend?",
-        "a": "Yes. When you book a weekend at South Road Farm, the entire 66-acre property is exclusively yours from Friday afternoon to Sunday morning. No other events, no other couples, no shared spaces with anyone outside your wedding."
+        "a": "Yes. When you book a weekend at South Road Farm, the entire 67-acre property is exclusively yours from Friday afternoon to Sunday morning. No other events, no other couples, no shared spaces with anyone outside your wedding."
       },
       {
         "q": "Can we have multiple events over the weekend — rehearsal dinner, wedding, brunch?",
