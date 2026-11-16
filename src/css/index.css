@@ -36,7 +36,7 @@
   font-weight: 300;
   line-height: 1.85;
   color: var(--stone);
-  max-width: 580px;
+  max-width: 460px;
 }
 .intro-text p + p {
   margin-top: 20px;
@@ -117,14 +117,13 @@
   color: var(--forest);
   line-height: 1.15;
   margin: 20px 0 32px;
-  max-width: 680px;
 }
 .property-intro {
   font-size: 17px;
   font-weight: 300;
   line-height: 1.85;
   color: var(--stone);
-  max-width: 620px;
+  max-width: 460px;
 }
 .stats-row-3 {
   grid-template-columns: repeat(3, 1fr);
@@ -169,7 +168,6 @@
   color: var(--white);
   line-height: 1.15;
   margin: 20px 0 28px;
-  max-width: 460px;
 }
 .story-text p {
   font-size: 16px;
