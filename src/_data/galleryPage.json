@@ -1,56 +1,240 @@
 {
   "sections": [
     {
-      "id": "land",
-      "heading": "Land & views.",
-      "intro": "Rolling fields, old stone walls, and a tree line that catches every sunset. Sixty-seven acres of room to breathe.",
+      "id": "ceremony",
+      "navLabel": "Ceremony",
+      "heading": "The ceremony",
+      "intro": "The wooden arch Dave built by hand for Nick and Alex's wedding in 2022. It now stands on the ceremony lawn, and it's yours to say your vows under.",
       "photos": [
         {
-          "src": "south-road-farm-2026-18.webp",
-          "alt": "Fall foliage panorama across the valley",
-          "layout": "full"
+          "src": "south-road-farm-2026-16.webp",
+          "alt": "The wooden ceremony arch standing in the field with fall foliage behind it",
+          "layout": "full",
+          "aspectRatio": "5 / 2",
+          "objectPosition": "center 40%"
         },
         {
-          "src": "3K7A2224.webp",
-          "alt": "Bride in the woods by the fire pit at golden hour",
+          "src": "3K7A2583.webp",
+          "alt": "Couple at the ceremony arch at golden hour",
           "layout": "half"
         },
         {
-          "src": "3K7A4196.webp",
-          "alt": "Bride on the deck overlooking the valley at twilight",
+          "src": "3K7A2902.webp",
+          "alt": "Groom lifting bride high in the air under the arch at sunset",
           "layout": "half"
         },
         {
-          "src": "3K7A2591.webp",
-          "alt": "Bride with bouquet by the arch at sunset, fall foliage behind",
-          "layout": "full"
+          "src": ["3K7A2680.webp", "3K7A3006.webp"],
+          "alt": [
+            "Wide view of the ceremony arch and lawn",
+            "Ceremony arch and surrounding landscape"
+          ],
+          "layout": "stack"
         },
+        {
+          "src": "3K7A3108.webp",
+          "alt": "Couple kissing in the barn doorway at dusk, warm light behind them",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A2860.webp",
+          "alt": "Couple at the ceremony arch during golden hour",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A3062.webp",
+          "alt": "Couple at the ceremony arch at dusk",
+          "layout": "half"
+        }
+      ]
+    },
+    {
+      "id": "decks",
+      "navLabel": "Decks",
+      "heading": "The decks",
+      "intro": "Open-air decks off both barns. The kind of view that makes guests stop mid-conversation.",
+      "photos": [
+        {
+          "src": "3K7A4235.webp",
+          "alt": "Bride on the deck with veil flowing, moon in the dusk sky, black and white",
+          "layout": "full",
+          "aspectRatio": "2 / 1",
+          "objectPosition": "center 65%"
+        },
+        {
+          "src": "3K7A4064.webp",
+          "alt": "Couple on the deck at dusk",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A4249.webp",
+          "alt": "Bride twirling her dress on the deck at dusk with warm orange sky and foliage",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A4207.webp",
+          "alt": "Bride and groom embracing on the deck at dusk with autumn landscape behind them",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A4160.webp",
+          "alt": "Couple on the deck at dusk",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A4282.webp",
+          "alt": "Bride with veil spread wide on the deck at dusk, moon overhead, black and white",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A4101.webp",
+          "alt": "Couple on the deck at dusk",
+          "layout": "half"
+        },
+        {
+          "src": "south-road-farm-2026-40.webp",
+          "alt": "The barn deck overlooking the valley on a sunny fall day",
+          "layout": "full",
+          "aspectRatio": "2 / 1"
+        }
+      ]
+    },
+    {
+      "id": "fire-pit",
+      "navLabel": "Fire pit",
+      "heading": "The fire pit",
+      "intro": "Deep in the woods, with Adirondack chairs and fall leaves. Usually the last place people leave.",
+      "photos": [
         {
           "src": "south-road-farm-2026-5.webp",
           "alt": "Adirondack chairs in the woods surrounded by fall leaves",
-          "layout": "half-landscape"
+          "layout": "full",
+          "aspectRatio": "2 / 1"
         },
         {
-          "src": "FayetteFarm_2944.webp",
-          "alt": "View through the barn doors out to the rolling hills",
-          "layout": "half-landscape"
+          "src": "3K7A1690.webp",
+          "alt": "Couple at the fire pit in the woods",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A1923.webp",
+          "alt": "Couple laughing together near the fire",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A1702.webp",
+          "alt": "Couple at the fire pit at dusk",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A2461.webp",
+          "alt": "Couple near the fire pit, warm autumn light",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A1756.webp",
+          "alt": "Couple walking together through the woods toward the fire pit at dusk",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A2516.webp",
+          "alt": "Couple at the fire pit, golden light through the trees",
+          "layout": "half"
+        }
+      ]
+    },
+    {
+      "id": "couples",
+      "navLabel": "Couple",
+      "heading": "The couple",
+      "intro": "The kind of day that feels like yours from start to finish.",
+      "photos": [
+        {
+          "src": "3K7A3571.webp",
+          "alt": "Couple at dusk, groom spraying champagne, moon in the sky, black and white",
+          "layout": "full",
+          "aspectRatio": "2 / 1"
+        },
+        {
+          "src": "3K7A2559.webp",
+          "alt": "Couple together at golden hour",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A9880.webp",
+          "alt": "Couple together near the barn",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A2914.webp",
+          "alt": "Couple at golden hour, fall foliage behind them",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A9867.webp",
+          "alt": "Couple together near the barn at dusk",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A2929.webp",
+          "alt": "Couple laughing together at golden hour",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A9768.webp",
+          "alt": "Couple together near the farmhouse",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A3585.webp",
+          "alt": "Couple at dusk, warm sky behind them",
+          "layout": "full",
+          "aspectRatio": "2 / 1"
+        },
+        {
+          "src": "3K7A2976.webp",
+          "alt": "Couple at golden hour",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A4368.webp",
+          "alt": "Couple together at dusk",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A3379.webp",
+          "alt": "Couple together on the lawn",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A3922.webp",
+          "alt": "Couple at dusk, warm evening light",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A3398.webp",
+          "alt": "Couple together, fall foliage",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A3439.webp",
+          "alt": "Couple together at dusk",
+          "layout": "half"
         }
       ]
     },
     {
       "id": "barns",
-      "heading": "The barns.",
+      "navLabel": "Barns",
+      "heading": "The barns",
       "intro": "Two restored barns — one for dinner, one for dancing. Hand-built beams, string lights, and open decks that look out over the valley.",
       "photos": [
         {
           "src": "3K7A9676.webp",
           "alt": "The barns at South Road Farm in black and white",
-          "layout": "full"
-        },
-        {
-          "src": "south-road-farm-2026-101.webp",
-          "alt": "The bar with flowers under the covered structure",
-          "layout": "half"
+          "layout": "full",
+          "aspectRatio": "2 / 1",
+          "objectPosition": "center 0%"
         },
         {
           "src": "3K7A3830.webp",
@@ -58,31 +242,56 @@
           "layout": "half"
         },
         {
-          "src": "south-road-farm-2026-38.webp",
-          "alt": "Barn deck overlooking the valley",
-          "layout": "full"
+          "src": ["3K7A0011.webp", "south-road-farm-2026-38.webp"],
+          "alt": [
+            "Bride and groom standing in the open barn doorway with the landscape behind them",
+            "Barn deck overlooking the valley"
+          ],
+          "layout": "stack"
         },
         {
-          "src": "south-road-farm-2026-39.webp",
-          "alt": "Barn deck and railing with blue sky",
+          "src": "3K7A0026.webp",
+          "alt": "Couple in the barn doorway",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A0141.webp",
+          "alt": "Couple near the barn at dusk",
+          "layout": "half"
+        },
+        {
+          "src": "south-road-farm-2026-101.webp",
+          "alt": "The bar with flowers under the covered structure",
           "layout": "half"
         },
         {
           "src": "3K7A1222.webp",
           "alt": "South Road Farm Est 1793 sign with barn entrance and flowers",
           "layout": "half"
+        },
+        {
+          "src": "FayetteFarm_2944.webp",
+          "alt": "View through the barn doors out to the rolling hills",
+          "layout": "half-landscape"
+        },
+        {
+          "src": "3K7A4041.webp",
+          "alt": "Barn exterior at dusk",
+          "layout": "half-landscape"
         }
       ]
     },
     {
       "id": "farmhouse",
-      "heading": "The farmhouse.",
+      "navLabel": "Farmhouse",
+      "heading": "The farmhouse",
       "intro": "Sleeps 10, included with your weekend.",
       "photos": [
         {
           "src": "south-road-farm-2026-11.webp",
           "alt": "The farmhouse exterior with covered porch and fall foliage",
-          "layout": "full"
+          "layout": "full",
+          "aspectRatio": "2 / 1"
         },
         {
           "src": "3K7A9697.webp",
@@ -95,9 +304,45 @@
           "layout": "half"
         },
         {
+          "src": "south-road-farm-2026-85.webp",
+          "alt": "Farmhouse bedroom with exposed wood beam ceiling and dark wood bed",
+          "layout": "half"
+        },
+        {
+          "src": "south-road-farm-2026-82.webp",
+          "alt": "Farmhouse bedroom with iron bed frame, white bedding, and hardwood floors",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A9771.webp",
+          "alt": "Farmhouse interior",
+          "layout": "full",
+          "aspectRatio": "2 / 1"
+        },
+        {
+          "src": "3K7A9664.webp",
+          "alt": "Farmhouse interior",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A9635.webp",
+          "alt": "Farmhouse interior",
+          "layout": "half"
+        },
+        {
           "src": "south-road-farm-2026-54.webp",
           "alt": "Farmhouse living room with exposed beams and wood stove",
           "layout": "full"
+        },
+        {
+          "src": "3K7A9674.webp",
+          "alt": "Farmhouse interior",
+          "layout": "half"
+        },
+        {
+          "src": "3K7A9764.webp",
+          "alt": "Farmhouse interior",
+          "layout": "half"
         },
         {
           "src": "3K7A9661.webp",

@@ -1,7 +1,25 @@
+/* ── Pricing header note ── */
+.pricing-header-note {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: rgba(var(--cream-rgb), 0.6);
+  max-width: 560px;
+  font-style: italic;
+  margin-top: 16px;
+}
+
 /* ── Pricing body ── */
 .pricing-body {
   background: var(--cream);
   padding: 0 var(--pad-x-wide) var(--pad-v);
+}
+.pricing-body--upper {
+  padding-bottom: var(--pad-v-sm);
+}
+.pricing-body--lower {
+  padding-top: 0;
 }
 
 /* ── Section group ── */
@@ -17,7 +35,7 @@
 }
 .pricing-group-heading {
   font-family: "Crimson Text", serif;
-  font-size: clamp(28px, 3vw, 40px);
+  font-size: clamp(36px, 3.5vw, 54px);
   font-weight: 400;
   line-height: 1.1;
   color: var(--forest);
@@ -32,7 +50,13 @@
 .pricing-cols {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 40px;
+}
+.pricing-col {
+  background: var(--white);
+  border: 1px solid rgba(var(--forest-ui-rgb), 0.08);
+  border-top: 3px solid var(--amber);
+  padding: 36px;
 }
 .pricing-col h3 {
   font-family: "Jost", sans-serif;
@@ -95,6 +119,72 @@
 .pricing-addon strong {
   font-weight: 500;
   color: var(--forest);
+}
+
+/* ── Ground rules (photo + text) ── */
+.pricing-rules {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 560px;
+}
+.pricing-rules-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--pad-v-sm) var(--pad-x-wide);
+  background: var(--cream-warm);
+}
+.pricing-rules-text h2 {
+  font-family: "Crimson Text", serif;
+  font-size: clamp(36px, 3.5vw, 54px);
+  font-weight: 300;
+  color: var(--forest);
+  line-height: 1.15;
+  margin-bottom: 32px;
+}
+.pricing-rules-img {
+  overflow: hidden;
+  position: relative;
+}
+.pricing-rules-img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.pricing-rules-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.pricing-rules-list li {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--stone);
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(var(--forest-ui-rgb), 0.08);
+}
+.pricing-rules-list li:first-child {
+  border-top: 1px solid rgba(var(--forest-ui-rgb), 0.08);
+}
+.pricing-rules-list li strong {
+  font-weight: 500;
+  color: var(--forest);
+}
+
+/* ── Cost guide layout (two-column, mirrors homepage intro) ── */
+.pricing-guide-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 80px;
+  padding-top: 72px;
+}
+.pricing-guide-aside .section-eyebrow {
+  padding-top: 12px;
 }
 
 /* ── Cost guide ── */
@@ -228,17 +318,36 @@
 
 /* ── Partner perks ── */
 .pricing-perks {
-  background: var(--cream);
-  padding: var(--pad-v-sm) var(--pad-x-wide);
-}
-.pricing-perks .pricing-group-heading {
-  margin: 0;
-}
-.pricing-perks-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  margin-top: 32px;
+  min-height: 480px;
+}
+.pricing-perks-img {
+  overflow: hidden;
+  position: relative;
+}
+.pricing-perks-img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.pricing-perks-content {
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--pad-v-sm) var(--pad-x-wide);
+}
+.pricing-perks-content .pricing-group-heading {
+  margin: 0 0 32px;
+}
+.pricing-perks-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
 .pricing-perk h3 {
   font-family: "Jost", sans-serif;
@@ -265,17 +374,35 @@
 
 /* ── Responsive ── */
 @media (max-width: 900px) {
+  .pricing-guide-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
   .pricing-cols {
     grid-template-columns: 1fr;
     gap: 48px;
+  }
+  .pricing-rules {
+    grid-template-columns: 1fr;
+  }
+  .pricing-rules-img {
+    height: 420px;
+  }
+  .pricing-rules-text {
+    padding: 64px var(--pad-x);
   }
   .pricing-steps-grid {
     grid-template-columns: 1fr 1fr;
     gap: 32px;
   }
-  .pricing-perks-grid {
+  .pricing-perks {
     grid-template-columns: 1fr;
-    gap: 32px;
+  }
+  .pricing-perks-img {
+    height: 400px;
+  }
+  .pricing-perks-content {
+    padding: 64px var(--pad-x);
   }
   .pricing-guide-item {
     flex-direction: column;

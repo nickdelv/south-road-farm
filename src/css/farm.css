@@ -45,6 +45,19 @@
 .farm-origin-text p + p {
   margin-top: 20px;
 }
+.farm-origin-contrast {
+  font-weight: 500;
+  color: #000;
+}
+
+.farm-origin-text .farm-festival-quote {
+  font-family: "Crimson Text", serif;
+  font-size: clamp(17px, 1.5vw, 20px);
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--forest);
+  max-width: 480px;
+}
 
 /* ── Pull quote ── */
 .farm-origin-text .farm-quote {
@@ -77,6 +90,18 @@
 .farm-photo-block {
   background: var(--cream);
   padding: 0 var(--pad-x-wide) var(--pad-v);
+}
+.farm-photo-block--headed {
+  padding-top: var(--pad-v);
+  padding-bottom: 0;
+}
+.farm-photo-block-heading {
+  font-family: "Crimson Text", serif;
+  font-size: clamp(36px, 3.5vw, 54px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--forest);
+  margin-bottom: 40px;
 }
 .farm-photo-grid {
   display: grid;

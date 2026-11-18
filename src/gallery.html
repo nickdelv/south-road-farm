@@ -16,19 +16,59 @@ ogImage: /assets/images/3K7A4526.webp
 
 <!-- GALLERY SECTIONS -->
 <section class="gallery-body">
+  <div class="gallery-nav">
+    {% for section in galleryPage.sections %}
+    <a href="#{{ section.id }}" class="gallery-nav-link">
+      {{ section.navLabel }}
+    </a>
+    {% endfor %}
+  </div>
   {% for section in galleryPage.sections %}
   <div class="gallery-section" id="{{ section.id }}">
     <h2 class="gallery-section-heading">{{ section.heading }}</h2>
     <p class="gallery-section-intro">{{ section.intro }}</p>
     <div class="gallery-grid">
       {% for photo in section.photos %}
-      <div class="gallery-photo gallery-photo--{{ photo.layout }}">
+      <div
+        class="gallery-photo gallery-photo--{{ photo.layout }}"
+        {%
+        if
+        photo.aspectRatio
+        %}
+        style="aspect-ratio: {{ photo.aspectRatio }}"
+        {%
+        endif
+        %}
+      >
+        {% if photo.layout == "stack" %} {% for i in [0, 1] %}
+        <img
+          src="/assets/images/{{ photo.src[i] }}"
+          alt="{{ photo.alt[i] }}"
+          loading="lazy"
+          decoding="async"
+          {%
+          if
+          photo.objectPosition[i]
+          %}style="object-position: {{ photo.objectPosition[i] }}"
+          {%
+          endif
+          %}
+        />
+        {% endfor %} {% else %}
         <img
           src="/assets/images/{{ photo.src }}"
           alt="{{ photo.alt }}"
           loading="lazy"
           decoding="async"
+          {%
+          if
+          photo.objectPosition
+          %}style="object-position: {{ photo.objectPosition }}"
+          {%
+          endif
+          %}
         />
+        {% endif %}
       </div>
       {% endfor %}
     </div>

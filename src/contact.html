@@ -70,12 +70,16 @@ ogImage: /assets/images/image14.webp
           />
         </div>
         <div class="form-field">
-          <label for="phone">Phone</label>
+          <label for="phone">
+            Phone
+            <span class="req">*</span>
+          </label>
           <input
             type="tel"
             id="phone"
             name="phone"
             placeholder="(207) 555-0123"
+            required
           />
         </div>
       </div>
@@ -87,7 +91,7 @@ ogImage: /assets/images/image14.webp
             type="text"
             id="date"
             name="wedding_date"
-            placeholder="e.g. Sept 2026, or TBD"
+            placeholder="e.g. Sept 2027, or TBD"
           />
         </div>
         <div class="form-field">
@@ -171,11 +175,17 @@ ogImage: /assets/images/image14.webp
       </svg>
     </div>
     <h2 class="ty-headline">
-      We got it —
+      Thank you,
       <br />
-      grab 15 minutes.
+      we got your inquiry!
     </h2>
     <div class="ty-rule"></div>
+    <p class="aside-label">Next step: schedule a call</p>
+    <p class="ty-body">
+      Grab 15 minutes so we can hear about the wedding you're dreaming of,
+      answer your questions, and, if it feels like a fit, set up a time for you
+      to come see the farm.
+    </p>
     <div class="ty-calendar">
       <!-- Google Calendar Appointment Scheduling begin -->
       <link
@@ -193,7 +203,7 @@ ogImage: /assets/images/image14.webp
             calendar.schedulingButton.load({
               url: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ3VSZft8dt5LOjfctWoClX_10bwAW4osKkijs-YSvfdHvU0XU1Os0dEhpnfsEruBlsLeMEhi1I_?gv=true",
               color: "#171a12",
-              label: "Grab 15 Minutes",
+              label: "Schedule a Call",
               target,
             });
           });
@@ -202,7 +212,8 @@ ogImage: /assets/images/image14.webp
       <!-- end Google Calendar Appointment Scheduling -->
     </div>
     <p class="ty-body">
-      Can't find a time right now? No worries — we'll follow up by email.
+      Not ready to pick a time? Jess from our team will reach out within a day
+      by text or email.
     </p>
     <a href="/weekend/" class="ty-link">See the Weekend →</a>
   </div>
@@ -210,20 +221,30 @@ ogImage: /assets/images/image14.webp
   <!-- ASIDE -->
   <div class="inquire-aside">
     <div class="inquire-aside-block">
-      <p class="aside-label">What happens next</p>
-      <h3>
-        A conversation,
-        <br />
-        not a pitch.
-      </h3>
-      <p>
-        Submit the form and you'll have the option to grab 15 minutes — right on
-        the confirmation page. Pick a time that works.
-      </p>
-      <p>
-        Either way, the goal is a quick conversation and, if it feels right, a
-        tour.
-      </p>
+      <h3>How it works.</h3>
+      <ol class="aside-steps">
+        <li class="aside-step">
+          <p class="aside-step-num">01</p>
+          <h4 class="aside-step-heading">Tell us about your day.</h4>
+          <p class="aside-step-body">
+            A few details so we know what you're dreaming of.
+          </p>
+        </li>
+        <li class="aside-step">
+          <p class="aside-step-num">02</p>
+          <h4 class="aside-step-heading">Grab 15 minutes on the phone.</h4>
+          <p class="aside-step-body">
+            We'll answer your questions and hear more about you.
+          </p>
+        </li>
+        <li class="aside-step">
+          <p class="aside-step-num">03</p>
+          <h4 class="aside-step-heading">Come see the farm.</h4>
+          <p class="aside-step-body">
+            Walk the barns with Dave, who restored them by hand.
+          </p>
+        </li>
+      </ol>
     </div>
 
     <div class="aside-rule"></div>

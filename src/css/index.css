@@ -18,7 +18,6 @@
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 80px;
-  margin-bottom: 72px;
 }
 .intro .section-eyebrow {
   padding-top: 12px;
@@ -44,6 +43,7 @@
 .intro-bold {
   font-weight: 400;
   color: var(--forest);
+  margin-bottom: 44px;
 }
 
 .intro-footer {
