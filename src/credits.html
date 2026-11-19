@@ -19,42 +19,28 @@ ogImage: /assets/images/image14.webp
 <!-- CREDITS -->
 <section class="credits">
   <ul class="credits-list">
-    <li>
-      <a
-        href="https://lindabarryphotography.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Linda Barry Photography
+    {% for p in photographers %}
+    <li id="{{ p.id }}" class="credit-entry">
+      <a class="credit-name" href="{{ p.url }}" target="_blank" rel="noopener">
+        {{ p.name }}
       </a>
-    </li>
-    <li>
+      <p class="credit-meta">
+        {{ p.contextHtml | safe }}
+        <br />
+        {{ p.location }}
+      </p>
+      {% if p.instagram %}
       <a
-        href="https://sashalees.com/"
+        class="credit-instagram"
+        href="{{ p.instagram.url }}"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener"
       >
-        Sasha Lee
+        {{ p.instagram.handle }}
       </a>
+      {% endif %}
     </li>
-    <li>
-      <a
-        href="https://www.jacquelynpotter.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Jacquelyn Potter
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://www.sunjournal.com/2026/09/20/out-of-the-woodwork-neighbors-lend-a-hand-as-storied-fayette-farm-gets-new-life/?uuid=05cb6cb8-3252-418a-b02b-933266fd3abf&lid=246086"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Joe Phelan / Sun Journal
-      </a>
-    </li>
+    {% endfor %}
   </ul>
 </section>
 

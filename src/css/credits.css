@@ -8,10 +8,16 @@
   padding: 0;
   margin: 0;
 }
-.credits-list li {
-  margin-bottom: 20px;
+.credit-entry {
+  padding: 40px 0;
 }
-.credits-list a {
+.credit-entry:first-child {
+  padding-top: 0;
+}
+.credit-entry + .credit-entry {
+  border-top: 1px solid rgba(var(--forest-ui-rgb), 0.08);
+}
+.credit-name {
   font-family: "Crimson Text", serif;
   font-size: clamp(20px, 2vw, 26px);
   font-weight: 400;
@@ -21,6 +27,34 @@
   padding-bottom: 2px;
   transition: color 0.2s;
 }
-.credits-list a:hover {
+.credit-name:hover {
   color: var(--amber);
+}
+.credit-meta {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--stone);
+  margin-top: 10px;
+}
+.credit-meta a {
+  color: var(--stone);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.credit-meta a:hover {
+  color: var(--forest);
+}
+.credit-instagram {
+  display: inline-block;
+  margin-top: 8px;
+  font-family: "Jost", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--amber);
+  text-decoration: none;
+}
+.credit-instagram:hover {
+  color: var(--forest);
 }

@@ -85,6 +85,27 @@
   min-height: 0;
 }
 
+/* ── Credits reference line ── */
+.gallery-credits-ref {
+  font-family: "Jost", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--stone);
+  margin-top: 20px;
+}
+.gallery-credits-ref a {
+  color: var(--stone);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.gallery-credits-ref a:hover {
+  color: var(--forest);
+}
+.gallery-credits-ref--bottom {
+  margin-top: 56px;
+  padding-bottom: 72px;
+}
+
 /* ── Responsive ── */
 @media (max-width: 900px) {
   .gallery-grid {

@@ -1,0 +1,43 @@
+[
+  {
+    "id": "sasha-lees-studio",
+    "name": "Sasha Lee's Studio",
+    "url": "https://sashalees.com/",
+    "contextHtml": "Fall 2026 styled shoot",
+    "location": "Lewiston, Maine",
+    "instagram": {
+      "handle": "@sashaleesstudio",
+      "url": "https://www.instagram.com/sashaleesstudio/"
+    }
+  },
+  {
+    "id": "jacquelyn-potter",
+    "name": "Jacquelyn Potter",
+    "url": "https://www.jacquelynpotter.com/",
+    "contextHtml": "Nick's own wedding, October 2022",
+    "location": "Vermont",
+    "instagram": {
+      "handle": "@jacquelynpotter",
+      "url": "https://www.instagram.com/jacquelynpotter/"
+    }
+  },
+  {
+    "id": "linda-barry-photography",
+    "name": "Linda Barry Photography",
+    "url": "https://lindabarryphotography.com/",
+    "contextHtml": "The farm and grounds, <a href=\"https://lindabarryphotography.com/south-road-farm-places-to-get-married-in-maine/\" target=\"_blank\" rel=\"noopener\">featured on her blog</a>",
+    "location": "Portland, Maine",
+    "instagram": {
+      "handle": "@lindabarry.co",
+      "url": "https://www.instagram.com/lindabarry.co/"
+    }
+  },
+  {
+    "id": "joe-phelan-sun-journal",
+    "name": "Joe Phelan / Sun Journal",
+    "url": "https://www.sunjournal.com/2026/09/20/out-of-the-woodwork-neighbors-lend-a-hand-as-storied-fayette-farm-gets-new-life/?uuid=05cb6cb8-3252-418a-b02b-933266fd3abf&lid=246086",
+    "contextHtml": "Out of the woodwork: Neighbors lend a hand as storied Fayette farm gets new life",
+    "location": "Lewiston, Maine",
+    "instagram": null
+  }
+]
