@@ -11,17 +11,6 @@
     }
   },
   {
-    "id": "jacquelyn-potter",
-    "name": "Jacquelyn Potter",
-    "url": "https://www.jacquelynpotter.com/",
-    "contextHtml": "Nick's own wedding, October 2022",
-    "location": "Vermont",
-    "instagram": {
-      "handle": "@jacquelynpotter",
-      "url": "https://www.instagram.com/jacquelynpotter/"
-    }
-  },
-  {
     "id": "linda-barry-photography",
     "name": "Linda Barry Photography",
     "url": "https://lindabarryphotography.com/",
@@ -39,5 +28,16 @@
     "contextHtml": "Out of the woodwork: Neighbors lend a hand as storied Fayette farm gets new life",
     "location": "Lewiston, Maine",
     "instagram": null
+  },
+  {
+    "id": "jacquelyn-potter",
+    "name": "Jacquelyn Potter",
+    "url": "https://www.jacquelynpotter.com/",
+    "contextHtml": "Nick's own wedding, October 2022",
+    "location": "Burlington, Vermont",
+    "instagram": {
+      "handle": "@jacquelynpotter",
+      "url": "https://www.instagram.com/jacquelynpotter/"
+    }
   }
 ]

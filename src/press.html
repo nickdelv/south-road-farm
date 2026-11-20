@@ -5,7 +5,7 @@ ogImage: /assets/images/image14.webp
 ---
 
 {% extends "layouts/base.html" %} {% block head %}
-<link rel="stylesheet" href="/css/credits.css" />
+<link rel="stylesheet" href="/css/press.css" />
 {% endblock %} {% block body %}
 
 <!-- PAGE HEADER -->
@@ -15,41 +15,35 @@ ogImage: /assets/images/image14.webp
     <br />
     in the News
   </h1>
+  <p class="page-header-intro">
+    Stories about the farm, the restoration, and the people helping bring it
+    back.
+  </p>
 </section>
 
 <!-- PRESS -->
-<section class="credits">
-  <ul class="credits-list">
-    <li>
+<section class="press">
+  <ul class="press-list">
+    {% for item in press %}
+    <li class="press-entry">
+      <p class="press-outlet">
+        {{ item.outlet }}{% if item.date %}
+        <span class="press-date">{{ item.date }}</span>
+        {% endif %}
+      </p>
       <a
-        href="https://www.sunjournal.com/2026/09/20/out-of-the-woodwork-neighbors-lend-a-hand-as-storied-fayette-farm-gets-new-life/?uuid=05cb6cb8-3252-418a-b02b-933266fd3abf&lid=246086"
+        class="press-title"
+        href="{{ item.url }}"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Sun Journal — Out of the Woodwork: Neighbors Lend a Hand as Storied
-        Fayette Farm Gets New Life
+        {{ item.title }}
       </a>
+      {% if item.summary %}
+      <p class="press-summary">{{ item.summary }}</p>
+      {% endif %}
     </li>
-    <li>
-      <a
-        href="https://lindabarryphotography.com/south-road-farm-places-to-get-married-in-maine/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Linda Barry Photography — South Road Farm: Places to Get Married in
-        Maine
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://mainebiz.biz/article/sweat-equity-helps-transform-kennebec-county-farm-into-wedding-venue/?bypass=GvNHOVH5yOWTxMshZh2J"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Mainebiz — Sweat Equity Helps Transform Kennebec County Farm into
-        Wedding Venue
-      </a>
-    </li>
+    {% endfor %}
   </ul>
 </section>
 

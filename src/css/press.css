@@ -1,0 +1,63 @@
+/* ── Press section ── */
+.press {
+  background: var(--cream);
+  padding: var(--pad-v-sm) var(--pad-x-wide) var(--pad-v);
+}
+.press-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 760px;
+}
+.press-entry {
+  padding: 40px 0;
+}
+.press-entry:first-child {
+  padding-top: 0;
+}
+.press-entry + .press-entry {
+  border-top: 1px solid rgba(var(--forest-ui-rgb), 0.08);
+}
+
+/* ── Outlet + date ── */
+.press-outlet {
+  font-family: "Jost", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin: 0 0 12px;
+}
+.press-date {
+  color: var(--stone);
+  font-weight: 300;
+  margin-left: 10px;
+}
+
+/* ── Headline ── */
+.press-title {
+  font-family: "Crimson Text", serif;
+  font-size: clamp(22px, 2.4vw, 30px);
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--forest);
+  text-decoration: underline;
+  text-decoration-color: var(--amber);
+  text-underline-offset: 4px;
+  transition: color 0.2s;
+}
+.press-title:hover {
+  color: var(--amber);
+}
+
+/* ── Summary ── */
+.press-summary {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--stone);
+  margin-top: 12px;
+  max-width: 620px;
+}

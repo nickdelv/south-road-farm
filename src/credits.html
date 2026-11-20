@@ -21,14 +21,11 @@ ogImage: /assets/images/image14.webp
   <ul class="credits-list">
     {% for p in photographers %}
     <li id="{{ p.id }}" class="credit-entry">
+      <p class="credit-eyebrow">{{ p.location }}</p>
       <a class="credit-name" href="{{ p.url }}" target="_blank" rel="noopener">
         {{ p.name }}
       </a>
-      <p class="credit-meta">
-        {{ p.contextHtml | safe }}
-        <br />
-        {{ p.location }}
-      </p>
+      <p class="credit-meta">{{ p.contextHtml | safe }}</p>
       {% if p.instagram %}
       <a
         class="credit-instagram"
